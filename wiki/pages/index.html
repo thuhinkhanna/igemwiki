@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 
-{% block title %}Home{% endblock %}
-{% block lead %}<b>Welcome to iGEM 2022!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
+{% block title %}Meet CURLIM!{% endblock %}
+{% block lead %}CURLIM is a passion project curated by the iGEM-REC Chennai team. Our project aims to address the impact of the heavy metal-Cadmium that is being released in industrial effluents. Untreated Cadmium ions can cause serious havoc. If this heavy metal is consumed, it can lead to long term disturbing effects that will result in organ failures and in some cases, even genetic diseases like cancer can be developed in cases of higher exposure.
+Our team has decided to go forth the sustainable way by developing a solution to control the bio- magnification of cadmium ions with the help of genetic engineering and synthetic biology by using Curly-proteins.{% endblock %}
 
 {% block page_content %}
-
+<!--
 <div class="row">
   <div class="col">
     <h2>Before you start</h2>
@@ -54,5 +55,39 @@
     </ul>
   </div>
 </div>
-
+-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width:100%">
+        <img class="card-img-top" src="static/images/team_logo.jpeg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Human Practices</h4>
+          <p class="card-text">Some example text.</p>
+          <a href="{{ url_for('pages', page='human-practices') }}" class="btn btn-primary">Go to HP</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width:100%">
+        <img class="card-img-top" src="static/images/team_logo.jpeg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Attributions</h4>
+          <p class="card-text">Some example text.</p>
+          <a href="{{ url_for('pages', page='attributions') }}" class="btn btn-primary">Go to Attributions</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width:100%">
+        <img class="card-img-top" src="static/images/team_logo.jpeg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Team</h4>
+          <p class="card-text">Some example text.</p>
+          <a href="{{ url_for('pages', page='team') }}" class="btn btn-primary">Meet the Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
