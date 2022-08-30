@@ -2,7 +2,7 @@
 
 {% block title %}Meet CURLIM!{% endblock %}
 {% block lead %}CURLIM is a passion project curated by the iGEM-REC Chennai team. Our project aims to address the impact of the heavy metal-Cadmium that is being released in industrial effluents. Untreated Cadmium ions can cause serious havoc. If this heavy metal is consumed, it can lead to long term disturbing effects that will result in organ failures and in some cases, even genetic diseases like cancer can be developed in cases of higher exposure.
-Our team has decided to go forth the sustainable way by developing a solution to control the bio- magnification of cadmium ions with the help of genetic engineering and synthetic biology by using Curly-proteins.{% endblock %}
+Our team has decided to go forth the sustainable way by developing a solution to control the bio- magnification of cadmium ions with the help of genetic engineering and synthetic biology by using Curly-proteins...<a class="link-light"href="{{ url_for('pages', page='description') }}">Learn More</a>{% endblock %}
 
 {% block page_content %}
 <!--
@@ -56,7 +56,30 @@ Our team has decided to go forth the sustainable way by developing a solution to
   </div>
 </div>
 -->
-<div class="container">
+
+<div id="homeCarousel" class="carousel slide border border-light border-3 rounded col-md-6" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/images/flower.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/flower.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/flower.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
       <div class="card" style="width:100%">
