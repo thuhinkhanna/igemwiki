@@ -2,10 +2,18 @@
     font-family: 'Montserrat';
     src: url("Montserrat-Regular.ttf");
 }
-
+@font-face {
+    font-family: 'MontserratBoldItalic';
+    src: url("Montserrat-BoldItalic.ttf");
+}
+@font-face{
+    font-family: 'MontserratItalic';
+    src: url("Montserrat-Italic.ttf");
+}
 body { 
     padding-top: 40px; 
     font-family: 'Montserrat';
+    background-color: #FAEBEFFF;
 }
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #343a40 !important; }
