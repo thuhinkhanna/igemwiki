@@ -15,7 +15,8 @@ body {
     padding-top: 40px; 
     font-family: 'Montserrat';
     /* background-color: #a7c9e2; */
-    background-image: linear-gradient(#1CA7EC , #8bbcd4);
+    /* background-image: linear-gradient(#4187e2ef,#8dc1dbd7); */
+    background-image: linear-gradient(#188fcf,#66c5f5e1);
 
     /* background-color: #8fcdf8; */
 }
@@ -25,7 +26,7 @@ body {
     /* background-color: #1F2F98 !important; */
     /* background-image: linear-gradient(#1F2F98 , #1CA7EC); */
     /* background-image: linear-gradient(#1CA7EC , #79a9ca); */
-    background-image:linear-gradient(#121d61 , #2f42b9d3)
+    background-image:linear-gradient(#121d61 , #273ab9d3)
 
     /* filter: brightness(80%);  */
 }
