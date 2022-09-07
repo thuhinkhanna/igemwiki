@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url("Montserrat-Regular.ttf");
+    src: url("https://static.igem.wiki/teams/4509/wiki/fonts/montserrat-regular.ttf");
 }
 @font-face {
     font-family: 'MontserratBoldItalic';
-    src: url("Montserrat-BoldItalic.ttf");
+    src: url("https://static.igem.wiki/teams/4509/wiki/fonts/montserrat-bolditalic.ttf");
 }
 @font-face{
     font-family: 'MontserratItalic';
-    src: url("Montserrat-Italic.ttf");
+    src: url("https://static.igem.wiki/teams/4509/wiki/fonts/montserrat-italic.ttf");
 }
 body { 
     /* background-image: linear-gradient(#7BD5F5 , #8fcdf8); */
