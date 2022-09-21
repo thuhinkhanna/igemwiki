@@ -10,6 +10,9 @@
     font-family: 'MontserratItalic';
     src: url("https://static.igem.wiki/teams/4509/wiki/fonts/montserrat-italic.ttf");
 }
+/* .nav-color{
+    background-color: "#7e5366";
+} */
 body { 
     /* background-image: linear-gradient(#7BD5F5 , #8fcdf8); */
     padding-top: 40px; 
@@ -17,24 +20,50 @@ body {
     /* background-color: #a7c9e2; */
     /* background-image: linear-gradient(#4187e2ef,#8dc1dbd7); */
     /* background-image: linear-gradient(#1a9ee0,#66c5f5e1); */
-    background-color: #1a9ee0;
+    /* background-color: #1a9ee0;  thiss*/
+    background-color: #fde9ee
     /* background-color: #8fcdf8; */
 }
 .left-aligned { margin-left: auto; }
 
-.bg-dark { 
+/* .bg-dark { 
     /* background-color: #1F2F98 !important; */
     /* background-image: linear-gradient(#1F2F98 , #1CA7EC); */
     /* background-image: linear-gradient(#1CA7EC , #79a9ca); */
-    background-image:linear-gradient(#121d61 , #273ab9d3)
+    /* background-image:linear-gradient(#121d61 , #273ab9d3) */
+    /* background-color: #7e5366; */
 
     /* filter: brightness(80%);  */
+/* }  */
+.skltitle{
+    font-family: Montserrat;
+    font-size: larger;
+    color: #ff565f;
+  }
+  .sklbody{
+    font-family: Montserrat;
+    font-size: large;
+    color: black;
+    text-align: justify; 
+
+    text-justify: auto; 
+  }
+.nav-text-color{
+    color: white;
 }
-.bg-hero {
+.nav-text-color:hover{
+    font-size: large;
+    color: yellowgreen; 
+    /* transform: scale(1.5); */
+    text-decoration: none;
+}
+
+/* .bg-hero {
     /* background-image: linear-gradient(#1CA7EC , #a7c9e2); */
 
      /* background-color: #1CA7EC;  */
-    }
+    /* } */ 
+
 
 
 /* CALLOUT */
