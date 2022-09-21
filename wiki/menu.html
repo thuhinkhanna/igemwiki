@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #7e5366;">
+  <div class="container" >
 
     <!---- TEAM NAME ---->
     <a class="navbar-brand" href="#">
       <img src="https://static.igem.wiki/teams/4509/wiki/stockimages/team-logo.jpeg" class="rounded-circle" height="50px">
     </a>
-    <a class="navbar-brand lead" href="#">REC CHENNAI</a>
+    <a class="navbar-brand lead nav-text-color" href="#" >REC CHENNAI</a>
 
     <!---- SMALL SCREEN MENU ICON ---->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,12 +17,12 @@
 
         <!---- HOME ---->
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          <a class="nav-link nav-text-color" href="{{ url_for('index') }}">Home</a>
         </li>
 
         <!---- TEAM ---->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{ url_for('pages', page='team') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle nav-text-color" href="{{ url_for('pages', page='team') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Team
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -35,7 +35,7 @@
 
         <!---- PROJECT ---->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle nav-text-color hover-zoom" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Project
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,7 +54,7 @@
 
         <!---- PARTS ---->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Parts
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,12 +66,12 @@
 
         <!---- SAFETY ---->
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='safety') }}">Safety</a>
+          <a class="nav-link nav-text-color" href="{{ url_for('pages', page='safety') }}">Safety</a>
         </li>
 
         <!---- HUMAN PRACTICES ---->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Human Practices</a>
+          <a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Human Practices</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ url_for('pages', page='education-hp') }}">Education</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='outreach') }}">Outreach</a></li>
@@ -85,7 +85,7 @@
         <!---- AWARDS ---->
         <!-- Check with group later -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Awards
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
