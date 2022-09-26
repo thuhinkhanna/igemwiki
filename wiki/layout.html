@@ -24,8 +24,10 @@
 </head>
 <body>
   {% include 'menu.html' %}
-  <img id="bnrimg" src="{% block bnrurl %}{% endblock %}" style="display: block; width: 100%;">
-    <div class="py-5 mb-5">
+  <div style="width:100%;">
+    <img id="bnrimg" src="{% block bnrurl %}{% endblock %}" style="display: block; width: 100%; height:fit-content;">
+  </div>
+  <div class="py-5 mb-5">
       <!-- #6575dd  add in middle of 3  -->
       <div class="container h-100">
         <div class="row h-100 align-items-center">
