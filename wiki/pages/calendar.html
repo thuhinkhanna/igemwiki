@@ -9,6 +9,8 @@ page_content %}
     --border-radius: 34px;
     --accent-br: 15px;
     width: 400px;
+
+    
   }
   .calendar select {
     background-color: #f3f4f6;
@@ -39,7 +41,7 @@ page_content %}
     text-align: center;
     font-weight: 700;
     font-size: 1.02rem;
-    color: #c5c8ca;
+    color: #00426e;
   }
   .calendar__dates {
     padding: 10px var(--side-padding);
@@ -149,15 +151,7 @@ page_content %}
     box-shadow: 0 10px 10px -6px rgba(23, 82, 255, 0.45);
     transform: translateY(-1px);
   }
-  body {
-    display: grid;
-    place-items: center;
-    background-color: #eaedf2;
-    height: 100vh;
-    font-family: "Nunito", sans-serif;
-    font-size: 14px;
-    margin: 3vmin;
-  }
+
   select,
   button {
     font-family: inherit;
@@ -172,15 +166,21 @@ page_content %}
     appearance: none;
   }
   select {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='960px' height='560px' viewBox='0 0 960 560' enable-background='new 0 0 960 560' xml:space='preserve'%3E%3Cg id='Rounded_Rectangle_33_copy_4_1_'%3E%3Cpath d='M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937 c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937 c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z'/%3E%3C/g%3E%3C/svg%3E");
+    /* background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='960px' height='560px' viewBox='0 0 960 560' enable-background='new 0 0 960 560' xml:space='preserve'%3E%3Cg id='Rounded_Rectangle_33_copy_4_1_'%3E%3Cpath d='M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937 c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937 c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z'/%3E%3C/g%3E%3C/svg%3E"); */
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: calc(100% - var(--side-padding)) center;
   }
 </style>
+
 <div class="row">
-  <div class="col-md-6">
+<<<<<<< HEAD
+  <div class="col-sm-6">
     <div class="calendar">
+=======
+  <div class="col-sm-4">
+    <div class="calendar mb-5">
+>>>>>>> b9b6bb7dbc05eb17a000c3489bc534ae154d80b4
       <div class="calendar__opts">
         <select name="calendar__month" id="calendar__month">
           <option>Jan</option>
@@ -197,12 +197,10 @@ page_content %}
           <option>Dec</option>
         </select>
 
-        <select name="calendar__year" id="calendar__year">
-          <option>2017</option>
-          <option>2018</option>
-          <option>2019</option>
-          <option selected>2020</option>
+        <select name="calendar__year" id="calendar__year">  
+          <option>2022</option>
         </select>
+
       </div>
 
       <div class="calendar__body">
@@ -242,20 +240,16 @@ page_content %}
           <div class="calendar__date calendar__date--selected calendar__date--last-date">
             <span>17</span>
           </div>
-          <div
-            class="calendar__date calendar__date--selected calendar__date--first-date"
-          >
+          <div class="calendar__date calendar__date--selected calendar__date--first-date">
             <span>18</span>
           </div>
           <div class="calendar__date calendar__date--selected">
-            <span>19</span>
+            <span>19</span>∏
           </div>
           <div class="calendar__date calendar__date--selected">
             <span>20</span>
           </div>
-          <div
-            class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"
-          >
+          <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end">
             <span>21</span>
           </div>
           <div class="calendar__date"><span>22</span></div>
@@ -273,7 +267,191 @@ page_content %}
     </div>
   </div>
 
-    <!-- <div class="col-md-6">
+<<<<<<< HEAD
+    <!-- <div class="col-sm-6">
+=======
+
+  <div class="col-sm-4">
+    <div class="calendar mb-5">
+      <div class="calendar__opts">
+        <select name="calendar__month" id="calendar__month">
+          <option>Jan</option>
+          <option>Feb</option>
+          <option>Mar</option>
+          <option>Apr</option>
+          <option selected>May</option>
+          <option>Jun</option>
+          <option>Jul</option>
+          <option>Aug</option>
+          <option>Sep</option>
+          <option>Oct</option>
+          <option>Nov</option>
+          <option>Dec</option>
+        </select>
+
+        <select name="calendar__year" id="calendar__year">  
+          <option>2022</option>
+        </select>
+
+      </div>
+
+      <div class="calendar__body">
+        <div class="calendar__days">
+          <div>M</div>
+          <div>T</div>
+          <div>W</div>
+          <div>T</div>
+          <div>F</div>
+          <div>S</div>
+          <div>S</div>
+        </div>
+
+        <div class="calendar__dates">
+          <div class="calendar__date calendar__date--grey"><span>27</span></div>
+          <div class="calendar__date calendar__date--grey"><span>28</span></div>
+          <div class="calendar__date calendar__date--grey"><span>29</span></div>
+          <div class="calendar__date calendar__date--grey"><span>30</span></div>
+          <div class="calendar__date"><span>1</span></div>
+          <div class="calendar__date"><span>2</span></div>
+          <div class="calendar__date"><span>3</span></div>
+          <div class="calendar__date"><span>4</span></div>
+          <div class="calendar__date"><span>5</span></div>
+          <div class="calendar__date"><span>6</span></div>
+          <div class="calendar__date"><span>7</span></div>
+          <div class="calendar__date"><span>8</span></div>
+          <div class="calendar__date"><span>9</span></div>
+          <div class="calendar__date"><span>10</span></div>
+          <div class="calendar__date"><span>11</span></div>
+          <div class="calendar__date"><span>12</span></div>
+          <div class="calendar__date"><span>13</span></div>
+          <div class="calendar__date"><span>14</span></div>
+          <div class="calendar__date"><span>15</span></div>
+          <div class="calendar__date calendar__date--selected calendar__date--first-date calendar__date--range-start">
+            <span>16</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--last-date">
+            <span>17</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--first-date">
+            <span>18</span>
+          </div>
+          <div class="calendar__date calendar__date--selected">
+            <span>19</span>∏
+          </div>
+          <div class="calendar__date calendar__date--selected">
+            <span>20</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end">
+            <span>21</span>
+          </div>
+          <div class="calendar__date"><span>22</span></div>
+          <div class="calendar__date"><span>23</span></div>
+          <div class="calendar__date"><span>24</span></div>
+          <div class="calendar__date"><span>25</span></div>
+          <div class="calendar__date"><span>26</span></div>
+          <div class="calendar__date"><span>27</span></div>
+          <div class="calendar__date"><span>28</span></div>
+          <div class="calendar__date"><span>29</span></div>
+          <div class="calendar__date"><span>30</span></div>
+          <div class="calendar__date"><span>31</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="calendar mb-5">
+      <div class="calendar__opts">
+        <select name="calendar__month" id="calendar__month">
+          <option>Jan</option>
+          <option>Feb</option>
+          <option>Mar</option>
+          <option>Apr</option>
+          <option selected>May</option>
+          <option>Jun</option>
+          <option>Jul</option>
+          <option>Aug</option>
+          <option>Sep</option>
+          <option>Oct</option>
+          <option>Nov</option>
+          <option>Dec</option>
+        </select>
+
+        <select name="calendar__year" id="calendar__year">  
+          <option>2022</option>
+        </select>
+
+      </div>
+
+      <div class="calendar__body">
+        <div class="calendar__days">
+          <div>M</div>
+          <div>T</div>
+          <div>W</div>
+          <div>T</div>
+          <div>F</div>
+          <div>S</div>
+          <div>S</div>
+        </div>
+
+        <div class="calendar__dates">
+          <div class="calendar__date calendar__date--grey"><span>27</span></div>
+          <div class="calendar__date calendar__date--grey"><span>28</span></div>
+          <div class="calendar__date calendar__date--grey"><span>29</span></div>
+          <div class="calendar__date calendar__date--grey"><span>30</span></div>
+          <div class="calendar__date"><span>1</span></div>
+          <div class="calendar__date"><span>2</span></div>
+          <div class="calendar__date"><span>3</span></div>
+          <div class="calendar__date"><span>4</span></div>
+          <div class="calendar__date"><span>5</span></div>
+          <div class="calendar__date"><span>6</span></div>
+          <div class="calendar__date"><span>7</span></div>
+          <div class="calendar__date"><span>8</span></div>
+          <div class="calendar__date"><span>9</span></div>
+          <div class="calendar__date"><span>10</span></div>
+          <div class="calendar__date"><span>11</span></div>
+          <div class="calendar__date"><span>12</span></div>
+          <div class="calendar__date"><span>13</span></div>
+          <div class="calendar__date"><span>14</span></div>
+          <div class="calendar__date"><span>15</span></div>
+          <div class="calendar__date calendar__date--selected calendar__date--first-date calendar__date--range-start">
+            <span>16</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--last-date">
+            <span>17</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--first-date">
+            <span>18</span>
+          </div>
+          <div class="calendar__date calendar__date--selected">
+            <span>19</span>∏
+          </div>
+          <div class="calendar__date calendar__date--selected">
+            <span>20</span>
+          </div>
+          <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end">
+            <span>21</span>
+          </div>
+          <div class="calendar__date"><span>22</span></div>
+          <div class="calendar__date"><span>23</span></div>
+          <div class="calendar__date"><span>24</span></div>
+          <div class="calendar__date"><span>25</span></div>
+          <div class="calendar__date"><span>26</span></div>
+          <div class="calendar__date"><span>27</span></div>
+          <div class="calendar__date"><span>28</span></div>
+          <div class="calendar__date"><span>29</span></div>
+          <div class="calendar__date"><span>30</span></div>
+          <div class="calendar__date"><span>31</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <!-- <div class="col-sm-6">
+>>>>>>> b9b6bb7dbc05eb17a000c3489bc534ae154d80b4
       <div class="calendar">
         <div class="calendar__opts">
           <select name="calendar__month" id="calendar__month">
