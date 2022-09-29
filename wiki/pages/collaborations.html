@@ -1,10 +1,148 @@
 {% extends "layout.html" %}
   
 {% block title %}Collaborations{% endblock %}
-{% block lead %}Sharing and collaboration are core values of iGEM. We encourage you to reach out and work with other teams on difficult problems that you can more easily solve together.{% endblock %}
+{% block lead %}Collaborations allow us to know about ourselves in a much better sense. Collaboration divides the tasks and multiplies the success. We had the opportunity to collaborate and interact with some of the most passionate and talented teams across the globe. Throughout this competition, we have had the occasion to understand and learn about each other’s project and synthetic biology, while exchanging knowledge that can help us elevate in our experimental work.{% endblock %}
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/collaboration.jpeg{% endblock %}
 {% block page_content %}
 
+<style>
 
+#colab {
+  height: 100vh;
+  width: 100%;
+  background: #fde9ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box1,#box2 {
+  height: 600px;
+  width: 70%;
+  background: #fde9ee;
+  border-radius: 15px;
+  margin: 20px;
+  transition: all ease 0.2s;
+  border: 1px solid rgba(218,74,127,1);
+}
+#box1 {
+  box-shadow: 0px 5px 10px 0px rgba(218,74,127,1);            
+}
+#box2{
+  box-shadow: inset 0px 5px 10px 0px rgba(218,74,127,1);
+}
+#box1:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(218,74,127,1);
+}
+#box2:hover{
+  transform: translateY(5px);
+  box-shadow: inset 0px 10px 20px 2px rgba(218,74,127,1);
+}
+p{
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: justify;
+}
+</style>
+<h1>CHANGE IMAGES, MAKE RESPONSIVE</h1>
+<div id="colab" class="container">
+    <div id="box1">
+        <div class="text-center" style="margin-top: 3%">
+        <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/waterloo6.jpeg" style="width:80%;">
+        </div>
+        <br>
+        <h5 class="text-center">University of Waterloo - Team Waterloo</h5>
+        <br>
+        <p>
+            We had a virtual meeting with University of Waterloo’s iGEM team to learn and discuss our respective projects. We had the privilege of getting to know the team and their project. We  engaged in a brain-storming session that helped us understand ways by which we can improve and raise the standards of our project. In return, we also provided the Waterloo team with some information that they can incorporate in their project.
+        </p>
+    </div>
+    <div id="box2">
+        <div class="text-center" style="margin-top: 3%">
+            <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/questionnaire.png" style="width:57%; height: 275px;">
+        </div>
+        <br>
+        <h5 class="text-center">IIT Delhi - Questionnaire</h5>
+        <br>    
+        <p>
+            The IIT Delhi Team had reached out to us and sent us some questions they had with regards to their project and asking some other general advice. We connected with our iHP Guide, Dr.Venkat and asked the questions sent by the IIT Delhi team. Dr.Venkat shared his insights and answered their questions. We noted down Dr.Venkat’s response and shared those answers to them
+        </p>
+    </div>
+</div>
+<div id="colab" class="container">
+    <div id="box1">
+        <div class="text-center" style="margin-top: 3%">
+        <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/modeling.png" style="width:57%; height: 275px;">
+        </div>
+        <br>
+        <h5 class="text-center">IIT Delhi - Modeling</h5>
+        <br>
+        <p>
+            Our team, this year, needed assistance with computational modeling and IIT-Delhi extended a helping hand. They helped us understand the working of Alpha-fold software.They had also provided us with certain sample codes that helped us enhance our understanding on mathematical modeling.
+        </p>
+    </div>
+    <div id="box2">
+        <div class="text-center" style="margin-top: 3%">
+            <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/questionnaire.png" style="width:57%; height: 275px;">
+        </div>
+        <br>
+        <h5 class="text-center">All India iGEM Meet 2022</h5>
+        <br>    
+        <p>
+            We had participated Virtually in this year’s ALL India iGEM Meet. We had the opportunity to present a poster pertaining to our project, CURLIM and we had answered all the questions raised by the judges. This Meet was the one that helped us connect with the IIT Delhi team. Participating in this event was a real eye-opener since we understood and gained perspective knowledge about so many other teams and their wonderful projects. This meeting was an enthralling and an opportunistic forum for us.
+        </p>
+    </div>
+</div>
+<div id="colab" class="container">
+    <div id="box1">
+        <div class="text-center" style="margin-top: 1%">
+        <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/pridemonth.jpeg" style="width:50%; height:300px;">
+        </div>
+        <br>
+        <h5 class="text-center">IISER-Tirupati India - String Science with PRIDE</h5>
+        <br>
+        <p>
+            Team IISER Tirupati iGEM team had organized a write-up event where teams have to pen down their thoughts regarding the STEM community and how we, as a whole can be more inclusive and welcoming to LGBTQIA+ community.  This was a great initiative and our team members, Marie Jyotsna and Avendhika had taken part in this collaboration by submitting a write-up from their perspectives as to how our community and world should be a safe and welcoming environment for the LGBTQIA+ community.
+        </p>
+    </div>
+    <div id="box2">
+        <div class="text-center" style="margin-top: 1%">
+            <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/questionnaire.png" style="width:57%; height: 275px;">
+        </div>
+        <br>
+        <h5 class="text-center">MIT MAHE - A Collaborative Geo Book</h5>
+        <br>    
+        <p>
+            Team iGEM REC Chennai took part in a fun and educational survey collaboration that was organized by Team MIT_MAHE. We had provided them with information and filled up their survey on our team’s favourite seafood dish and details such as where that aquatic animal can be found, how and why exactly it is famous among our region and the history of that aquatic animal. This collaboration helped us understand more about the chosen aquatic animal and certain unsustainable practices involved in the breeding of this species.
+        </p>
+    </div>
+</div>
+<div id="colab" class="container">
+    <div id="box1">
+        <div class="text-center" style="margin-top: 1%">
+        <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/questionnaire.png" style="width:57%; height: 275px;">
+        </div>
+        <br>
+        <h5 class="text-center">Queens Canada - International Day of World Indigeneous People</h5>
+        <br>
+        <p>
+            Our team had the opportunity to celebrate the International Day of World Indigenous People, thanks to the collaboration offered by Queens University iGEM team. We had to choose an indigenous scientist from our country and make a poster to help appreciate, rejoice and be thankful for the scientific accomplishments that were made possible by them. Our team had chosen Dr.Jagadish Chandra Bose, a revolutionary biologist and a physicist.
+        </p>
+    </div>
+    <div id="box2">
+        <div class="text-center" style="margin-top: 1%">
+            <img class="img img-fluid rounded" src="https://static.igem.wiki/teams/4509/wiki/colab/questionnaire.png" style="width:51%; height: 220px;">
+        </div>
+        <br>
+        <h5 class="text-center">Lambert GA - A creative Cookbook Collaboration</h5>
+        <br>    
+        <p>
+            We had helped the Lamber_Ga iGEM team by curating a healthy cookbook containing super healthy and tasty recipes that represent our proud South Indian culture. Our team member, Abhitha, had helped in finding the perfect dish. Our chosen dishes are Medhu Vadai, Idiyappam and vegetable stew packed with South Indian magic, flavor and its mouth-watering aroma 
+Medhu vadai is an ideal dish packed with protein, vitamin B and so many other essentials. Our Idiyappam with Vegetable stew is the perfect breakfast dish that is low in calories but full of flavor. This dish is a team favorite! 
+To know more about these dishes, you can refer below by clicking the document that contains the recipe!
+Happy cooking :)
+        </p>
+    </div>
+</div>
 
 {% endblock %}
