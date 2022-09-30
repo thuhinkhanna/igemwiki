@@ -15,6 +15,10 @@ body {
     padding-top: 40px; 
     font-family: 'Montserrat';
     background-color: #fde9ee;
+    background-image: url('https://static.igem.wiki/teams/4509/wiki/banners/wiki-bg2.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 .left-aligned { margin-left: auto; }
