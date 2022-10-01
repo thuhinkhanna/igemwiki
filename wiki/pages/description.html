@@ -1,57 +1,89 @@
 {% extends "layout.html" %}
   
 {% block title %}Project Description{% endblock %}
-{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+{% block lead %}{% endblock %}
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/description.jpeg{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Describe how and why you chose your iGEM project.<p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+<style>
+  p{
+    font-size: larger;
+    text-align: justify;
+  }
+  li{
+    font-size: larger;
+    margin-bottom: 0.5%;
+    text-align: justify;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2> Background </h2> <hr>
+      <p>
+        In order to cater the demands of the growing population, production of the goods in the manufacturing units increases day by day. The industries also produce effluents along with the desired products. The effluents are required to be discharged into the water bodies but the most crucial factor to consider is the removal of toxic components prior to discharge[5]. Heavy metals are persistent pollutants in waste water and these trace elements are released into the water bodies from various industries. It gives birth to several environmental and health impacts[3][2].
+      </p>
+      <p>
+        Project Curlim focuses on scavenging cadmium ions from the industrial effluent. Cadmium is a heavy metal that can cause disastrous effects on the ecosystem with its toxic properties. When the effluent containing the heavy metal encounters the sea water, the toxic component from the discharge can be transferred from lower trophic level to higher trophic level within the food web due to biomagnification[1]. 
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h2> Aim of the Project</h2><hr>
+      <p>
+        To construct Moving bed biofilm reactor in the pilot scale and remove the cadmium ions from the industrial discharge with the help of our engineered bacteria Mr.CURLIM.
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h2> Objectives </h2><hr>
+      <ul>
+        <li>To genetically modify an Escherichia coli strain to produce acid phosphatase enzyme.</li>
+        <li>To build a lab scale model of a Moving Bed Biofilm Reactor to achieve optimum conditions for biofilm formation</li>
+        <li>To achieve the bioprecipitation of cadmium in the form of Cadmium Phosphate for successful removal from wastewater effluents.</li>
+      </ul>
+    </div>
+    <div class="col-md-12">
+      <h2> Theory </h2><hr>
+      <p>
+        In  a Moving Bed Biofilm Reactor, an aeration tank with special structures called biocarriers are added. These carriers act as a substratum to which the microbes adhere and form biofilms. Usually, these carriers are less dense than water hence can be easily suspended in wastewater or media. Biofilm formation is promoted with the help of curli proteins[4]. The biofilm should be attached to the biocarriers and the biofilm formed should be sufficient and strong enough to express suffused phosphate enzymes.
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h2> Challenges </h2><hr>
+      <ol>
+        <li>We have chosen E.coli K 12 strain which is a poor biofilm forming strain.</li>
+        <li>Acid phosphatase enzymes should be present on the cell surface of the bacteria so that the enzyme can bind with the phosphate substrate and give free phosphate ions as the product.</li>
+      </ol>
+    </div>
+    <div class="col-md-12">
+      <h2>Master Plan For Project CURLIM</h2><hr>
+      <p>
+        Mr. Curlim has been engineered to perform two major functions:-
+      </p>
+      <ol>
+        <li>To enhance biofilm formation by dual expression of csgD and OmpR234.</li>
+        <li>To express acid phosphatase enzymes on the cell surface. This is achieved with the help of a cell surface tag (OmpA with Linker).</li>
+      </ol>
+      <p>
+        Mr. Curlim will be allowed to form biofilm on the biocarrier. These biocarriers will be introduced into the reactor. Upon addition of the phosphatase substrate, acid phosphatase enzyme will be dephosphorylated. The free phosphate ions available will bind to cadmium in the effluent and form metal phosphate. The metal phosphate is insoluble in aqueous solution and it leads to bioprecipitation of cadmium ions and hence cadmium can be removed easily from the industrial discharge.
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h2> Future Perspective</h2> <hr>
+      <p>
+        We plan on developing an industrial scale version of our bioreactor to scale up the bioremediation process. The E.coli strain that is genetically engineered by Team REC-CHENNAI can be efficiently applied for Wastewater treatment due to its low toxicity level and pathogenicity. The MBBR can be used in the remediation of other heavy metals as well. Acid phosphatase is known to bio precipitate other heavy metals such as Cobalt, Lead and Ferrous along with our metal of interest, Cadmium. Due to its low energy consumption and material requirements, our proposed solution provides a cost-efficient mode of heavy metal removal. 
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h2> References </h2> <hr>
+      <ol>
+        <li>Ali, H., & Khan, E. (2019). Trophic transfer, bioaccumulation, and biomagnification of non-essential hazardous heavy metals and metalloids in food chains/webs—Concepts and implications for wildlife and human health. <i>Human and Ecological Risk Assessment: An International Journal,</i> 25(6), 1353-1376.</li>
+        <li>Hutton, M. (1983). Sources of cadmium in the environment. <i>Ecotoxicology and environmental safety,</i> 7(1), 9-24.</li>
+        <li>Idrees, N., Tabassum, B., Abd_Allah, E. F., Hashem, A., Sarah, R., & Hashim, M. (2018). Groundwater contamination with cadmium concentrations in some West UP Regions, India. <i>Saudi Journal of Biological Sciences,</i> 25(7), 1365-1368.</li>
+        <li>Olsén, A., Wick, M. J., Mörgelin, M., & Björck, L. (1998). Curli, fibrous surface proteins of Escherichia coli, interact with major histocompatibility complex class I molecules. <i>Infection and immunity,</i> 66(3), 944-949.</li>
+        <li>Ravera, O. (1984). Cadmium in freshwater ecosystems. <i>Experientia,</i> 40(1), 1-14. <i>Infection and immunity,</i> 66(3), 944-949.</li>
+      </ol>
     </div>
   </div>
 </div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>A clear and concise description of your project.</li>
-      <li>A detailed explanation of why your team chose to work on this particular project.</li>
-      <li>References and sources to document your research.</li>
-      <li>Use illustrations and other visual resources to explain your project.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Leiden/Description">2019 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Some advice</h2>
-    <hr>
-    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>References</h2>
-    <hr>
-    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
-  </div>
-</div>
-
 {% endblock %}
