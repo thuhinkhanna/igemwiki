@@ -306,7 +306,7 @@ CARDS
 
 .card-caption {
   font-weight: 700;
-  font-family: "Montserrat";
+  font-family: "LucidaUnicode";
 }
 
 
@@ -736,7 +736,7 @@ FONT AWESOME FA CLASS
 /* ======= GENERAL  ======= */
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "Montserrat";
+  font-family: "LucidaUnicode";
   font-weight: 300;
   line-height: 1.5em;
 }

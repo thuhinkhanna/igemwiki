@@ -10,10 +10,20 @@
     font-family: 'MontserratItalic';
     src: url("https://static.igem.wiki/teams/4509/wiki/fonts/montserrat-italic.ttf");
 }
+@font-face{
+    font-family: 'LucidaSans';
+    src: url("https://static.igem.wiki/teams/4509/wiki/fonts/lsans.ttf");
+}
+@font-face{
+    font-family: 'LucidaUnicode';
+    src: url("https://static.igem.wiki/teams/4509/wiki/fonts/l-10646.ttf");
+}
+
+
 
 body {
     padding-top: 40px; 
-    font-family: 'Montserrat';
+    font-family: 'LucidaUnicode';
     background-color: #fde9ee;
     background-image: url('https://static.igem.wiki/teams/4509/wiki/banners/wiki-bg2.jpeg');
     background-repeat: no-repeat;
@@ -24,11 +34,11 @@ body {
 .left-aligned { margin-left: auto; }
 
 .skltitle{
-    font-family: MontserratBoldItalic;
+    font-family: LucidaUnicode;
     color: #422b36;
 }
 .sklbody{
-    font-family: Montserrat;
+    font-family: LucidaUnicode;
     font-size: large;
     color: black;
     text-align: justify; 
