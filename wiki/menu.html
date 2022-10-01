@@ -2,15 +2,30 @@
   <div class="container" >
 
     <!---- TEAM NAME ---->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ url_for('index') }}">
       <img src="https://static.igem.wiki/teams/4509/wiki/stockimages/team-logo.jpeg" class="rounded-circle" height="50px">
     </a>
-    <a class="navbar-brand lead nav-text-color" href="#" >REC CHENNAI</a>
+    <a class="navbar-brand lead nav-text-color" href="{{ url_for('index') }}" >REC CHENNAI</a>
 
     <!---- SMALL SCREEN MENU ICON ---->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler generic-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <input class="generic-hamburger__checkbox" type="checkbox"> <span class="generic-hamburger__bar"></span>
+      <span class="generic-hamburger__bar"></span>
+  
+      <span
+      class="generic-hamburger__bar"></span>
+      <!-- <span class="navbar-toggler-icon"></span> -->
     </button>
+
+
+    <!-- <button class="generic-hamburger">
+      <input class="generic-hamburger__checkbox" type="checkbox"> <span class="generic-hamburger__bar"></span>
+   <span class="generic-hamburger__bar"></span>
+  
+      <span
+      class="generic-hamburger__bar"></span>
+  </button> -->
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto left-aligned">
