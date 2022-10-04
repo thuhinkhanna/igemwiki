@@ -19,7 +19,9 @@
     src: url("https://static.igem.wiki/teams/4509/wiki/fonts/l-10646.ttf");
 }
 
-
+.make-it-hover-green:hover{
+    color: yellowgreen;
+}
 
 body {
     padding-top: 40px; 
