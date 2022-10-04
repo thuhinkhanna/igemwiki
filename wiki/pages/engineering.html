@@ -5,14 +5,166 @@
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/engineering.jpeg{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #1</h4>
-      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.<p>
-      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
+
+<div class="row">
+  <div class="col-md-3">
+    <nav class="h-100 flex-column align-items-stretch pe-4 border-end d-none d-md-block">
+      <nav class="nav nav-pills flex-column">
+        <a style="text-decoration: none;" class="nav-link" href="#overview">Overview</a>
+
+        <a style="text-decoration: none;" class="nav-link" href="#module1">Module 1 : Parts Engineering</a>
+          <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#iteration11">Iteration 1</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#design11">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#build11">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#test11">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#learn11">&nbsp;&nbsp;• Learn</a>
+          <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#iteration12">Iteration 2</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#design12">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#build12">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#test12">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#learn12">&nbsp;&nbsp;• Learn</a>
+
+        <a style="text-decoration: none;" class="nav-link" href="#module2">Module 2 : Reactor Engineering</a>
+          <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#iteration21">Iteration 1</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#design21">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#build21">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#test21">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#learn21">&nbsp;&nbsp;• Learn</a>
+          <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#iteration22">Iteration 2</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#design22">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#build22">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link ms-3 my-1" href="#test22">&nbsp;&nbsp;• Test</a>
+      </nav>
+    </nav>
+  </div>
+
+  <div class="col-md-9">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+      <div id="overview">
+        <div class="bd-callout bd-callout-info">
+          <h2>Overview</h2>
+          <hr>
+          <p>
+            The Engineering Cycle is a step-by-step process for building and maintaining a biological system. It is used to identify troubleshoots and narrow down the idea to one efficient prototype. The first step of the cycle is design, where the team brainstorms an idea and drafts a model design. The next step is to bring the design to life by building the prototype. The third step is to test the prototype and check for errors and efficiency. The third step is followed by the learning cycle where the errors or inefficiencies are rectified. This way the whole cycle repeats again until the project is optimized with the final test run.
+          </p>
+        </div>
+      </div>
+      <div id="module1">
+        <h2>Module 1 : Parts Engineering</h2>
+      </div>
+      <div id="iteration11">
+        <h3 style="text-align: left;">Iteration 1</h3>
+      </div>
+      <div id="design11">
+        <h5>Design</h5>
+        <p>
+          Our goal is to facilitate bioprecipitation of cadmium ions from industrial effluent for which the engineered bacteria should satisfy two major conditions. The bacteria should be able to form biofilm and it should express acid phosphatase enzyme. From the organisms on the white list cataloged by iGEM, we chose E.coli DH5 alpha and E.coli K12 MG1655 strains to check if it would fulfill the conditions[1]. Finally after literature mining and observing biofilm formation in both the strains, E.coli K12 strain was selected. The structure and other physiochemical properties of acid phosphatase enzyme were studied in detail[2]. Dephosphorylation of the substrate takes place when acid phosphatase binds with the phosphate substrate. Bioprecipitation takes place as the metal phosphate is not soluble in aqueous solution. We were introduced to curli biogenesis by Dr.Saravanan during the internal iHP meet. Then, we found out that the ability of the E. coli to produce biofilm is majorly dependent on csgA[3][4].Our initial plan was to modify BBa_K1404006 part submitted by the team INSA Lyon 2010 by linking acid phosphatase gene to csgA with the help of a rigid linker[5]. Thus, the fusion protein will be present attached to the curli of biofilm and will not get washed away by effluents.
+        </p>
+      </div>
+      <div id="build11">
+        <h5>Build</h5>
+        <p>
+          We chose the Biobrick RFC[10] standard as the majority of parts in the Registry database are RFC[10] compatible. Scar sequence for Biobrick RFC[10] was identified and used during virtual plasmid construction with the parts in Benchling. We had the opportunity to meet Dr.Anandan sir during this phase. He pointed out the fact that it would be difficult for the bacteria to achieve a curli- mediated transport of the phosphatase enzyme since the fusion protein shouldn’t affect the biofilm strength and he asked us to predict the fusion protein structure and check the binding strength of the fusion protein.
+        </p>
+      </div>
+      <div id="test11">
+        <h5>Test</h5>
+        <p>
+          To predict the structures and binding strength, we used I-TASSER .We computationally modeled the fusion protein (csgA aphA) with different linkers. Then,We received five predicted models from I-TASSER with a c-score in the range -4.7 to -3.2. <br>
+          FIVE MODELS FROM I TASSER
+        </p>
+      </div>
+      <div id="learn11">
+        <h5>Learn</h5>
+        <p>
+          As suggested by Dr.Anandan during our iHP meeting, the result should be in such a way that the expression of the enzyme should not affect the biofilm production. We were working on E.coli K12 strain which is a poor biofilm forming strain. So the parts that we use in our project should enhance biofilm formation and express the enzyme at the cell surface.
+        </p>
+      </div>
+      <div id="iteration12">
+        <h3 style="text-align: left;">Iteration 2</h3>
+      </div>
+      <div id="design12">
+        <h5>Design</h5>
+        <p>
+          From what we learnt, it is clear that the parts we choose must enhance biofilm formation and express acid phosphatase enzyme at the cell surface in the desired  E.coli K12 MG1655 strain. Hence we planned to modify the composite part BBa_K2229300 submitted by the team iGEM17_TAS_Taipei by replacing the BBa_J23100 promoter with another strong promoter to reduce the burden on the organism and OmpR upregulation will facilitate csgD overexpression which in turn aids in curli biogenesis. This curli composite part BBa_K4509469 is joined with another composite part BBa_K4509669 consisting of a cadmium metal sensing promoter (BBa_K896008), strong RBS (BBa_B0034), cell surface tag (BBa_K103006) linked to acid phosphatase gene (BBa_K4509369), GFP reporter molecule with terminator (BBa_K259006). This composite part has been designed to express the acid phosphatase enzyme on the cell surface.
+        </p>
+      </div>
+      <div id="build12">
+        <h5>Build</h5>
+        <p>
+          According to the design, the parts were constructed using Biobrick RFC[10] standard. We chose the RFC[10] standard because the curli composite part that we chose to modify followed the RFC[10] standard and the parts in the cell surface aphA composite part were all RFC[10] compatible. The scar sequence for RFC[10] was used. We were able to virtually construct the plasmid with the help of Benchling. We are being mentored by iGEM team member Deepak Kumar, who gave us insights about the standard and assembly methods and helped us in construction. OmpR upregulation facilitates csgD overexpression which in turn helps in curli biogenesis and the ompA-acid phosphatase fusion protein is expressed on the cell surface. 
+        </p>
+      </div>
+      <div id="test12">
+        <h5>Test</h5>
+        <p>
+          To predict the structures and binding strength, we used I-TASSER .We computationally modeled the fusion protein (csgA aphA) with different linkers. Then,We received five predicted models from I-TASSER with a c-score in the range. <br>
+          FIVE MODELS FROM I TASSER
+        </p>
+      </div>
+      <div id="learn12">
+        <h5>Learn</h5>
+        <p>
+          As expected, the overexpression of csgD enhanced biofilm formation. From the information obtained by computationally modeling (I TASSER) the fusion protein, the c-scores of the fusion protein after modification have better scores when compared.
+        </p>
+      </div>
+
+      <div id="module1">
+        <h2>Module 2 : Reactor Engineering</h2>
+      </div>
+      <div id="iteration21">
+        <h3 style="text-align: left;">Iteration 1</h3>
+      </div>
+      <div id="design21">
+        <h5>Design</h5>
+        <p>
+          The scope of Project Curlim is to provide an eco-friendly and cost-efficient solution for removal of heavy metals. Bioprecipitation with bacterial enzymes provided effective results in past studies [1]. Our team chose the E.coli K12 strain for the production of phosphatase enzymes which would instigate bioprecipitation in a contained environment. A Moving Bed Biofilm Reactor model was developed to carry out the bioremediation [2].
+        </p>
+      </div>
+      <div id="build21">
+        <h5>Build</h5>
+        <p>
+          The Moving Bed Biofilm reactor consists of a sparger for aeration and agitation. A lab scale version of the bioreactor was built using a conical flask. Substrates were added to meet up with the nutrient requirements for the cells. The biofilm formation was carried out using tiny plastic circular materials called biocarriers. As suggested by our iHP guide Dr. B Anandan, a peristaltic pump was used to circulate the substrate and feed in and out of the reactor.
+        </p>
+      </div>
+      <div id="test21">
+        <h5>Test</h5>
+        <p>
+          The growth of the biofilm on the plastic carriers was less than the expected level. The cells did not adhere well to the biocarriers. The bio carriers have mobility under the provided environment.
+        </p>
+      </div>
+      <div id="learn21">
+        <h5>Learn</h5>
+        <p>
+          Our team realized that plastic bio carriers were not a feasible solution. The conical flask added to the negative efficiency of the reactor.
+        </p>
+      </div>
+      <div id="iteration22">
+        <h3 style="text-align: left;">Iteration 2</h3>
+      </div>
+      <div id="design22">
+        <h5>Design</h5>
+        <p>
+          As advised by our iHP guide Dr. Venkat Nancharaiah, we used charcoal in place of plastics for biocarriers. Dr. Nancharaiah showed us a lab scale version of a Bubble Column Reactor with charcoal and granular technology. He suggested we try a similar approach for the Moving Bed Biofilm Reactor. He also seconded Dr. Anandhan’s idea of using a peristaltic pump for feed and substrate circulation. The lab scale reactor in Kalpakkam used measuring cylinders for reactor body construction.
+        </p>
+      </div>
+      <div id="build22">
+        <h5>Build</h5>
+        <p>
+          Our team shifted to a 2 litre measuring cylinder in place of a conical flask for the reactor’s structure. We used sterilized charcoal blocks as bio carriers for our genetically modified biofilm. Dr. Nancharaiah asked us to consider Fixed Bed Reactor and Sequestrated Bed Reactor. Our team chose to stick with a MBBR as it is more efficient than FBR and SBR under optimum conditions [3].
+        </p>
+      </div>
+      <div id="test22">
+        <h5>Test</h5>
+        <p>
+          There was a successful growth of biofilm. The acid phosphatase enzyme secreted interacted with the heavy metals in the feed, forming Cd-Phosphate complexes and sediment. Thus the bioprecipitation was successfully carried out in the MBBR.
+        </p>
+      </div>
     </div>
   </div>
 </div>
