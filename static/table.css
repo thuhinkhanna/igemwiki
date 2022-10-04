@@ -1,0 +1,17 @@
+.col-property{
+    text-align: center;
+    font-weight: bold;
+    background: #7e5366;
+}
+
+.make-it-bolder{
+    font-weight: 900;
+}
+
+.make-it-normal{
+    font-weight: normal;
+}
+
+.col-color{
+    color: white;
+}
