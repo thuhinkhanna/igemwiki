@@ -1,11 +1,93 @@
 {% extends "layout.html" %}
   
 {% block title %}Part Collection{% endblock %}
-{% block lead %}Describe your parts collection on this page, so the judges can evaluate you for the Best Part Collection award.{% endblock %}
+{% block lead %}All the parts listed in our collection have common attributes in modification. All 5 composite parts have promoter parts added to amplify the expression of the enzymes such as Acid phosphatase and HorseRadish Peroxidase. 
+BBa_K4509669 and BBa_4509769 possess a metal sensitive and a constitutive promoter respectively. The constitutive promoter reduces the burden of the cell as well. Following this, we have BBa_4509569, BBa_4509869 and BBa_4509420, each of which contains different constitutive promoters that increase the expression of the enzymes while reducing cell burden.
+{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
+<h4 style=" margin-bottom: 1em;">Promoters for Better Expression: </h4>
+
+<div class="table-responsive-sm">
+<table class="table table-hover table-responsive-sm">
+  <thead>
+    <tr class="col-property">
+      <th scope="col" class="make-it-bolder col-color" >BioBrick ID</th>
+      <th scope="col" class="make-it-bolder col-color">Name</th>
+      <th scope="col" class="make-it-bolder col-color">Type</th>
+      <th scope="col" class="make-it-bolder col-color">Length</th>
+      <th scope="col" class="make-it-bolder col-color">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="make-it-normal"><a href = "http://parts.igem.org/Part:BBa_K4509669" target="_blank">BBa_K4509669</a></th>
+      <td class="make-it-normal">Cell surface aphA with Cd2+ sensing promote</td>
+      <td class="make-it-normal">Composite with metal sensing promoter</td>
+      <td class = "text-nowrap make-it-normal">2122 bp</td>
+      <td class="px-4 make-it-normal">Increases the expression of Acid phosphatase in the presence of Cd2+</td>
+    </tr>
+    <tr>
+      <th scope="row" class="make-it-normal"><a href="http://parts.igem.org/Part:BBa_K4509769" target="_blank">BBa_K4509769</a></th>
+      <td class="make-it-normal">Cell surface aphA with constitutive promoter</td>
+      <td class="make-it-normal">Composite with constitutive promoter</td>
+      <td class="make-it-normal">2076 bp</td>
+      <td class="px-4 make-it-normal">Increases the cell surface expression of Acid phosphatase.</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://parts.igem.org/Part:BBa_K4509569" target="_blank">BBa_K4509569</a></th>
+      <td>HorseRadish Peroxidase with constitutive promoter J23100</td>
+      <td>Composite with constitutive promoter</td>
+      <td>1120 bp</td>
+      <td class="px-4">Increase in HRP production.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 style = "margin-top: 5em; margin-bottom: 1em;">Promoters for Burden Reduction:</h4>
+
+<div class="table-responsive-sm">
+  <table class="table table-hover table-responsive-sm">
+    <thead>
+      <tr class="col-property">
+        <th scope="col" class="make-it-bolder col-color" >BioBrick ID</th>
+        <th scope="col" class="make-it-bolder col-color">Name</th>
+        <th scope="col" class="make-it-bolder col-color">Type</th>
+        <th scope="col" class="make-it-bolder col-color">Length</th>
+        <th scope="col" class="make-it-bolder col-color">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="make-it-normal"><a href = "http://parts.igem.org/Part:BBa_K4509469" target="_blank">BBa_K4509469</a></th>
+        <td class="make-it-normal">csgD and OmpR234 Dual Expression</td>
+        <td class="make-it-normal">Composite with constitutive promoter</td>
+        <td class = "text-nowrap make-it-normal">1616 bp</td>
+        <td class="px-4 make-it-normal">Acid phosphatase production with reduced cell burden.</td>
+      </tr>
+      <tr>
+        <th scope="row" class="make-it-normal"><a href="http://parts.igem.org/Part:BBa_K4509869" target="_blank">BBa_K4509869</a></th>
+        <td class="make-it-normal">HorseRadish Peroxidase with constitutive promoter J23106</td>
+        <td class="make-it-normal">Composite with constitutive promoter</td>
+        <td class="make-it-normal">1120 bp</td>
+        <td class="px-4 make-it-normal">HRP production with reduced cell burden.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://parts.igem.org/Part:BBa_K4509420" target="_blank">BBa_K4509420</a></th>
+        <td>HorseRadish Peroxidase with constitutive promoter J23116</td>
+        <td>Composite with constitutive promoter.</td>
+        <td>1120 bp</td>
+        <td class="px-4">HRP production with reduced cell burden.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+
+<!-- <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
       <h4>Best Part Collection Special Prize</h4>
@@ -20,6 +102,6 @@
       <p>This page should list all the parts in the collection your team made during your project, explaining how all your parts form a collection, and include direct links to your Parts main pages on the <a href="http://parts.igem.org">Registry</a>. <b>You must add all characterization information for your parts on Parts Main Page on the Registry.</b> You should <b>not</b> put characterization information on this page.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 {% endblock %}
