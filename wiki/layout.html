@@ -7,9 +7,6 @@
     <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
-    <!--Download Font Awesome-->
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
     <!-- Bootstrap CSS -->
     <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
 
@@ -18,10 +15,9 @@
     <link href="{{ url_for('static', filename = 'card.css')}}" rel="stylesheet">
     <link href="{{ url_for('static', filename = 'table.css')}}" rel="stylesheet">
 
-
-
     <!--Download jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <script src="{{ url_for('static', filename = 'timelinr.js') }}"></script>
 
 
@@ -29,21 +25,19 @@
 </head>
 <body>
   {% include 'menu.html' %}
-  <img class="img img-fluid" id="bnrimg" style="margin-top: 2%;" src="{% block bnrurl %}{% endblock %}">
+  <img class="img img-fluid" id="bnrimg" style="margin-top: 2%; width:100%;" src="{% block bnrurl %}{% endblock %}">
   <div class="py-4">
-      <!-- #6575dd  add in middle of 3  -->
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-lg-12">
-            <!--h1 class="display-4 mt-5 mb-2" style="color:#FCF6F5FF; font-family: MontserratBoldItalic;">{{ self.title() }}</h1-->
             <p class="lead mb-5" style="color: #422b36; font-family: LucidaUnicode; text-align: justify; text-justify: inter-word;">{% block lead %}{% endblock %} </p>
           </div>
         </div>
       </div>
     </div>
-  <!--/div-->
+
   <!-- Page Content -->
-  <!-- style="background-image: linear-gradient(#188fcf,#66c5f5e1);" -->
+
   <div class="container" >
     {% block page_content %}{% endblock %}
   </div>
@@ -56,9 +50,6 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
-  <!-- <script src="http://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js"> </script> -->
-
-  
 
 </body>
 </html>
