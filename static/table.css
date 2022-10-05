@@ -15,3 +15,19 @@
 .col-color{
     color: white;
 }
+
+.ml-sm-4{
+    margin-left: 20em;
+}
+
+p{
+    text-align: justify;
+}
+
+#left-align-div{
+    text-align: right;
+}
+
+body{
+    text-align: justify;
+}
