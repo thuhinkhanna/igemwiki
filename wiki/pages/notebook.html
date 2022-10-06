@@ -28,10 +28,11 @@ a {
 	-ms-transition: 0.5s;
 	transition: 0.5s;
 }
-	a:hover,
-	a.selected {
 
-		color: #ffcc00;
+/* Big font like name */
+	a:hover,
+	a.selected { 
+		color: #ffcc00; 
 	}
 
 h1,h2,h4,h5,h6 {
@@ -67,7 +68,7 @@ h1,h2,h4,h5,h6 {
 		}
 			#dates li {
 				list-style: none;
-				width: 190px;
+				width: 3000px;
 				height: 100px;
 				line-height: 100px;
 				font-size: 24px;
@@ -152,7 +153,7 @@ h1,h2,h4,h5,h6 {
       /* left:45%; */
 		#next, #prev {
 			position: absolute;
-			left: 45%;
+			left: 55%;
 			font-size: 70px;
 			width: 38px;
 			height: 22px;
@@ -177,65 +178,70 @@ h1,h2,h4,h5,h6 {
 				#prev.disabled {
 					opacity: 0.2;
 				}
+
+	.small-color{
+		color: azure;
+	}
         
 </style>
 
 <div id="timeline">
   <ul id="dates">
-    <li><a href="#march21" class="selected">1</a></li>
+    <li><a href="#march21" class="selected">March 21</a></li>
     <li><a href="#march23">2</a></li>
-    <!-- <li><a href="#1944">1944</a></li>
-    <li><a href="#1950">1950</a></li>
-    <li><a href="#1971">1971</a></li>
-    <li><a href="#1977">1977</a></li>
-    <li><a href="#1989">1989</a></li> 
-    <li><a href="#1999">1999</a></li>
-    <li><a href="#2001">2001</a></li>
-    <li><a href="#2011">2011</a></li> -->
+    <li><a href="#march25">3</a></li>
+    <li><a href="#march30">4</a></li>
+    <li><a href="#april1">5</a></li>
+    <li><a href="#april6">6</a></li>
+    <li><a href="#april8">7</a></li> 
+    <li><a href="#april9">8</a></li>
+    <li><a href="#april12">9</a></li>
+    <li><a href="#april15">10</a></li>
   </ul>
   <ul id="issues">
     <li id="march21" class="selected">
 		<img src="https://static.igem.wiki/teams/4509/wiki/stockimages/vectorlabwork.svg">
       <h1>March 21</h1>
-      <p>Introduction to iGEM</p>
+      <p class="small-color">Introduction to iGEM</p>
     </li>
     <li id="march23">
 		<img src="https://static.igem.wiki/teams/4509/wiki/stockimages/vectorlabwork.svg">
       <h1>March 23</h1>
       <p>Team recruitment began.</p>
     </li>
-    <!-- <li id="1944">
-      <h1>1944</h1>
+    <li id="march25">
+      <h1>March 25</h1>
       <p>Interviews were conducted for students who showed interest in joining iGEM.</p>
     </li>
-    <li id="1950">
-      <h1>1950</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+    <li id="march30">
+      <h1>March 30</h1>
+      <p>The whole iGEM team was finalised.</p>
     </li>
-    <li id="1971">
-      <h1>1971</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+	<li id="april1">
+		<h1>April 1</h1>
+		<p>First official offline meet-up was held.</p>
+	  </li>
+    <li id="april6">
+      <h1>April 6</h1>
+      <p>1st brainstorming session</p>
     </li>
-    <li id="1977">
-      <h1>1977</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+    <li id="april8">
+      <h1>April 8</h1>
+      <p>Literature review was done</p>
     </li>
-    <li id="1989">
-      <h1>1989</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+    <li id="april9">
+      <h1>April 9</h1>
+      <p>Had a 1st online meet-up with the seniors for getting to know about iGEM and their experience.</p>
     </li>
-    <li id="1999">
-      <h1>1999</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+    <li id="april12">
+      <h1>April 12</h1>
+      <p> Opened the iGEM lab and had the stock check done.</p>
     </li>
-    <li id="2001">
-      <h1>2001</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+    <li id="april15">
+      <h1>April 15</h1>
+      <p>2nd brainstorming session.</p>
     </li>
-    <li id="2011">
-      <h1>2011</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li> -->
+
   </ul>
   <div id="grad_top"></div>
   <div id="grad_bottom"></div>
