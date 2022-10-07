@@ -2,269 +2,419 @@
   
 {% block title %}Notebook{% endblock %}
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/notebook.jpeg{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
 {% block page_content %}
 
-
-
 <style>
-  * {
-	margin: 0;
-	padding: 0;
+
+
+#faq {
+  z-index: 800;
+  max-width: 100em;
+  margin: auto;
+  padding: 0 1em;
+  text-align: center;
 }
 
-body {
-	background: #222;
-	font-family: Georgia, serif;
-	color: #fff;
-	font-size: 14px;
+section.faq {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#faq ul {
+  text-align: left;
+}
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.3s;
+}
+
+#faq .no-select, #faq h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+#faq h1 {
+  color: #000;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#faq h2 {
+  color: #cc071e;
+  line-height: 17px;
+  text-align: left;
+  padding: 15px 15px 0;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#faq p {
+  color: #333;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+  max-height: 46em;
+  will-change: max-height;
+  contain: layout;
+  display: inline-block;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 50px 0 15px;
+  transition: .3s opacity, .6s max-height;
+  hyphens: auto;
+  z-index: 2;
+}
+
+#faq ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+#faq ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /*padding-bottom: 4px;*/
+  /*padding-top: 18px;*/
+  background: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
+  -webkit-tap-highlight-color: transparent;
+}
+#faq ul li + li {
+  margin-top: 15px;
+}
+#faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+#faq ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 28px;
+  right: 15px;
+}
+#faq ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #cc071e;
+  width: 3px;
+  height: 9px;
+}
+#faq ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+#faq ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+#faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  touch-action: manipulation;
+}
+#faq ul li input[type=checkbox]:checked ~ h2 {
+  color: #000;
+}
+#faq ul li input[type=checkbox]:checked ~ p {
+  /*margin-top: 0;*/
+  max-height: 0;
+  transition: .3s;
+  opacity: 0;
+  /*transform: translate(0, 50%);*/
+}
+#faq ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+#faq ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
 }
 
 a {
-	color: #ffffcc;
-	text-decoration: none;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-}
-	a:hover,
-	a.selected {
-
-		color: #ffcc00;
-	}
-
-h1,h2,h4,h5,h6 {
-	text-align: center;
-	color: #ccc;
-	text-shadow: #000 1px 1px 2px;
-	margin-bottom: 5px;
-}
-	h1 {
-		font-size: 18px;
-	}
-	h2 {
-		font-size: 14px;
-	}
-.sociales {
-	text-align: center;
-	margin-bottom: 20px;
+  color: currentColor;
+  transition: .2s ease-in-out;
 }
 
-	#timeline {
-		width: 500px;
-		height: 600px;
-		overflow: hidden;
-		margin: 40px auto;
-		position: relative;
-		background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif') 3px top repeat-y;
-	}
-		#dates {
-			width: 100px;
-			height: 600px;
-			overflow: hidden;
-			float: left;
-		}
-			#dates li {
-				list-style: none;
-				width: 190px;
-				height: 100px;
-				line-height: 100px;
-				font-size: 24px;
-				padding-left: 10px;
-				background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png') left center no-repeat;
-			}
-				#dates a {
-					line-height: 38px;
-					padding-bottom: 10px;
-				}
-				#dates .selected {
-			        font-size: 25px;
-				}
-		
-		#issues {
-			width: 400px;
-			height: 600px;
-			overflow: hidden;
-			float: left;
-		}	
-			#issues li {
-				max-width: 300px; 
-        width: 40\00px;
-				height: 600px;
-				list-style: none;
-         text-align: center; 
+h1, h2, h3, h4 {
+  margin: .3em 0;
+}
 
-			}
-				#issues li.selected img {
-					-webkit-transform: scale(1.1,1.1);
-					-moz-transform: scale(1.1,1.1);
-				    -o-transform: scale(1.1,1.1);
-				    -ms-transform: scale(1.1,1.1);
-				    transform: scale(1.1,1.1);
-				}
-				#issues li img {
-					float: left;
-          width: 200px; 
-					margin: 10px 30px 10px 50px;
-					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
-					zoom: 1;
-					-webkit-transition: all 2s ease-in-out;
-					-moz-transition: all 2s ease-in-out;
-					-o-transition: all 2s ease-in-out;
-					-ms-transition: all 2s ease-in-out; 
-					transition: all 2s ease-in-out;
-					-webkit-transform: scale(0.7,0.7);
-					-moz-transform: scale(0.7,0.7);
-				    -o-transform: scale(0.7,0.7);
-				    -ms-transform: scale(0.7,0.7);
-				    transform: scale(0.7,0.7);
-				}
-				#issues li h1 {
-					color: #ffcc00;
-					font-size: 48px;
-					text-align: center;
-					text-shadow: #000 1px 1px 2px;
-				}
-				#issues li p {
-					font-size: 14px;
-					margin: 10px 20px;
-					font-weight: normal;
-					line-height: 22px;
-					text-shadow: #000 1px 1px 2px;
-				}
-		
-		#grad_top, #grad_bottom {
-			width: 500px;
-			height: 80px;
-			position: absolute;
-		}
-			#grad_top {
-		        top: 10;
-		        background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_top.png') repeat-x;
-			}
-			#grad_bottom {
-		        bottom: 0;
-		        background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_bottom.png') repeat-x;
-			}
-		
-      /* left:45%; */
-		#next, #prev {
-			position: absolute;
-			left: 45%;
-			font-size: 70px;
-			width: 38px;
-			height: 22px;
-			background-position: 0 -44px;
-			background-repeat: no-repeat;
-			text-indent: -9999px;
-			overflow: hidden;
-		}
-			#next:hover,
-			#prev:hover {
-				background-position: 0 0;
-			}
-			#next {
-				bottom: 0;
-				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/next_v.png');
-			}
-			#prev {
-				top: 0;
-				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/prev_v.png');
-			}
-				#next.disabled,
-				#prev.disabled {
-					opacity: 0.2;
-				}
-        
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
 </style>
 
-<div id="timeline">
-  <ul id="dates">
-    <li><a href="#march21" class="selected">1</a></li>
-    <li><a href="#march23">2</a></li>
-    <!-- <li><a href="#1944">1944</a></li>
-    <li><a href="#1950">1950</a></li>
-    <li><a href="#1971">1971</a></li>
-    <li><a href="#1977">1977</a></li>
-    <li><a href="#1989">1989</a></li> 
-    <li><a href="#1999">1999</a></li>
-    <li><a href="#2001">2001</a></li>
-    <li><a href="#2011">2011</a></li> -->
-  </ul>
-  <ul id="issues">
-    <li id="march21" class="selected">
-		<img src="https://static.igem.wiki/teams/4509/wiki/stockimages/vectorlabwork.svg">
-      <h1>March 21</h1>
-      <p>Introduction to iGEM</p>
-    </li>
-    <li id="march23">
-		<img src="https://static.igem.wiki/teams/4509/wiki/stockimages/vectorlabwork.svg">
-      <h1>March 23</h1>
-      <p>Team recruitment began.</p>
-    </li>
-    <!-- <li id="1944">
-      <h1>1944</h1>
-      <p>Interviews were conducted for students who showed interest in joining iGEM.</p>
-    </li>
-    <li id="1950">
-      <h1>1950</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="1971">
-      <h1>1971</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="1977">
-      <h1>1977</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="1989">
-      <h1>1989</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="1999">
-      <h1>1999</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="2001">
-      <h1>2001</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li>
-    <li id="2011">
-      <h1>2011</h1>
-      <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-    </li> -->
-  </ul>
-  <div id="grad_top"></div>
-  <div id="grad_bottom"></div>
-  <a href="#" id="next">+</a>
-  <a href="#" id="prev">-</a>
-</div>
+<div id="faq">
+    <h1>CALENDAR</h1>
+    <ul>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> March </h2>
+        <p>
+            <b>March 21 - Monday</b> <br>
+            Introduction to iGEM <br>
+            <b>March 23 - Wednesday</b> <br>
+            Team recruitment began<br>
+            <b>March 25 - Friday</b> <br>
+            Interviews were conducted for students who showed interest in joining iGEM. <br>
+            <b>March 30 - Wednesday</b> <br />
+            The whole iGEM team was finalised. <br>
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> April </h2>
+        <p>
+            April 1 - Friday  <br>
+            First official offline meet-up was held. <br>
 
+            April 4 - Monday  <br>
+            First official offline meet-up was held. <br>
 
-<script>
+            April 6 - Wednesday  <br>
+            1<sup>st</sup> brainstorming session. <br>
 
-  // $("#next").onclick(function(){
-    
-  //       orientation: 'vertical';
-  //       issuesSpeed: 600;
-  //       datesSpeed: 100;
-  //       arrowKeys: 'true';
-  //       startAt: 3;
-  // });
-    
-    
-    $(function(){
-      $().timelinr({
-        orientation: 'vertical',
-        issuesSpeed: 300,
-        datesSpeed: 100,
-        arrowKeys: 	'true',
-        startAt:	3
-      })
-    });
-    </script>
+            April 8 - Friday  <br>
+            Literature review was done. <br>
+
+            April 9 - Saturday  <br>
+            Had a 1st online meet-up with the seniors for getting to know about iGEM and their experience. <br>
+
+            April 12 - Tuesday  <br>
+            Opened the iGEM lab and had the stock check done. <br>
+
+            April 15 - Friday  <br>
+            2nd brainstorming session. <br>
+
+            April 16 - Saturday  <br>
+            Literature review was done. <br>
+            
+            April 20 - Wednesday  <br>
+            Official group picture was taken. <br>
+
+            April 22 - Friday <br>
+            Fumigation of lab done. <br>
+
+            April 25 - Monday <br>
+            1<sup>st</sup> lab discussion. <br>
+
+            April 28 - Thursday <br>
+            Literature review was done. <br>
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> May </h2>
+        <p>No content</p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> June </h2>
+        <p>
+          June 9 - Thursday <br>
+          Registration of the students into the iGEM REC Chennai Team. <br>
+
+          June 11 - Saturday <br>
+          Accepted as member of REC-CHENNAI iGEM team. <br>
+
+          June 18 - Saturday <br>
+          Arrival of E.coli Alpha strain. <br>
+
+          June 20 - Monday <br>
+          Online google meet for division of works among the team members. <br>
+
+          June 19 - Sunday <br>
+          Grant submission. <br>
+
+          June 23 - Thursday <br>
+          Subculture of the alpha strain. <br>
+          Safety forms submitted. <br>
+
+          June 24 - Friday <br>
+          iGEM kit received. <br>
+
+          June 25 - Saturday <br>
+          iiGEM kit opened. <br>
+
+          June 28 - Tuesday <br>
+          2<sup>nd</sup> subculture done. <br>
+
+          June 29 - Wednesday <br>
+          Submitted safety and security grant. <br>
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> July </h2>
+        <p>
+          July 1 - Friday <br>
+          3<sup>rd</sup> subculture, online meet for team discussion. <br>
+
+          July 5 - Tuesday <br>
+          4<sup>th</sup> subculture and testing viability of mother culture and discussion about the biochemical assay.<br>
+
+          July 8 - Friday <br>
+          Online meet. <br>
+
+          July 9 - Saturday <br>
+          Subculture and fumigation of lab. <br>
+
+          July 12 - Tuesday <br>
+          Offline meetup for work discussion <br>
+
+          July 13 - Wednesday <br>
+          Subculture done. <br>
+
+          July 14 - Thursday <br>
+          DH5 alpha test and reactor building discussions. <br>
+
+          July 16 - Saturday <br>
+          Subculture and confirmation tests. <br>
+
+          July 21 - Thursday <br>
+          Online meet discussion for AIIMS <br>
+
+          July 24 - Sunday <br>
+          AIIMS presentation. <br>
+
+          July 26 - Tuesday <br>
+          Collecting K12 and DH5 alpha strain from IITM. <br>
+
+          July 27 - Wednesday <br>
+          Madras University, Dr. Anand meet. <br>
+
+          July 29 - Friday <br>
+          SBOA HP, Waterloo online meet <br>
+
+          July 30 - Saturday <br>
+          Subculture <br>
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> August </h2>
+        <p>
+          August 3 - Wednesday <br>
+          Online meet to discuss for sponsorship possiblities & college level event. <br>
+
+          August 4 - Thursday <br>
+          Meet in college with Hari Anna and Saravanan sir. Online meet with Madlyn Thompson. <br>
+
+          August 5 - Friday <br>
+          1<sup>st</sup> Night stay for biofilm assay. <br>
+
+          August 6 - Saturday <br>
+          Sacred heart School HP. <br>
+
+          August 8 - Monday <br>
+          Rehersal for game launch program. <br>
+
+          August 9 - Tuesday <br>
+          CURCOLI game launch. <br>
+
+          August 12 - Friday <br>
+          Sponsorship meet in. <br>
+
+          August 14 - Sunday <br>
+          Vijay Anna online meet. <br>
+
+          August 17 - Wednesday <br>
+          Bhavans HP. <br>
+
+          August 20 - Saturday <br>
+          Subculture and 3rd biofilm new protocol attempt. <br>
+
+          August 22 - Monday <br>
+          Successfully biofilms formed. <br>
+
+          August 23 - Tuesday <br>
+          Discussion for beach HP. <br>
+
+          August 25 - Thursday <br>
+          Kalpakkam Scientist meet. <br>
+
+          August 28 - Sunday <br>
+          Beach HP. <br>
+
+          August 29 - Monday <br>
+          Meet with iGEM-Munich. <br>
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2> September </h2>
+        <p>
+          September 2 - Friday <br>
+          Promotion video uploaded. <br> 
+
+          September 6 - Tuesday <br>
+          Meet with Shi from bioscience. <br> 
+
+          September 7 - Wednesday <br>
+          Placed order in Twist Bioscience. <br> 
+
+          September 9 - Friday <br>
+          Night stay for 1<sup>st</sup> Transformation. <br> 
+
+          September 15 - Thursday <br>
+          Final Safety Form submitted. <br> 
+
+          September 18 - Sunday <br>
+          Online meet with Advisors. <br> 
+
+          September 19 - Monday <br>
+          Meet with IIT Delhi. <br> 
+
+          September 21 - Wednesday <br>
+          Night stay for 2<sup>nd</sup> attempt for transformation  <br> 
+
+          September 24 - Saturday <br>
+          Meet with Deepak. <br> 
+        </p>
+      </li>
+      <li>
+
+      <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2> October </h2>
+          <p>No content</p>
+        </li>
+      <li>
+
+    </ul>
+  </div>
 
 {% endblock %}
