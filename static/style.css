@@ -33,7 +33,9 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-
+p{
+    font-size:larger;
+}
 .left-aligned { margin-left: auto; }
 
 .skltitle{
