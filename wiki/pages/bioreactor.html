@@ -5,16 +5,93 @@
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/bioreactor.jpeg{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Gold Medal Criterion #6: Education & Communication</h4>
-      <p>Develop and implement education, science communication, and/or outreach materials related to synthetic biology.<p>
-      <p>All activities must follow Safety policies for <a href="https://responsibility.igem.org/safety-policies/human-subjects">Human Subjects Research</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+<h4>SYNOPSIS</h4>
 
+<p> The goal of our project is to bio precipitate the noxious cadmium ions present in industrial effluents employing our product, an engineered E. coli strain one which provides a strong biofilm medium via curli protein and expresses the acid phosphatase enzyme. These phosphatase enzymes, in spin, emancipate free phosphate ions from the substrate added to the water medium up to a certain tolerable level. Furthermore, the cadmium ions in the effluent combine with these free phosphate ions to form precipitate. Therefore, for this wastewater treatment process to take place, we needed a bioreactor that could complete the aforementioned task under less-than-ideal circumstances while also being mindful of the resources that are available in the medium. </p>
+
+<!-- Insert figure here -->
+
+<h4>COMPREHENDING THE DIFFICULTIES!</h4>
+
+<p>We couldn't just doodle a design on our desk and expect it to be successful across the entire globe. We first designed to develop a Laboratory Adaptable Moving Bed Biofilm Reactor (MBBR) that would simulate the conditions that industries would use to treat cadmium ions considering that this setup would later guide us in determining the necessary specifications for our user-level bioreactor as well as making design predictions. <br> <br>
+  When speaking with Dr. Venkat of the Madras Atomic Power Station in Kalpakkam, he provided the Team with a unique perspective on Lab Scale Reactor Construction. Dr. Anandan, Assistant Professor at Madras University's Tharamani Campus, also provided us with constructive feedback on the environmental and reactor conditions to consider, as well as the Enzyme Kinetics parameters. As a result, we noticed that the Field Adaptable Moving Bed Biofilm Reactor (MBBR) needed to be as simple and configurable as possible to allow for end-user construction using whatever resources they had available. Industries can efficiently determine the best design that fits their needs by providing the necessary growing conditions and design suggestions. This avoids the all-too-common engineering fallacy of designing a product without considering local, real-world conditions.</p>
+
+<!-- INSERT PROCESS FLOW DIAGRAM -->
+
+<h4>RESEARCH AND IMPLEMENTATION</h4>
+
+<h5>THE INITIATION</h5>
+
+<p>Prior to designing our lab reactor, we first required some data. Based on certain published research, the team created an enzyme kinetics model to analyse the activity of the fusion protein. The phosphatase domain of the fusion protein's enzymatic activity was validated using the Michalis Menten equation, with glycerophosphate as a substrate that will react with the catalytic site and inorganic phosphate liberated during catalysis. This activity was compared to the activity of the native protein. To increase accuracy, we also needed to identify some limitations.</p>
+<p>To obtain additional data, we began experimenting with native and engineered E. coli in the lab with tests such as temperature sensitivity and solution pH change during growth. One important piece of information was whether the E. coli would attach to the biocarrier or remain suspended in the medium. The amount of airflow rate was the most important parameter. The bioreactor's design was heavily reliant on this.</p>
+
+<h4>CHOOSING MBBR OVER OTHER REACTORS</h4>
+
+<p>The moving bed biofilm reactor (MBBR) technology is renowned for its rapid wastewater treatment technique. This procedure involves utilizing a suspended, porous polymeric carrier that travels ceaselessly in the bioreactor, causing the active biomass to develop as a biofilm on the carrier's surface. Additionally, rather than floating in the liquid, more than 90% of the biomass is attached to the media. The MBBR technique has become more popular in the modern period due to a number of these qualities. In the current era, the MBBR process is more acceptable due to a number of these qualities. It is a complete mix that is compact and has continuous flow through. It has high stability against load variation, lower process head loss, and requires less reactor maintenance, including air grid cleaning. Because of the self-modifying microbial characteristics of the biofilm, MBBR processing technology can sustainably and effectively treat wastewater with varying organic loads.</p>
+<p>The current study of the team aims to evaluate various process parameters percent carrier media for maximum simultaneous COD, DO, and cadmium removal in the MBBR system, providing valuable results to further optimize the design conditions for complete cadmium removal. Combining our experiments, modelling data, and literature information indicated that we could begin developing our Lab Adaptable Bioreactor.</p>
+
+
+<h4>REACTOR SET UP AND OPERATION</h4>
+<h5>Primary Lab Adaptable Reactor Setup</h5>
+<p>Our design for a Primary Lab Adaptable Reactor Setup includes a cylindrical tank which will serve as the main culturing tank. This setup used two major biocarriers, GAC and Polyethylene plastics, and involved two steps. The first was to drain the media solution after the main tank reached the desired levels of biofilm production, allowing the biocarriers to settle. The tank with the biocarriers is then filled with the feed, which contains the wastewater, phosphate substrate, and microbe nutrients. GAC and Polyethylene plastic were used to provide protected surface areas for microbial biofilm development in the biofilm carriers. This inner surface area protected the growing biofilm from the carrier's shared forces. As an influent source, toxic Cadmium-containing synthetic wastewater was used. Synthetic wastewater was created in the laboratory and used throughout the investigation to maintain a consistent contaminant composition. The effectiveness of MBBR in reducing COD and cadmium was studied. The primary setup included a Half L conical flask, 4L cylinder, a 2-way peristaltic pump to control the inlet and outlet flow, and an aerator with membrane filter to provide aeration and carrier mix-up.</p>
+  
+<div class="table-responsive-sm row">
+  <div class = "offset-md-3 col-md-6">
+  <table class="table table-hover table-responsive-sm">
+    <thead>
+      <tr class="col-property">
+        <th scope="col" class="make-it-bolder col-color" >Name of the Component</th>
+        <th scope="col" class="make-it-bolder col-color">Cost (in USD)</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: center;">
+      <tr>
+        <th scope="row" class="make-it-normal">Measuring Cylinder and Conical Flask</th>
+        <td class="make-it-normal">3</td>
+      </tr>
+      <tr>
+        <th scope="row" class="make-it-normal">Peristaltic air pump</th>
+        <td class="make-it-normal">1.69</td>
+      </tr>
+      <tr>
+        <th scope="row">Air Stone</th>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <th scope="row">Charcoal</th>
+        <td>0.18</td>
+      </tr>
+      <tr>
+        <th scope="row">K 1 media </th>
+        <td>0.3</td>
+      </tr>
+      <tr>
+        <th scope="row">Pipes</th>
+        <td>0.36</td>
+      </tr>
+      <tr>
+        <th scope="row">Membrane Filter</th>
+        <td>0.85</td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: burlywood;">TOTAL</th>
+        <td style="color: burlywood;">6.88</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+  <h4>Lab Scale Reactor Setup</h4>
+  <p>A lab-scale batch reactor with a working volume of 4 L was built from commercially available Plexiglas vessels (size: 10 cm X 30cm). It was divided into two parts. One was an outside water bath thermal insulation layer to keep the temperature at 28 to 37 degrees Celsius, and the other was an inner zone of the reaction site. The air grid and influent pipes were located at the bottom of the reactor, as shown in Figure. Air was supplied from the reactor's bottom at a calculated flow rate of 1.8 m3/h to provide oxygen for the biological activity of the microbial mass as well as to fluidize the carriers. By maintaining their respective HRTs, two separate peristaltic pumps are used to feed the influent to both reactors. Two sludge settlers of half litre capacity are built downstream of the reactors to separate solids from the effluent.</p>
+
+  <p>
+  The biofilm carriers used were made of GAC (0.4-0.5 g/cc) or PE plastic (density 0.94-0.96 g/cm3) and were designed to provide protected surface areas for the development of microbial biofilm. The influent source was synthetic wastewater which contains the carcinogenic Cadmium. The study looked at how MBBR performed in terms of COD and Cadmium reduction.
+  </p>
+<!-- ADD PIC HERE -->
+
+<h3>MEETING TODAY'S CHALLENGES WHILE PREPARING FOR TOMORROW'S NEEDS – FUTURE SCALE UP</h3>
+<p style="text-align: center;">To scale up the bioremediation process, we intend to build an industrial scale version of our bioreactor. Due to its low toxicity and pathogenicity, the genetically modified E. coli strain created by Team REC-CHENNAI can be successfully used for wastewater treatment. The MBBR can also be used to remediate other heavy metals. Along with our metal of interest, Cadmium, acid phosphatase is known to bio precipitate other heavy metals such as Cobalt, Lead, and Ferrous. Our proposed solution is a cost-effective method of heavy metal removal due to its low energy consumption and material requirements.</p>
+<!-- Add vvideo here -->
 {% endblock %}
