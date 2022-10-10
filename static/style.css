@@ -105,6 +105,8 @@ p{
     transition: all .3s;
 }
 
+
+
 .generic-hamburger__checkbox {
     position: absolute;
     top: 0;
@@ -127,6 +129,12 @@ p{
 .generic-hamburger__bar:nth-of-type(3) {
     top: calc(100% - 7px);
 }
+
+.make-it-aligned{
+    padding-right: 1em;
+
+}
+
 /* CALLOUT */
 .bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
 .bd-callout h4 { margin-bottom:.25rem }
