@@ -2,419 +2,212 @@
   
 {% block title %}Notebook{% endblock %}
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/notebook.jpeg{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+{% block lead %}{% endblock %}
 
 {% block page_content %}
 
-<style>
-
-
-#faq {
-  z-index: 800;
-  max-width: 100em;
-  margin: auto;
-  padding: 0 1em;
-  text-align: center;
-}
-
-section.faq {
-  padding-top: 2em;
-  padding-bottom: 3em;
-}
-
-#faq ul {
-  text-align: left;
-}
-.transition, p, ul li i:before, ul li i:after {
-  transition: all 0.3s;
-}
-
-#faq .no-select, #faq h2 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-
-#faq h1 {
-  color: #000;
-  margin-bottom: 30px;
-  margin-top: 0;
-}
-
-#faq h2 {
-  color: #cc071e;
-  line-height: 17px;
-  text-align: left;
-  padding: 15px 15px 0;
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: 1px;
-  display: block;
-  margin: 0;
-  cursor: pointer;
-  transition: .2s;
-}
-
-#faq p {
-  color: #333;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.5;
-  position: relative;
-  overflow: hidden;
-  max-height: 46em;
-  will-change: max-height;
-  contain: layout;
-  display: inline-block;
-  opacity: 1;
-  transform: translate(0, 0);
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 0 50px 0 15px;
-  transition: .3s opacity, .6s max-height;
-  hyphens: auto;
-  z-index: 2;
-}
-
-#faq ul {
-  list-style: none;
-  perspective: 900;
-  padding: 0;
-  margin: 0;
-}
-#faq ul li {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  /*padding-bottom: 4px;*/
-  /*padding-top: 18px;*/
-  background: rgb(255, 255, 255);
-  box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
-  -webkit-tap-highlight-color: transparent;
-}
-#faq ul li + li {
-  margin-top: 15px;
-}
-#faq ul li:last-of-type {
-  padding-bottom: 0;
-}
-#faq ul li i {
-  position: absolute;
-  transform: translate(-6px, 0);
-  margin-top: 28px;
-  right: 15px;
-}
-#faq ul li i:before, ul li i:after {
-  content: "";
-  position: absolute;
-  background-color: #cc071e;
-  width: 3px;
-  height: 9px;
-}
-#faq ul li i:before {
-  transform: translate(-2px, 0) rotate(45deg);
-}
-#faq ul li i:after {
-  transform: translate(2px, 0) rotate(-45deg);
-}
-#faq ul li input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  touch-action: manipulation;
-}
-#faq ul li input[type=checkbox]:checked ~ h2 {
-  color: #000;
-}
-#faq ul li input[type=checkbox]:checked ~ p {
-  /*margin-top: 0;*/
-  max-height: 0;
-  transition: .3s;
-  opacity: 0;
-  /*transform: translate(0, 50%);*/
-}
-#faq ul li input[type=checkbox]:checked ~ i:before {
-  transform: translate(2px, 0) rotate(45deg);
-}
-#faq ul li input[type=checkbox]:checked ~ i:after {
-  transform: translate(-2px, 0) rotate(-45deg);
-}
-a,
-a:visited,
-a:focus,
-a:active,
-a:link {
-  text-decoration: none;
-  outline: 0;
-}
-
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
-}
-
-h1, h2, h3, h4 {
-  margin: .3em 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-
-</style>
-
-<div id="faq">
-    <h1>CALENDAR</h1>
-    <ul>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> March </h2>
-        <p>
-            <b>March 21 - Monday</b> <br>
-            Introduction to iGEM <br>
-            <b>March 23 - Wednesday</b> <br>
-            Team recruitment began<br>
-            <b>March 25 - Friday</b> <br>
-            Interviews were conducted for students who showed interest in joining iGEM. <br>
-            <b>March 30 - Wednesday</b> <br />
-            The whole iGEM team was finalised. <br>
-        </p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> April </h2>
-        <p>
-            April 1 - Friday  <br>
-            First official offline meet-up was held. <br>
-
-            April 4 - Monday  <br>
-            First official offline meet-up was held. <br>
-
-            April 6 - Wednesday  <br>
-            1<sup>st</sup> brainstorming session. <br>
-
-            April 8 - Friday  <br>
-            Literature review was done. <br>
-
-            April 9 - Saturday  <br>
-            Had a 1st online meet-up with the seniors for getting to know about iGEM and their experience. <br>
-
-            April 12 - Tuesday  <br>
-            Opened the iGEM lab and had the stock check done. <br>
-
-            April 15 - Friday  <br>
-            2nd brainstorming session. <br>
-
-            April 16 - Saturday  <br>
-            Literature review was done. <br>
-            
-            April 20 - Wednesday  <br>
-            Official group picture was taken. <br>
-
-            April 22 - Friday <br>
-            Fumigation of lab done. <br>
-
-            April 25 - Monday <br>
-            1<sup>st</sup> lab discussion. <br>
-
-            April 28 - Thursday <br>
-            Literature review was done. <br>
-        </p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> May </h2>
-        <p>No content</p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> June </h2>
-        <p>
-          June 9 - Thursday <br>
-          Registration of the students into the iGEM REC Chennai Team. <br>
-
-          June 11 - Saturday <br>
-          Accepted as member of REC-CHENNAI iGEM team. <br>
-
-          June 18 - Saturday <br>
-          Arrival of E.coli Alpha strain. <br>
-
-          June 20 - Monday <br>
-          Online google meet for division of works among the team members. <br>
-
-          June 19 - Sunday <br>
-          Grant submission. <br>
-
-          June 23 - Thursday <br>
-          Subculture of the alpha strain. <br>
-          Safety forms submitted. <br>
-
-          June 24 - Friday <br>
-          iGEM kit received. <br>
-
-          June 25 - Saturday <br>
-          iiGEM kit opened. <br>
-
-          June 28 - Tuesday <br>
-          2<sup>nd</sup> subculture done. <br>
-
-          June 29 - Wednesday <br>
-          Submitted safety and security grant. <br>
-        </p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> July </h2>
-        <p>
-          July 1 - Friday <br>
-          3<sup>rd</sup> subculture, online meet for team discussion. <br>
-
-          July 5 - Tuesday <br>
-          4<sup>th</sup> subculture and testing viability of mother culture and discussion about the biochemical assay.<br>
-
-          July 8 - Friday <br>
-          Online meet. <br>
-
-          July 9 - Saturday <br>
-          Subculture and fumigation of lab. <br>
-
-          July 12 - Tuesday <br>
-          Offline meetup for work discussion <br>
-
-          July 13 - Wednesday <br>
-          Subculture done. <br>
-
-          July 14 - Thursday <br>
-          DH5 alpha test and reactor building discussions. <br>
-
-          July 16 - Saturday <br>
-          Subculture and confirmation tests. <br>
-
-          July 21 - Thursday <br>
-          Online meet discussion for AIIMS <br>
-
-          July 24 - Sunday <br>
-          AIIMS presentation. <br>
-
-          July 26 - Tuesday <br>
-          Collecting K12 and DH5 alpha strain from IITM. <br>
-
-          July 27 - Wednesday <br>
-          Madras University, Dr. Anand meet. <br>
-
-          July 29 - Friday <br>
-          SBOA HP, Waterloo online meet <br>
-
-          July 30 - Saturday <br>
-          Subculture <br>
-        </p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> August </h2>
-        <p>
-          August 3 - Wednesday <br>
-          Online meet to discuss for sponsorship possiblities & college level event. <br>
-
-          August 4 - Thursday <br>
-          Meet in college with Hari Anna and Saravanan sir. Online meet with Madlyn Thompson. <br>
-
-          August 5 - Friday <br>
-          1<sup>st</sup> Night stay for biofilm assay. <br>
-
-          August 6 - Saturday <br>
-          Sacred heart School HP. <br>
-
-          August 8 - Monday <br>
-          Rehersal for game launch program. <br>
-
-          August 9 - Tuesday <br>
-          CURCOLI game launch. <br>
-
-          August 12 - Friday <br>
-          Sponsorship meet in. <br>
-
-          August 14 - Sunday <br>
-          Vijay Anna online meet. <br>
-
-          August 17 - Wednesday <br>
-          Bhavans HP. <br>
-
-          August 20 - Saturday <br>
-          Subculture and 3rd biofilm new protocol attempt. <br>
-
-          August 22 - Monday <br>
-          Successfully biofilms formed. <br>
-
-          August 23 - Tuesday <br>
-          Discussion for beach HP. <br>
-
-          August 25 - Thursday <br>
-          Kalpakkam Scientist meet. <br>
-
-          August 28 - Sunday <br>
-          Beach HP. <br>
-
-          August 29 - Monday <br>
-          Meet with iGEM-Munich. <br>
-        </p>
-      </li>
-      <li>
-        <input type="checkbox" checked>
-        <i></i>
-        <h2> September </h2>
-        <p>
-          September 2 - Friday <br>
-          Promotion video uploaded. <br> 
-
-          September 6 - Tuesday <br>
-          Meet with Shi from bioscience. <br> 
-
-          September 7 - Wednesday <br>
-          Placed order in Twist Bioscience. <br> 
-
-          September 9 - Friday <br>
-          Night stay for 1<sup>st</sup> Transformation. <br> 
-
-          September 15 - Thursday <br>
-          Final Safety Form submitted. <br> 
-
-          September 18 - Sunday <br>
-          Online meet with Advisors. <br> 
-
-          September 19 - Monday <br>
-          Meet with IIT Delhi. <br> 
-
-          September 21 - Wednesday <br>
-          Night stay for 2<sup>nd</sup> attempt for transformation  <br> 
-
-          September 24 - Saturday <br>
-          Meet with Deepak. <br> 
-        </p>
-      </li>
-      <li>
-
-      <li>
-          <input type="checkbox" checked>
-          <i></i>
-          <h2> October </h2>
-          <p>No content</p>
-        </li>
-      <li>
-
-    </ul>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <span class="h3">March</span>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar21.png"> <p class="text-center">Introduction to iGEM</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar23.png"> <p class="text-center">Team recruitment began</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar25.png"> <p class="text-center">Interviews were conducted for students who showed interest in joining iGEM.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar30.png"> <p class="text-center">The whole iGEM team was finalised.</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <span class="h3">April</span>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar1.png"> <p class="text-center">First official offline meet-up was held.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar4.png"> <p class="text-center"></p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar6.png"> <p class="text-center">1st brainstorming session</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar8.png"> <p class="text-center">Literature review was done</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar9.png"> <p class="text-center">Had a 1st online meet-up with the seniors for getting to know about iGEM and their experience.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar12.png"> <p class="text-center">Opened the iGEM lab and had the stock check done.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar15.png"> <p class="text-center">2nd brainstorming session.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar16.png"> <p class="text-center">Literature review was done</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar20.png"> <p class="text-center">Official group picture was taken.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar22.png"> <p class="text-center">Fumigation of lab done.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar25.png"> <p class="text-center">1st lab discussion.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar28.png"> <p class="text-center">Literature review was done.</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <span class="h3">May</span>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour#collapseFour">
+        <span class="h3">June</span>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar9.png"> <p class="text-center">Registration of the students into the iGEM REC Chennai Team</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar11.png"> <p class="text-center">Accepted as member of REC-CHENNAI iGEM team </p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar18.png"> <p class="text-center">Arrival of E.coli Alpha strain. <br> Online google meet for division of works among the team members.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar19.png"> <p class="text-center">Grant submission</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar23.png"> <p class="text-center">Subculture of the alpha strain. <br> Safety forms submitted.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar24.png"> <p class="text-center">iGEM kit received</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar25.png"> <p class="text-center">iGEM kit opened</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar28.png"> <p class="text-center">2nd subculture done.</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar29.png"> <p class="text-center">Submitted safety and security grant.</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <span class="h3">July</span>
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar1.png"> <p class="text-center">3rd subculture, online meet for team discussion.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar5.png"> <p class="text-center">4th subculture and testing viability of mother culture and discussion about the biochemical assay.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar8.png"> <p class="text-center">Online meet.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar9.png"> <p class="text-center">Subculture and fumigation of lab.</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar12.png"> <p class="text-center">Offline meetup for work discussion</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar13.png"> <p class="text-center">Subculture done</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar14.png"> <p class="text-center">DH5 alpha test and reactor building discussions.</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar16.png"> <p class="text-center">Subculture and confirmation tests</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar21.png"> <p class="text-center">Online meet discussion for AIIMS</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar24.png"> <p class="text-center">AIIMS presentation</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar26.png"> <p class="text-center">Collecting K12 and DH5 alpha strain from IITM</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar27.png"> <p class="text-center">Madras University, Dr. Anand meet</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar29.png"> <p class="text-center">SBOA HP, Waterloo online meet</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar30.png"> <p class="text-center">Subculture</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        <span class="h3">August</span>
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar3.png"> <p class="text-center">Online meet to discuss for sponsorship possiblities & college level event</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar4.png"> <p class="text-center">Meet in college with Hari Anna and Saravanan sir. Online meet with Madlyn Thompson</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar5.png"> <p class="text-center">1st Night stay for biofilm assay </p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar6.png"> <p class="text-center">Sacred heart School HP</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar8.png"> <p class="text-center">Rehersal for game launch program</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar9.png"> <p class="text-center">CURCOLI game launch</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar12.png"> <p class="text-center">Sponsorship meet</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar14.png"> <p class="text-center">Vijay Anna online meet </p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar17.png"> <p class="text-center">Bhavans HP</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar20.png"> <p class="text-center">Subculture and 3rd biofilm new protocol attempt</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar22.png"> <p class="text-center">Successfully biofilms formed</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar23.png"> <p class="text-center">Discussion for beach HP</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar25.png"> <p class="text-center">Kalpakkam Scientist meet</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar28.png"> <p class="text-center">Beach HP</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar29.png"> <p class="text-center">Meet with iGEM-Munich</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        <span class="h3">September</span>
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar2.png"> <p class="text-center">Promotion video uploaded</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar6.png"> <p class="text-center">Meet with Shi from bioscience </p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar7.png"> <p class="text-center">Placed order in Twist Bioscience</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar9.png"> <p class="text-center">Night stay for 1st Transformation</p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar15.png"> <p class="text-center">Final Safety Form submitted</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar18.png"> <p class="text-center">Online meet with Advisors</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar19.png"> <p class="text-center">Meet with IIT Delhi</p> </div>
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar21.png"> <p class="text-center">Night stay for 2nd attempt for transformation </p> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><img class="img" style="width: 60%;" src="https://static.igem.wiki/teams/4509/wiki/notebook/calendar24.png"> <p class="text-center">Meet with Deepak</p> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        <span class="h3">October</span>
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
