@@ -6,11 +6,11 @@
 {% block page_content %}
 
 <style>
-  a {
+  .side-column-link{
     text-decoration: none;
     color: white;
   }
-  a:hover {
+  .side-column-link:hover {
     color: #ec6466;
   }
 </style>
@@ -19,30 +19,30 @@
   <div class="col-md-3 p-4 border-end" style="background-color: #7e5366; height: fit-content; border-radius: 20px;">
     <nav class="h-100 flex-column align-items-stretch pe-4 d-none d-md-block">
       <nav class="nav nav-pills flex-column">
-        <a style="text-decoration: none;" class="nav-link" href="#overview">Overview</a>
+        <a style="text-decoration: none;" class="nav-link side-column-link" href="#overview">Overview</a>
         
-        <a style="text-decoration: none;" class="nav-link" href="#module1">Module 1 : Parts Engineering</a>
-          <a style="text-decoration: none;" class="nav-link ms-3 ." href="#iteration11">Iteration 1</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#design11">&nbsp;&nbsp;• Design</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#build11">&nbsp;&nbsp;• Build</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#test11">&nbsp;&nbsp;• Test</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#learn11">&nbsp;&nbsp;• Learn</a>
-          <a style="text-decoration: none;" class="nav-link ms-3 ." href="#iteration12">Iteration 2</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#design12">&nbsp;&nbsp;• Design</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#build12">&nbsp;&nbsp;• Build</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#test12">&nbsp;&nbsp;• Test</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#learn12">&nbsp;&nbsp;• Learn</a>
+        <a style="text-decoration: none;" class="nav-link side-column-link " href="#module1">Module 1 : Parts Engineering</a>
+          <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#iteration11">Iteration 1</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#design11">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link  ms-3 ." href="#build11">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#test11">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#learn11">&nbsp;&nbsp;• Learn</a>
+          <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#iteration12">Iteration 2</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#design12">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#build12">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#test12">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#learn12">&nbsp;&nbsp;• Learn</a>
 
-        <a style="text-decoration: none;" class="nav-link" href="#module2">Module 2 : Reactor Engineering</a>
-          <a style="text-decoration: none;" class="nav-link ms-3 ." href="#iteration21">Iteration 1</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#design21">&nbsp;&nbsp;• Design</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#build21">&nbsp;&nbsp;• Build</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#test21">&nbsp;&nbsp;• Test</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#learn21">&nbsp;&nbsp;• Learn</a>
-          <a style="text-decoration: none;" class="nav-link ms-3 ." href="#iteration22">Iteration 2</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#design22">&nbsp;&nbsp;• Design</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#build22">&nbsp;&nbsp;• Build</a>
-            <a style="text-decoration: none;" class="nav-link ms-3 ." href="#test22">&nbsp;&nbsp;• Test</a>
+        <a style="text-decoration: none;" class="nav-link side-column-link" href="#module2">Module 2 : Reactor Engineering</a>
+          <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#iteration21">Iteration 1</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#design21">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#build21">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#test21">&nbsp;&nbsp;• Test</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#learn21">&nbsp;&nbsp;• Learn</a>
+          <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#iteration22">Iteration 2</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#design22">&nbsp;&nbsp;• Design</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#build22">&nbsp;&nbsp;• Build</a>
+            <a style="text-decoration: none;" class="nav-link side-column-link ms-3 ." href="#test22">&nbsp;&nbsp;• Test</a>
       </nav>
     </nav>
   </div>
@@ -54,8 +54,7 @@
           <h2>Overview</h2>
           <hr>
           <p>
-            The Engineering Cycle is a step-by-step process for building and maintaining a biological system. It is used to identify troubleshoots and narrow down the idea to one efficient prototype. The first step of the cycle is design, where the team brainstorms an idea and drafts a model design. The next step is to bring the design to life by building the prototype. The third step is to test the prototype and check for errors and efficiency. The third step is followed by the learning cycle where the errors or inefficiencies are rectified. This way the whole cycle repeats again until the project is optimized with the final test run.
-          </p>
+            The Engineering Cycle is a step-by-step method for developing and maintaining a biological  system. It is used to identify problems and narrow down the concept to a single efficient  prototype. The cycle begins with design, in which the team brainstorms an idea and draughts a  model design. The next step is to build the prototype and bring the design to life. The third step  is to put the prototype through its paces and check for errors and efficiency. The third step is  followed by the learning cycle, which corrects any errors or inefficiencies. The cycle is repeated  until the project is optimized with the final test run.           </p>
         </div>
       </div>
       <div id="module1">
@@ -147,25 +146,29 @@
       <div id="design21">
         <h5>Design</h5>
         <p>
-          The scope of Project Curlim is to provide an eco-friendly and cost-efficient solution for removal of heavy metals. Bioprecipitation with bacterial enzymes provided effective results in past studies [1]. Our team chose the <i>E.coli</i> K12 strain for the production of phosphatase enzymes which would instigate bioprecipitation in a contained environment. A Moving Bed Biofilm Reactor model was developed to carry out the bioremediation [2].
+          The primary goal of project CURLIM is to create a method for removing cadmium from effluent. We want to build a bioreactor that facilitates the growth of genetically modified E. coli K12 to  form biofilm, which will produce acid phosphatase. After that, the enzyme will dephosphorylate  the phosphate monomers (substrates) to produce free phosphate. Cadmium phosphate will  precipitate once the free phosphate bonds to the cadmium ions in the effluent. We are designing 
+          a laboratory Adaptable Moving Bed Biofilm Reactor in order to identify the key requirements for our user-level bioreactor and make design predictions (MBBR).          
+        </p>
+        <p>
+          Dr. Venkat of the Madras Atomic Power Station in Kalpakkam gave the Team a unique  perspective on Lab Scale Reactor Construction when they spoke with him. Dr. Anandan,  Assistant Professor at Madras University's Tharamani Campus, also gave us constructive  feedback on the environmental and reactor conditions to take into account, as well as the  Enzyme Kinetics parameters. As a result, we realized that the Field Adaptable Moving Bed  Biofilm Reactor (MBBR) needed to be as simple and configurable as possible so that end-users could build it with whatever resources they had available.
         </p>
       </div>
       <div id="build21">
         <h5>Build</h5>
         <p>
-          The Moving Bed Biofilm reactor consists of a sparger for aeration and agitation. A lab scale version of the bioreactor was built using a conical flask. Substrates were added to meet up with the nutrient requirements for the cells. The biofilm formation was carried out using tiny plastic circular materials called biocarriers. As suggested by our iHP guide Dr. B Anandan, a peristaltic pump was used to circulate the substrate and feed in and out of the reactor.
+          Our design includes a cylindrical tank that will serve as the Primary Lab Adaptable Reactor Setup's primary culturing tank. The CAG OR plastic bio carriers will serve as a surface for the  growth of biofilms. The first step was to drain the media solution after the main tank had  produced the required quantity of biofilm, allowing the bio carriers to settle. The feed, which  contains synthetic effluent, phosphate substrate, and microbe nutrients, is then added to the  tank with the bio carriers. To maintain a consistent contaminant composition, synthetic effluent  was created in the laboratory and used throughout the investigation. The main apparatus,  which was kept, consisted of an aerator with membrane, a 4L cylinder, a 2-way peristaltic pump  to control inlet and output flow, and a half L conical flask. 
         </p>
       </div>
       <div id="test21">
         <h5>Test</h5>
         <p>
-          The growth of the biofilm on the plastic carriers was less than the expected level. The cells did not adhere well to the biocarriers. The bio carriers have mobility under the provided environment.
+          There was an evidential growth of biofilm but it was inefficient. The secreted acid phosphatase enzyme interacted with the heavy metals in the feed, resulting in the formation of Cd-Phosphate  complexes and sediment. Thus, bio-precipitation was performed in the MBBR. 
         </p>
       </div>
       <div id="learn21">
         <h5>Learn</h5>
         <p>
-          Our team realized that plastic bio carriers were not a feasible solution. The conical flask added to the negative efficiency of the reactor.
+          The efficient formation of biofilms necessitates an optimum temperature of 37 degrees Celsius, which the primary adaptable reactor setup could not provide. 
         </p>
       </div>
       <div id="iteration22">
@@ -174,27 +177,30 @@
       <div id="design22">
         <h5>Design</h5>
         <p>
-          As advised by our iHP guide Dr. Venkat Nancharaiah, we used charcoal in place of plastics for biocarriers. Dr. Nancharaiah showed us a lab scale version of a Bubble Column Reactor with charcoal and granular technology. He suggested we try a similar approach for the Moving Bed Biofilm Reactor. He also seconded Dr. Anandhan’s idea of using a peristaltic pump for feed and substrate circulation. The lab scale reactor in Kalpakkam used measuring cylinders for reactor body construction.
+          The team conducted additional research to optimize the environmental and reactor conditions. These investigations resulted in an improved version of the Laboratory Adaptable Moving Bed  Biofilm Reactor (MBBR) which is divided into two parts. The enhanced setup incorporated a  water bath thermal insulation layer outside the reactor tank to keep the temperature between  28 and 37 degrees Celsius, and another was an inner zone of the reaction site. Industries may  effectively choose the best design that suits their demands by offering essential growing  conditions and design recommendations. More information can be found on our <a href="{{ url_for('pages', page='bioreactor') }}" target="_blank">Bioreactor</a> page! 
         </p>
       </div>
       <div id="build22">
         <h5>Build</h5>
         <p>
-          Our team shifted to a 2 litre measuring cylinder in place of a conical flask for the reactor’s structure. We used sterilized charcoal blocks as bio carriers for our genetically modified biofilm. Dr. Nancharaiah asked us to consider Fixed Bed Reactor and Sequestrated Bed Reactor. Our team chose to stick with a MBBR as it is more efficient than FBR and SBR under optimum conditions [3].
-        </p>
+          A 4 L lab-scale batch reactor was constructed using commercially available Plexiglas vessels. It  was split into two sections. One was an outside water bath thermal insulation layer to keep the  temperature between 28 and 37 degrees Celsius, and the other was an inner zone of the 
+          reaction site. The air grid and influent pipes were installed at the reactor's bottom, as shown in  Figure. Air was supplied from the reactor's bottom at a calculated flow rate of 1.8 m3/h to  provide oxygen for the microbial mass's biological activity and to fluidize the carriers. Two  separate peristaltic pumps are used to feed the influent to both reactors while maintaining their  respective HRTs. To separate solids from effluent, two half-liter sludge settlers are built  downstream of the reactors.  
+       </p>
+       <p>
+        The biofilm carriers used were made of GAC (0.4-0.5 g/cc) or PE plastic (density 0.94-0.96  g/cm3) and were designed to provide protected surface areas for microbial biofilm  development. The influent source was carcinogenic Cadmium-containing synthetic wastewater. 
+       </p>
       </div>
       <div id="test22">
         <h5>Test</h5>
         <p>
-          There was a successful growth of biofilm. The acid phosphatase enzyme secreted interacted with the heavy metals in the feed, forming Cd-Phosphate complexes and sediment. Thus the bioprecipitation was successfully carried out in the MBBR.
-        </p>
-      </div>
+          Laboratory Adaptable Moving Bed Biofilm Reactor (MBBR) that would simulate the conditions that industries would use to treat cadmium ions considering that this setup would later guide us  in determining the necessary specifications for our user-level bioreactor as well as making  design predictions.        </div>
       <div id="references2">
         <h3>References <hr></h3>
         <p>
-          1. Chaudhuri, G., Shah, G. A., Dey, P., S., G., Venu-Babu, P., & Thilagaraj, W. R. (2013). Enzymatically mediated bioprecipitation of heavy metals from industrial wastes and single ion solutions by mammalian alkaline phosphatase. Journal of Environmental Science and Health, Part A, 48(1), 79-85. <br>
-          2. McQuarrie, J. P., & Boltz, J. P. (2011). Moving bed Biofilm reactor technology: Process applications, design, and performance. Water Environment Research, 83(6), 560-575. <br>
-          3. Rezaee A., Jorfi S., Soltani R. D. C., (2011), Comparison of the Efficiency of Moving-and Fixed-bed Bioreactors for Treatment of High-strength Synthetic Wastewater. Chemical and Biochemical Engineering Quarterly 25(4). <br>
+          1. J. Xing, R. Hickey, Response in performance of the GAC-fluidized bed reactor process for BTX removal to perturbation in oxygen and nutrient supply, International Biodeterioration &  Biodegradation, Volume 33, Issue 1,1994, Pages 23-39, ISSN 0964-8305, <a href= "https://doi.org/10.1016/0964-8305(94)90053-1">https://doi.org/10.1016/0964-8305(94)90053-1</a>. <br>
+          2. Magdum, Sandip & V., Kalyanraman. (2019). Evaluation of High Rate MBBR to Predict Optimal  Design Parameters for Higher Carbon and Subsequent Ammoniacal Nitrogen Removal. Current  science, 116. 2083-2088. 10.18520/cs/v116/i12/2083-2088. <br>
+          3. Brackin, M.J., McKenzie, D.E., Hughes, B.M. et al. Laboratory-scale evaluation of fluidized bed  reactor technology for biotreatment of maleic anhydride process wastewater. Journal of  Industrial Microbiology 16, 216-223 (1996). <a href="https://doi.org/10.1007/BF01570024">https://doi.org/10.1007/BF01570024</a>. <br>
+          4. Yu N, Zhang D, Lei Y, Wang J, Dong Y, Chen Y. Innovative Coating-Etching Method of Biocarrier  Fabrication for Treating Wastewater with a Low C/N Ratio. Polymers, 2022 Jul 25;14(15):3010.<br>
         </p>
       </div>
     </div>
