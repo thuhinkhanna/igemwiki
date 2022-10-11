@@ -21,6 +21,7 @@
 
 .make-it-hover-green:hover{
     color: #ec6466;
+    font-size: 19px;
 }
 
 body {
@@ -54,7 +55,7 @@ p{
     color: white;
 }
 .nav-text-color:hover{
-    font-size: large;
+    font-size: 19px;
     color: #ec6466; 
     text-decoration: none;
 }
@@ -133,6 +134,15 @@ p{
 .make-it-aligned{
     padding-right: 1em;
 
+}
+
+/* .banner-img{
+    position: relative;
+    z-index: 700;
+} */
+
+.wrapper{
+    position: relative;
 }
 
 /* CALLOUT */
