@@ -20,7 +20,7 @@
 }
 
 .make-it-hover-green:hover{
-    color: yellowgreen;
+    color: #ec6466;
 }
 
 body {
@@ -55,7 +55,7 @@ p{
 }
 .nav-text-color:hover{
     font-size: large;
-    color: yellowgreen; 
+    color: #ec6466; 
     text-decoration: none;
 }
 
