@@ -1,214 +1,155 @@
 {% extends "layout.html" %}
   
 {% block title %}Contribution{% endblock %}
-{% block lead %}Make a useful contribution for future iGEM teams. Use this page to document that contribution.{% endblock %}
-{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/contribution.jpeg
-
-
-
-{% endblock %}
-
+{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/contribution.jpeg{% endblock %}
 
 
 {% block page_content %}
 
 
-<style>
+<h4>Overview</h4>
+<p>
+  Making a valuable contribution to future iGEM Teams has been our main impetus since the beginning  of our project. We benefited greatly from what our predecessors transcribed in their wiki, and we  have decided to do our best to be as useful to future generations of iGEM students as possible. 
+</p>
+
+<h4>Protein-Coding Sequence Modification</h4>
+
+<p>
+  The class B acid phosphatase enzyme coding sequence obtained from NCBI for the project was regrettably incompatible with the BioBrick RFC[10].
+</p>
+<center><img src="https://static.igem.wiki/teams/4509/wiki/before-opt.png" style="margin-top: 1em; width:65%; height:500px;"/></center>
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 1: Acid phosphatase(aphA) coding sequence</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;"> When the sequence from NCBI is uploaded to the iGEM registry, it is evident that the sequence is not compatible with other Biobrick or iGEM standards except RFC[1000]</div>
+
+<p>
+  Therefore, we decided to troubleshoot this by removing the illegal restriction sites by inducing silent mutations by use of IDT's codon optimizing tool. As a result, the protein that is expressed would remain the same while enabling the sequence to comply with the iGEM assembly standard requirement.
+</p>
+
+<center><img src="https://static.igem.wiki/teams/4509/wiki/idt-tool.jpeg" style="margin-top: 1em; width:65%; height:500px;"/></center>
+
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 2: IDT Codon Optimizing Tool</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;"> The figure indicates the illegal restriction sites present in the protein coding sequence</div>
+
+<p>We removed all the illegal restriction sites for the protein-coding sequences of acid phosphatase to be compatible with the BioBrick RFC[10]. We believe that this contribution will make assembly more convenient and universal for future iGEM teams who plan on assembling or synthesizing acid phosphatase in a prokaryotic system.</p>
+
+<center><img src="https://static.igem.wiki/teams/4509/wiki/after-opt.png" style="margin-top: 1em; width:65%; height:500px;"/></center>
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 3: Optimized Acid Phosphatase(aphA) Sequence</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;">The codon-optimized sequence is now compatible with the Biobrick or iGEM standards. </div>
+<p>
+  For more information, please visit our <a href="{{ url_for('pages', page='parts') }}">parts </a> page!
+</p>
+
+<h4>Part Improvement</h4>
+
+<p>
+  Our project Curlim requires increased production of curli fiber for biofilm formation, which guided us to the composite part 
+  <a href="http://parts.igem.org/Part:BBa_K2229300" target="_blank">BBa_K2229300</a> developed by iGEM17_TAS_Taipei. REC-CHENNAI's review studies routed us to discover the burden imparted on the 
+  cell by the existing promoter. The promoter <a href="http://parts.igem.org/Part:BBa_J23100" target="_blank">BBa_J23100</a> offers a strength of 1 au and a burden value in the range of 20.0% ± 9.9%.
+   Studies showed that the burden value of the RBS(B0034) - strong promoter(J23100) amalgamated to be 27.5 ± 8.6%. Thus it is vital to note that biobricks with a burden value >20% - 30% will result in reduced protein synthesis,may be susceptible to becoming less functional or nonfunctional units, and also cause cell death. Considering the above factors 
+   we mindfully chose <a href="http://parts.igem.org/Part:BBa_J23118" target="_blank"> BBa_J23118</a>, a strong promoter from the Anderson Series. This promoter expresses the strength of 0.56 au and produces a burden value between the range of -0.1%±3.8% on the cell. On a final note, we replaced the promoter <a href="http://parts.igem.org/Part:BBa_J23100" target="_blank"> BBa_J23100 </a> with <a href="http://parts.igem.org/Part:BBa_J23100" target="_blank"> BBa_J23118 </a>, thus creating an improved composite part <a href="http://parts.igem.org/Part:BBa_J23100" target="_blank"> BBa_K4509469</a>.
+</p>
+
+<h4>Adding New Parts</h4>
+
+<p>
+  While working on project CURLIM, our team added the upcoming new basic and composite parts to the iGEM registry. The biofilm formation and dephosphorylation processes will be facilitated by the following components.
+</p>
+
+<h6>
+  <a href="http://parts.igem.org/Part:BBa_K4509669" target="_blank">BBa_K4509669</a>
+</h6>
+<p>
+  It employs a metal sensing promoter to help produce acid phosphatase when cadmium is present.
+</p>
+
+<h6>
+  <a href="http://parts.igem.org/Part:BBa_K4509769" target="_blank">BBa_K4509769</a>
+</h6>
+<p>
+  It promotes the synthesis of acid phosphatase as cell surface protein.
+</p>
+
+<h6> 
+  <a href="http://parts.igem.org/Part:BBa_K4509469" target="_blank">BBa_K4509469</a>
+</h6>
+
+<p>
+  It promotes the formation of curli fiber by overexpressing the proteins csgD and OmpR234.
+</p>
+
+<h4>Literature Reference</h4>
+
+<p>
+  The production of more curli fibers for biofilm formation, the synthesis of acid phosphatase enzyme, and the tagging of a reporter gene to identify DNA sequences or monitor gene expression are some of the significant activities carried out by the CURLIM. 
+  During this phase, we came to understand the necessity and significance of detailed literature evaluations pertaining to the functionality, efficacy, applicability, etc., of the components of the project. 
+  Literature evidence supported us and helped us solve problems during multiple investigations. For the benefit of upcoming iGEM teams and researchers, we have included a few references to the parts <a href="http://parts.igem.org/Part:BBa_K259006" target="_blank"> BBa_K259006</a> (GFP-Terminator), <a href="http://parts.igem.org/Part:BBa_k1404006" target="_blank">BBa_k1404006</a> (p70-CsgA, curli generator), and <a href="http://parts.igem.org/Part:BBa_K4509369" target="_blank">BBa_K4509369</a> (Acid phosphatase (aphA)).
+</p>
 
 
+<h4>Team And Working Structure</h4>
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
+<p>
+  Our team has 15 members, which is a large number that necessitates a structured and organized team framework for effective operation. 
+  So, in this section, we present our team's learning, practices, and establishments in order to assist future iGEMers in forming a successful and efficient team. 
+  The flow below depicts a detailed and structured team framework.
+</p>
 
+<h5>Step 1 - Planning</h5>
 
-.mouse_scroll {
-  z-index: -1;
-	display: block;
-	margin: 0 auto;
-	width: 24px;
-  position: absolute;
-  top: 0;
-  right: 0;
-	height: 100px;
-}
+<p>
+  At first, the team chose suitable leaders who were in charge of overseeing the team operations, competition requirements, and deadlines.
+</p>
 
+<p>
+  Second, the team brainstormed all of the project requirements and categorized each team member's strengths in order to assign the right person to the right task. 
+  They were divided into subgroups based on their individual strengths and project requirements. 
+  Every member had to understand the entire project's working process, so the teams were shuffled regularly to ensure equal contribution from all.
+</p>
 
-.m_scroll_arrows
-{
-  display: block;
-  width: 5px;
-  height: 5px;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-   
-  border-right: 2px solid rgb(85, 13, 13);
-  border-bottom: 2px solid rgb(92, 12, 12);
-  margin: 0 0 3px 4px;
-  
-  width: 16px;
-  height: 16px;
-}
+<p>
+  Every subgroup had a leader who assigned tasks to members and mediated communication between subgroup members, the team leader, and other subgroups.
+</p>
 
+<h5>Step 2 - Communication</h5>
 
-.unu
-{
-  margin-top: 1px;
-}
+<p>
+  Communication is essential for project success, so team members should communicate on a regular basis to stay informed about the project's progress.
+</p>
 
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-  
-}
+<ol>
+  <li>Communication between team members:</li>
+  <ul>
+    <li>
+      <p>
+        Our team established protocols from the start to ensure productive team meetings. 
+        An hour before the scheduled meeting, the subgroup would circulate a detailed agenda in the form of digital documents to every other subgroup outlining their workflow of the project, future requirements, and other points to be discussed. 
+        This practice saved time and kept discussions on track. During the discussion, "Minutes of the Meeting - MoM" were jotted down, which included the date, time, attendees, and pointers discussed, which significantly reduced the time we spent on the wiki content.
+      </p>
+    </li>
+  </ul>
 
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  -webkit-animation-direction: alternate;
-  
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
+  <li>Communication between mentors:</li>
+  <ul>
+    <li>
+      <p>
+        Every Friday of the week, we would host a meeting with our mentors where the details of the team meetings would be presented in the form of digital documents and they would suggest improvisations to fix our troubleshoots and help us progress in our work.
+      </p>
+    </li>
+  </ul>
+</ol>
 
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
+<h5> Step 3 - Organize and Implement </h5>
 
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .3s;
-  animation-direction: alternate;
-  
-  
-  margin-top: -6px;
-}
+<p>
+  The team would record the developments and tasks (wet lab, dry lab, outreach, etc.) scheduled for the following week based on the meetings in a "Team Register". 
+  This register also contains information about tasks assigned to a specific member, task protocols, task requirements, and so on. 
+  Upon completion of the task, the member would record the data in a digital document and distribute it to the rest of the team members and to the mentors.
+</p>
+<p>
+  We are confident that strict adherence to these three standards resulted in excellent team coordination and effective results. 
+  As a result, we present our successful team strategy for the benefit of future iGEM teams.
+</p>
 
-.mouse {
-  height: 42px;
-  width: 24px;
-  border-radius: 14px;
-  transform: none;
-  border: 2px solid rgb(26, 58, 165);
-  top: 170px;
-}
-
-.wheel {
-  height: 5px;
-  width: 2px;
-  display: block;
-  margin: 5px auto;
-  background: white;
-  position: relative;
-  
-  height: 4px;
-  width: 4px;
-  border: 2px solid rgb(114, 10, 10);
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-}
-
-.wheel {
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-  -moz-animation: mouse-wheel 0.6s linear infinite;
-  animation: mouse-wheel 0.6s linear infinite;
-}
-
-@-webkit-keyframes mouse-wheel{
-   0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-
-@-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
-}
-@-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-</style>
-
-
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #4</h4>
-      <p>Make a useful contribution for future iGEM teams. Use this page to document that contribution.<p>
-      <p>If you are making a contribution by adding information to an existing Part or creating a new Part, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria. You can use this page to link to that part and include additional information about your contribution.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
-
-
+<div style="text-align: center;"> Best wishes!</div>
 
 {% endblock %}
