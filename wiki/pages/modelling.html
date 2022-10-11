@@ -1,48 +1,375 @@
 {% extends "layout.html" %}
   
 {% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Gold Medal Criterion #3</h4>
-      <p>Use modeling to gain insight into how your project works or should be implemented. Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model Special Prize</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+<style>
+  td{
+    text-align: center;
+  }
+</style>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-    <p>Please note you can compete for both the Gold Medal criterion #3 and the Best Model prize with this page.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
+<div class="row">
+  <div class="col-md-12">
+    <p>
+    The crucial steps in our project include biofilm attachment, production of recombinant proteins and designing the reactor. In order to optimise the vital elements in our project, we created and instigated modelling. We executed mathematical and computational models to answer the following questions:
+    </p>
+    <ol>
+      <li>Is it possible to predict biofilm detachment from biocarrier?</li>
+      <li>What helps in the efficient production of curli fibres?</li>
+      <li>How to identify the important parameters for the over-expression of fusion protein?</li>
+      <li>Why should we learn about the binding affinity of fusion protein and how can it be achieved?</li>
+      <li>Will the active site of acid phosphatase be different in native aphA and aphA present in fused form?</li>
+    </ol>
+    <h2>Module 1: Biofilm Detachment Model</h2><hr>
+    <h4>Theory</h4>
+    <p>
+      The process in which the microorganisms attach to and grow on a surface is called biofilm formation. Biocarriers provide surface for the biofilm attachment. It is essential to understand the steps involved in the formation to derive the model.
+    </p>
+    <p>The stages of biofilm formation are as follows :</p>
     <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
+      <li>Attachment</li>
+      <li>Proliferation</li>
+      <li>Maturation</li>
+      <li>Detachment</li>
+      <li>Dispersion of planktonic cells</li>
     </ul>
+    <!---->
+    <p>
+      Detachment is one of the phases in the biofilm cycle. Since the biofilm is attached to the biocarrier, the detachment phase shouldn't lead to the run off of engineered bacteria. Hence, it is critical to identify when the biofilm present in the biocarriers need replacement. Conditions that govern detachment of biofilm are stress parameter of bacteria, biofilm strength, liquid shear and other properties of the bacteria.
+    </p>
+    <h4>Assumptions</h4>
+    <ol>
+      <li>The biofilm is considered to be homogenous.</li>
+      <li>The biofilm is assumed to have physical properties that do not vary in magnitude with respect to direction of measurement.</li>
+      <li>The entire three dimensional system is considered to be in a two dimensional scenario by assuming all the events occur only in the xy plane.</li>
+      <li>Reattachment is not possible after detachment. However, after detachment, dispersion of planktonic cells can occur and reversion to planktonic growth is possible.</li>
+    </ol>
+    <h4>Derivation</h4>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-1.png" style="width:50%" /></center>
+    <div class="row">
+      <div class="col-md-6">
+        <p><em>C </em>- &nbsp;Yield stress parameter of bacteria </p>
+        <p><em>M<sub>C</sub></em> - Fluidity of the bacteria</p>
+        <p><em>N<sub>C</sub></em> - Flow index of bacteria</p>
+        <p><em>&nbsp;<sup>-1</sup></em> - Power-law index of the model</p>
+        <p><em>L<sub>A</sub></em><sub>&nbsp;</sub> - Strain rate for Acc based on bacterial physical parameters</p>
+        <p><em>L<sub>0</sub></em> - Initial stress tensor based on density</p>
+      </div>
+      <div class="col-md-6">
+        <p><em>a<sub>x</sub></em> - attachment in X axis</p>
+        <p><em>a<sub>y</sub></em>&nbsp; - attachment in Y axis</p>
+        <p><em>g<sub>x</sub></em>&nbsp; - growth in X axis</p>
+        <p><em>g<sub>y</sub></em>&nbsp; - growth in Y axis</p>
+        <p><em>d<sub>x</sub></em>&nbsp; - detachment in X axis</p>
+        <p>d<sub>y</sub> - detachment in Y axis</p>
+      </div>
+    </div>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-2.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-3.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-4.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-5.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-6.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-7.png" style="width:50%" /></center>
+    <h4>Results</h4>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-8.png" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-9.png" style="width:50%" /></center>
+    <p>Gro &rarr; Growth</p>
+    <p>Det &rarr; Detachment</p>
+    <p>Att &rarr; Attachment</p>
+    <h4>References</h4>
+    <ol>
+      <li>
+          <p>C. Picioreanu, M.C.M van Loosdrecht, J.J. Heijnen, &rdquo;Two dimensional model of biofilm detachment caused by internal stress from liquid flow&rdquo;, <em>Biotechnology and Bioengineering</em>, vol. 72, no. 2, pp. 205-218, 2001. <a href="https://doi.org/10.1002/1097-0290(20000120)72:2%3C205::AID-BIT9%3E3.0.CO;2-L">https://doi.org/10.1002/1097-0290(20000120)72:2%3C205::AID-BIT9%3E3.0.CO;2-L</a></p>
+      </li>
+      <li>
+          <p>Picioreanu, C., Van Loosdrecht, M. C., &amp; Heijnen, J. J. (1998). Mathematical modeling of biofilm structure with a hybrid differential‐discrete cellular automaton approach.&nbsp;<em>Biotechnology and bioengineering, 58</em>(1), 101-116. <a href="https://doi.org/10.1002/(SICI)1097-0290(19980405)58:1%3C101::AID-BIT11%3E3.0.CO;2-M">https://doi.org/10.1002/(SICI)1097-0290(19980405)58:1%3C101::AID-BIT11%3E3.0.CO;2-M</a></p>
+      </li>
+      <li>
+          <p>Picioreanu, C., van Loosdrecht, M., &amp; Heijnen, J. (1999). <em>Multidimensional modeling of biofilm structure.</em> Delft University of Technology, Faculty of Applied Sciences.</p>
+      </li>
+      <li>
+          <p>Rittman, B. E. (1982). The effect of shear stress on biofilm loss rate. <em>Biotechnology and bioengineering, 24</em>(2), 501-506. <a href="https://doi.org/10.1002/bit.260240219">https://doi.org/10.1002/bit.260240219</a></p>
+      </li>
+    </ol>
   </div>
 </div>
-
+<div class="row">
+  <div class="col-md-12">
+    <h2>Module 2: Curli Fibre Production</h2><hr>
+    <h4>Theory</h4>
+    <p>
+      The csgBAC operon encodes csgA, csgB and csgC. csgA is the major structural subunit of curli protein and it is mainly responsible for biofilm formation. csgB is  the minor structural subunit and it binds to the extracellular matrix and facilitates the polymerization for the production of curli proteins. csgC is required for the correct assembly of mature curli fimbriae. csgD is the positive transcriptional regulator of csgBAC operon. The transition from the planktonic to the multicellular state of the bacteria is controlled by csgD through regulation of curli genes. To activate csgD gene and produce curli proteins necessary for biofilm formation, upregulation of OmpR is required.
+    </p>
+    <h4>Flowchart</h4>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-10.jpg" style="width:65%; height:350px;" /></center>
+    <h4>Assumptions</h4>
+    <ol>
+      <li>
+          <p>The concentration of gene is considered to be constant.</p>
+      </li>
+      <li>
+          <p>Transcription and translation processes are not hindered due to any disturbance.</p>
+      </li>
+      <li>
+          <p>RNA polymerase is available in adequate quantity.</p>
+      </li>
+      <li>
+          <p>Ribosomes are present in sufficient amounts to aid in translation.</p>
+      </li>
+    </ol>
+    <h4>Derivation</h4>
+    <p>mRNA formed per unit time is given by:</p>
+    <p>d[mRNA] / dt =&nbsp;k<sub>₁</sub>[gene] - d<sub>₁</sub>[mRNA] (1)</p>
+    <p>Protein formed per unit time is given by:</p>
+    <p>d[protein] / dt = &nbsp;k<sub>₂</sub>[mRNA] - d<sub>₂</sub> [protein] (2)</p>
+    <p>Where,</p>
+    <p>k<sub>₁</sub>&nbsp;is transcription rate&nbsp;</p>
+    <p>d<sub>₁</sub>&nbsp;is mRNA degradation rate</p>
+    <p>k<sub>₂</sub> is translation rate&nbsp;</p>
+    <p>d<sub>₂</sub> &nbsp; is protein degradation rate</p>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-11.jpg" style="width:65%; height:350px;" /></center>
+    <br>
+    <p>OmpR protein production:</p>
+    <p>d[mRNA OmpR] / dt &nbsp;= &nbsp;k<sub>₁</sub>[gene OmpR] - d<sub>₁</sub>&nbsp;[mRNA OmpR] (3)</p>
+    <p>d[protein OmpR] / dt &nbsp;= k<sub>₂</sub> [mRNA OmpR] - d<sub>₂</sub>[protein OmpR] (4)</p>
+    <p>&nbsp;</p>
+    <p>OmpR protein has been produced, now OmpR upregulation activates csgD production</p>
+    <p>d[mRNA csgD] / dt= k<sub>₃</sub> [gene csgD] - d<sub>₃</sub> [mRNA csgD] (5)</p>
+    <p>d[protein csgD] / dt = k<sub>₄</sub> [mRNA csgD] - d<sub>₄</sub> [protein csgD] (6)</p>
+    <p>&nbsp;</p>
+    <p>We know that csgD &nbsp;is a positive transcriptional regulator of csg BAC operon. csgD controls the transcription of csgA, csgB and csgC genes.</p>
+    <p>d[mRNA csgA] / dt = k<sub>₅</sub>[gene csgA] - d<sub>₅</sub> [mRNA csgA] (7)</p>
+    <p>d[mRNA csgB] / dt= k<sub>₆</sub>[gene csgB] - d<sub>₆</sub> [mRNA csgB] (8)</p>
+    <p>d[mRNA csgC] / dt = k<sub>₇</sub>[gene csgC] - d<sub>₇</sub> [mRNA csgC] (9)</p>
+    <br>
+    <p>Parameters involved:</p>
+    <div align="center" class="table-responsive-sm">
+      <table class="table table-hover table-responsive-sm">
+          <thead>
+              <tr class="col-property">
+                  <th scope="col" class="make-it-bolder col-color">Parameter</th>
+                  <th scope="col" class="make-it-bolder col-color">Description</th>
+                  <th scope="col" class="make-it-bolder col-color">Values</th>
+                  <th scope="col" class="make-it-bolder col-color">SI unit</th>
+                  <th scope="col" class="make-it-bolder col-color">Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr scope="row">
+                <td>k₁</td>
+                <td>Rate of transcription of OmpR</td>
+                <td>TBF</td>
+                <td>Sec - 1</td>
+                <td> - </td>
+              </tr>
+              <tr scope="row">
+                <td>k₂</td>
+                <td>Rate of translation of OmpR</td>
+                <td>TBF</td>
+                <td>Sec - 1</td>
+                <td> - </td>
+              </tr>
+              <tr>
+                <td>k₃</td>
+                <td>Rate of transcription of csgD</td>
+                <td>0.0214</td>
+                <td>Sec - 1</td>
+                <td>Proshkin, Sergey, et al. 2010</td>
+              </tr>
+              <tr>
+                <td>k₄</td>
+                <td>Rate of translation of csgD</td>
+                <td>TBF</td>
+                <td>Sec - 1</td>
+                <td> - </td>
+              </tr>
+              <tr>
+                <td>k₅ </td>
+                <td>Rate of transcription of csgA</td>
+                <td>0.0921</td>
+                <td>Sec - 1</td>
+                <td>Proshkin, Sergey, et al. 2010</td>
+              </tr>
+              <tr>
+                <td>k₆</td>
+                <td>Rate of transcription of csgB</td>
+                <td>0.0214</td>
+                <td>Sec - 1</td>
+                <td>Proshkin, Sergey, et al. 2010</td>
+              </tr>
+              <tr>
+                <td>k₇</td>
+                <td>Rate of transcription of csgC</td>
+                <td>0.0214</td>
+                <td>Sec - 1</td>
+                <td>Proshkin, Sergey, et al. 2010</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <br>
+    <p style="font-size:smaller;">TBF<sup>*</sup> - To be found</p>
+    <h4>Results</h4>
+    <p>It is evident from the above mentioned flowchart and equations that the mRNA of csgA,csgB and csgC is produced in greater amounts when the transcriptional regulator, csgD protein is formed effectively. Increase or decrease in the csgD protein levels will control the transcription of csgA,csgB and csgC curli genes.</p>
+    <h4>References</h4>
+    <ol>
+      <li>
+          <p>Proshkin, S., Rahmouni, A. R., Mironov, A., &amp; Nudler, E. (2010). Cooperation between translating ribosomes and RNA polymerase in transcription elongation. Science, 328(5977), 504-508. <a href="https://doi.org/10.1126/science.1184939">https://doi.org/10.1126/science.1184939</a></p>
+      </li>
+      <li>
+          <p>Ledezma-Tejeida, D., Altamirano-Pacheco, L., Fajardo, V., &amp; Collado-Vides, J. (2019). Limits to a classic paradigm: most transcription factors in E. coli regulate genes involved in multiple biological processes. Nucleic acids research, 47(13), 6656-6667. <a href="https://doi.org/10.1101/479857">https://doi.org/10.1101/479857</a></p>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Module 3: Fusion Protien Expression</h2><hr>
+    <h4>Theory</h4>
+    <p>The gene is transcribed into mRNA and the mRNA is translated into protein. Promoter strength, plasmid copy number, transcription factors, RNA polymerase are important parameters responsible for effective transcription process. For the effective translation process, ribosome, strength of ribosome binding site(RBS), tRNA play a pivotal role.</p>
+    <h4>Assumptions</h4>
+    <ol>
+      <li>For successful transcription, many components are involved, but in this derivation we are only considering transcription factors while forming the equation.</li>
+      <li>Transcription and translation processes are not repressed by any means.</li>
+    </ol>
+    <h4>Derivation</h4>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-12.jpg" style="width:65%; height:350px;" /></center>
+    <br>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-13.jpg" style="width:65%; height:350px;" /></center>
+    <br>
+    <p>A &rarr; Promoter(<a href="http://parts.igem.org/Part:BBa_J23100">BBa_J23100</a>/<a href="http://parts.igem.org/wiki/index.php?title=Part:BBa_K896008">BBa_K896008</a>)</p>
+    <p>B &rarr; Transcription factor</p>
+    <p>C &rarr; mRNA</p>
+    <p>D &rarr; Fusion protein(OmpA - aphA)</p>
+    <p>K<sub>on</sub> represents binding between A and B</p>
+    <p>K<sub>off</sub> represents unbinding between A and B</p>
+    <p><br></p>
+    <p>d[A.B] / dt = k<sub>on</sub> [A] [B] &ndash; k<sub>off</sub> [AB] &nbsp; &nbsp; &nbsp; &nbsp;(1)</p>
+    <p>d[A] / dt = -k<sub>on</sub> [A] [B] + k<sub>off</sub> [AB] &nbsp; &nbsp; &nbsp; &nbsp;(2)</p>
+    <p>d[B] /dt = &ndash; k<sub>on</sub> [A] [B] + k<sub>off</sub> [AB] &nbsp; &nbsp; &nbsp; &nbsp;(3)</p>
+    <p>[AB] + [A] = C<sub>ₙ</sub> &nbsp;(4)</p>
+    <p>Where C<sub>ₙ</sub> is plasmid copy number.</p>
+    <p>[AB] = C<sub>ₙ</sub> k<sub>on</sub> [B] / k<sub>on</sub> [B] + k<sub>off</sub></p>
+    <p>[AB] = C<sub>ₙ</sub>[B] / k<sub>d</sub> + [B] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4)</p>
+    <p>d[C]/dt = (k<sub>₁</sub>C<sub>ₙ</sub>[B] /&nbsp; k<sub>d</sub> +[B]) - &nbsp;d<sub>₁</sub>[C] &nbsp;&nbsp;&nbsp;&nbsp;(5)</p>
+    <p>d[D] / dt = k<sub>₂</sub> [C] &ndash; d<sub>₂</sub> [D] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6)</p>
+    <p>C = (k<sub>₁</sub> C<sub>ₙ</sub> [B]/ k<sub>d</sub> + [B])/d<sub>₁ &nbsp;</sub>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;(7)</p>
+    <p>D = (k<sub>₂</sub> k<sub>₁</sub> C<sub>ₙ</sub>/ d<sub>₁</sub>d<sub>₂</sub>) (&beta;<sub>o</sub> + (1- &beta;<sub>o</sub>)( [B]<sup>ⁿ</sup>/ k<sub>d</sub> + [B]<sup>ⁿ</sup>) &nbsp;(8)</p>
+    <p>In the Hill function,&nbsp;</p>
+    <p>&beta;<sub>o</sub> is the basal expression</p>
+    <p>n is hill&rsquo;s coefficient</p>
+    <p>k<sub>d&nbsp;</sub>is apparent dissociation constant</p>
+    <h4>Results</h4>
+    <p>Transcription is mainly dependent on promoter and transcription factor. For the gene expression, transcription is one of the rate determining steps. The gene expression is controlled by various factors.Depending on the plasmid copy number and the promoter strength, the protein yield will differ. So for different promoters, the expression of the fusion protein will be different based on the individual promoter strength.</p>
+    <h4>References</h4>
+    <ol>
+      <li>
+          <p>Kim, H., &amp; Gelenbe, E. (2011). Stochastic gene expression modeling with hill function for switch-like gene responses. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 9(4), 973-979. (<a href="https://doi.org/10.1109/TCBB.2011.153">https://doi.org/10.1109/TCBB.2011.153</a>)</p>
+      </li>
+      <li>
+          <p>Likhoshvai, V., &amp; Ratushny, A. (2007). Generalized Hill function method for modeling molecular processes. Journal of bioinformatics and computational biology, 5(02b), 521-531. (<a href="https://doi.org/10.1142/S0219720007002837">https://doi.org/10.1142/S0219720007002837</a>)</p>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Module 4: Binding Affinity</h2><hr>
+    <p>Fusion proteins are formed when two genes are linked together with the help of a linker. In our project,  OmpA gene attached to a linker is joined with aphA gene. The role of OmpA linker is to bring aphA protein to the cell surface. For the efficient fusion protein yield, the binding affinity should be strong. To check the binding affinity of the fusion protein, we have used the iTASSER server. The server provided C - score for the fusion protein. We analysed the C - score to check the quality of the predicted fusion protein model. C - score obtained using the iTASSER helped us understand the quality of the model that we initially built. Then, we worked on creating a better model to increase the binding affinity. We will work on improving the C - score of the fusion protein till it achieves very strong binding affinity. Z-score is the normalized Z-score of the threading alignments. Alignment with a Normalized Z-score greater than 1 means a good alignment. The fusion protein sequence received 2.56 Normalized Z-score and pdb hit in Rank 1 is 1n8nA.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-14.jpg" style="width:70%; height: 300px;" /></center>
+      </div>
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-15.jpg" style="width:70%; height: 300px;" /></center>
+      </div>
+    </div>
+    <br>
+    <h4>References</h4>
+    <ol>
+      <li>
+          <p>Yang, J., Yan, R., Roy, A., Xu, D., Poisson, J., &amp; Zhang, Y. (2015). The I-TASSER Suite: protein structure and function prediction. <em>Nature methods,</em> 12(1), 7-8. (<a href="https://doi.org/10.1038/nmeth.3213">https://doi.org/10.1038/nmeth.3213</a>)</p>
+      </li>
+      <li>
+          <p>Roy, A., Kucukural, A., &amp; Zhang, Y. (2010). I-TASSER: a unified platform for automated protein structure and function prediction.&nbsp;<em>Nature protocols</em>, 5(4), 725-738. (<a href="https://doi.org/10.1038/nprot.2010.5">https://doi.org/10.1038/nprot.2010.5</a>)</p>
+      </li>
+      <li>
+          <p>Zhang, Y. (2008). I-TASSER server for protein 3D structure prediction.<em>&nbsp;BMC bioinformatics</em>, 9(1), 1-8. (<a href="https://doi.org/10.1186/1471-2105-9-40">https://doi.org/10.1186/1471-2105-9-40</a>)</p>
+      </li>
+  </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Module 5: Alphafold</h2><hr>
+    <p>To check the model confidence we used another software called AlphaFold. The confidence score of the functional protein domains in our structure such as aphA and ompA range from confident to very confident (blue to dark blue) with slight distortion and lower confidence as a result of the linker molecule between the two major protein domains.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-16.png" style="width:80%; height: 350px;" /></center>
+      </div>
+      <div class="col-md-6">
+        <img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-17.png" style="width:80%; height: 350px;" />
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-19.png" style="width:60%; height: 300px;" /></center>
+      </div>
+      <div class="col-md-6">
+        <img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-18.png" style="width:60%; height: 250px;" />
+      </div>
+    </div>
+    <br>
+    <p>Our pLDDT score for amino acids also has high confidence for the two protein domains with some distortions predicted due to the presence of linker between the two protein domains.</p>
+    <br>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-20.png" style="width:35%; height: 350px;" /></center>
+    <br>
+    <p>Overall, considering our confidence scores, pLDDT, and Predicted aligned Error, we concluded that our fusion protein system is functional in the expected manner and we proceeded with construction.</p>
+    <h4>References</h4>
+    <ol>
+      <li>
+          <p>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... &amp; Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583-589. (<a href="https://doi.org/10.1038/s41586-021-03819-2">https://doi.org/10.1038/s41586-021-03819-2</a>)</p>
+      </li>
+      <li>
+          <p>Mirdita, M., Sch&uuml;tze, K., Moriwaki, Y., Heo, L., Ovchinnikov, S., &amp; Steinegger, M. (2022). ColabFold: making protein folding accessible to all. Nature Methods, 1-4. (<a href="https://doi.org/10.1038/s41592-022-01488-1">https://doi.org/10.1038/s41592-022-01488-1</a>)</p>
+      </li>
+      <li>
+          <p>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... &amp; Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583-589. (<a href="https://doi.org/10.1038/s41586-021-03819-2">https://doi.org/10.1038/s41586-021-03819-2</a>)</p>
+      </li>
+      <li>
+          <p>Mirdita, M., Sch&uuml;tze, K., Moriwaki, Y., Heo, L., Ovchinnikov, S., &amp; Steinegger, M. (2022). ColabFold: making protein folding accessible to all. Nature Methods, 1-4.(<a href="https://doi.org/10.1038/s41592-022-01488-1">https://doi.org/10.1038/s41592-022-01488-1</a>)</p>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Module 6: Aligning Native aphA and OmpA - aphA</h2><hr>
+    <p>The native acid phosphatase will have an active site for substrate binding. The conformation of the active site in aphA shouldn’t change when aphA is present in fused form. To check if there is any change in the active sites, we have made use of PyMOL. We have utilised the ‘align’ function in PyMOL which performed sequence alignment and structural superimposition. We aligned OmpA-aphA model  predicted by iTASSER and OmpA-aphA model predicted by AlphaFold Colab with the native aphA. We observed that the aphA in OmpA-aphA fused form and the native aphA superimposed perfectly and thus confirming that the active site  of aphA was not disturbed. Hence, it is proved that there is no difference in the active sites of native aphA and OmpA-aphA.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-21.jpg" style="width:70%; height: 350px;" /></center>
+      </div>
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-22.jpg" style="width:70%; height: 350px;" /></center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <p style="margin-left:20%; margin-right:20%"><i>iTASSER fusion protein prediction and native acid phosphatase aligned using PyMOL</i></p>
+      </div>
+      <div class="col-md-6">
+        <p style="margin-left:20%; margin-right:20%"><i>Alphafold fusion protein prediction and native acid phosphatase aligned using PyMOL</i></p>
+      </div>
+    </div>
+    <h4>References</h4>
+    <ol>
+      <li><p>Schrödinger, L., & DeLano, W. (2020). PyMOL. Retrieved from <a href="http://www.pymol.org/pymol">PyMOL</a></p></li>
+    </ol>
+  </div>
+</div>
 {% endblock %}
