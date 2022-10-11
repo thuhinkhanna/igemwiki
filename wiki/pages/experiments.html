@@ -5,25 +5,383 @@
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/experiments.jpeg{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>Describe the research, experiments, and protocols you used in your iGEM project. These should be detailed enough for another team to repeat your experiments.</p>
-    <p>If you made Parts this year, please remember to put all information, characterization, and measurement data on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</p>
+<div id="MiniPrep" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>MINI PREP <hr></h3>
+  <h5>Materials Required :</h5>
+  <p>
+    1. Resuspension buffer- 50mM Tris•HCl (pH = 8), 10mM EDTA, 100μg/ml RNase A <br>
+    2. Lysis buffer - 200mM NaOH, 1% SDS <br>
+    3. Precipitation buffer - 3M potassium acetate (pH = 5.5) 
+  </p>
+  <h5>Procedure :</h5>
+  <p>
+    1. Grow 2 to 6ml culture O/N <br>
+    2. Transfer 2ml (at a time) to 2ml microcentrifuge tube(s) and pellet at 14000 rpm for 5 minutes. Discard supernatant and repeat as necessary <br>
+    3. Resuspend in 300μl ice-cold P1 <br>
+    4. Add 300μl P2, gently invert 3x. Quickly add 300μl P3 and invert 3x <br>
+    5. Spin at 14000 rpm for 10 minutes at room temperature <br>
+    6. Retain supernatant in 1.5ml microcentrifuge tube <br>
+    7. Add 650μl of 100% isopropanol, gently invert, and incubate for 10 minutes at room temperature <br> 
+    8. Spin at 14000 rpm for 10 minutes, then discard supernatant <br>
+    9. Wash pellet with 500μl of cold 70% ethanol <br>
+    10. Spin at 14000 rpm for 5 minutes <br>
+    11. Discard the supernatant. Carefully tap the tube to remove remaining ethanol. Dry pellet in vacuum. <br>
+    12. Resuspend the pellet in 20μl of sterile ddH2O or TE buffer. Nanodrop to determine concentration. Store at -20°C <br>
+  </p>
+</div>
+
+<div id="PCR" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>PCR <hr></h3>
+  <h5>Procedure :</h5>
+  <h5>1. PCR Setup</h5>
+  <div class="row">
+    <div class="col" style="padding-left: 10%;">
+      <p>
+        2X master mix                  <br>
+        Forward primer (10 picomol/Ul) <br>
+        Reverse primer (10 picomol/Ul) <br>
+        cDNA (100ng)                   <br>
+        NFW                            <br>
+                                       <br>
+      </p>
+    </div>
+    <div class="col">
+      10 ul <br>
+      1 ul <br>
+      1 ul <br>
+      2 ul <br>
+      6 ul <br>
+      20 ul <br>
+    </div>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Nantes/Experiments">2019 Nantes</a></li>
-      <li><a href="https://2019.igem.org/Team:TU_Eindhoven/Experiments">2019 TU Eindhoven</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Demonstrate">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Amsterdam/Experiments">2020 Amsterdam</a></li>
-      <li><a href="https://2020.igem.org/Team:NCTU_Formosa/Experiments">2020 NCTU Formosa</a></li>
-      <li><a href="https://2020.igem.org/Team:USAFA/Experiments">2020 USAFA</a></li>
-    </ul>
+  <h5>2. Temperature Profile</h5>
+  <div class="row">
+    <div class="col" style="padding-left: 10%;">
+      <p>
+        Initial Denaturation <br>
+        Denaturation         <br>
+        Annealing            <br> 
+        Extensive            <br> 
+        Final temperature    <br>
+      </p>
+    </div>
+    <div class="col">
+      :   95 degree celsius- 5mins <br>
+      :   95 degree celsius- 30sec <br>
+      :   20 sec  (Ta = Tm - 5) <br>
+      :   72 degrees celsius- 1kb 1min (depends on length) <br>
+      :   72 degrees celsius- 5 to 10 min   <br>
+    </div>
   </div>
+</div>
+
+<div id="AgaroseGelElectrophoresis" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Agarose Gel Electrophoresis <hr></h3>
+  <h5>Materials Required :</h5>
+  <p>
+    1. TAE (EDTA, Acetate, Tris-base) <br>
+    2. Agarose <br>
+    3. Ethidium bromide <br>
+    4. Casting tray <br>
+    5. Well combs <br>
+    6. Voltage source <br>
+    7. Gel box <br>
+    8. UV light source <br>
+    9. Microwave
+  </p>
+  <h5>Procedure :</h5>
+  <p>
+    1. Make 1% Agarose Gel ( Mix 1g of Agarose powder with 100mL of 1X TAE buffer. <br>
+    2. Microwave for 1-3 min until the agarose is completely dissolved. <br>
+    3. Let the agarose solution cool down. <br>
+    4. Add ethidium bromide (EtBr) to the agarose solution of approximately 0.2-0.5 μg/mL (usually about 2-3 μl of lab stock solution per 100 mL gel). EtBr binds to the DNA and allows you to visualize the DNA under ultraviolet (UV) light. <br>
+    5. Pour the agarose into a gel tray with the well comb in place. <br>
+    6. Let the agarose solution set. <br>
+    7. Once solidified, place the agarose gel into the gel box (electrophoresis unit). <br>
+    8. Fill the gel box with 1xTAE (or TBE) until the gel is covered. <br>
+    9. Add loading buffer to each of your DNA samples.(Loading buffer serves two purposes: 1) it provides a visible dye that helps with gel loading and allows you to gauge how far the DNA has migrated; 2) it contains a high percentage of glycerol that increases the density of your DNA sample). <br>
+    10. Carefully load a molecular weight ladder into the first lane of the gel. <br>
+    11. Carefully load your samples into the additional wells of the gel. <br>
+    12. Run the gel at 80-150 V until the dye line is approximately 75-80% of the way down the gel.Turn OFF power, disconnect the electrodes from the power source, and then carefully remove the gel from the gel box. <br>
+    13. Using any device that has UV light, visualize your DNA fragments. <br>
+    14. Using the DNA ladder in the first lane as a guide , you can infer the size of the DNA in your sample lanes.
+  </p>
+  <h4>Gel Extraction</h4>
+  <h5>Procedure :</h5>
+  <p>
+    1. Once you have run your gel, move it to an open UV box, remove it from any gel tray as plastic will block much of the UV and with a clean, sterile razor blade, slice the desired DNA fragment from the gel. <br>
+    2. Place the gel in a labeled microfuge tube. <br>
+    3. Using a scale, weigh the gel fragment because it is directly proportional to its liquid volume and this is used to determine how much of each buffer to add during the DNA isolation step. <br>
+    4. Add 200 μL Binding Buffer (NTI) per 100 mg gel. <br>
+    5. Incubate the mixture at 50ºC for 5-10 minutes or until the gel has completely melted. <br>
+    6. Add the above mix to a EZ column and let it sit for 2 min, and centrifuge at 11, 000 x g for 30s at room temperature. <br>
+    7. Discard liquid and add 750  μL of wash buffer and centrifuge at 10000 rpm for 2min. <br>
+    8. Repeat the step twice and discard the flow-through liquid and re-use the collection tube. <br>
+    9. Place the EZ column into a clean 1.5 mL eppendorf tube. Add 15-30 μL of Elution Buffer (10 mM Tris-HCl, pH 8.5) directly onto the column matrix and incubate at room temperature for 1 minute. Centrifuge for 1 minute at 11,000 x g to elute DNA. 
+  </p>
+</div>
+
+<div id="RestrictionDigestion" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Restriction digestion <hr></h3>
+  <h5>Procedure :</h5>
+  <p>1. Setup</p>
+  <div class="row">
+    <div class="col" style="padding-left: 10%;">
+      <p>
+        Template             <br>
+        Restriction enzyme 1 <br>
+        Restriction enzyme 2 <br>
+        5X buffer            <br>
+        NFW                  <br>
+      </p>
+    </div>
+    <div class="col">
+      10 ul <br>
+      1 ul <br>
+      1 ul <br>
+      5 ul <br>
+      8 ul <br>
+      25 ul <br>
+    </div>
+  </div>
+  <p>2. Incubate at 37 degree celsius for 2hours. <br>
+      3. Run Gel electrophoresis
+  </p>
+</div>
+
+<div id="Ligation" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Ligation <hr></h3>
+  <h5>Procedure :</h5>
+  <p>1. Setup</p>
+  <div class="row">
+    <div class="col" style="padding-left: 10%;">
+      <p>
+        Vector        <br>
+        Insert        <br>
+        T4 DNA ligase <br>
+        2X buffer     <br>
+        NFW           <br>
+      </p>
+    </div>
+    <div class="col">
+      1 ul <br>
+      1 ul <br>
+      1 ul <br>
+      5 ul <br>
+      2 ul <br>
+      10 ul <br>
+    </div>
+  </div>
+  <p>
+    2. The ligated product is in 10 ul aliquot.
+  </p>
+</div>
+
+<div id="CompetentCellPreparation" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Competent Cell Preparation <hr></h3>
+  <h5>Materials Required :</h5>
+  <p>
+    1.  LB miller broth <br>
+    2. E coli cells <br>
+    3. Conical flasks <br>
+    4. Falcon tubes <br>
+    5. Ice and ice box <br>
+    6. CaCl2 solution (20mM and 0.1M) <br>
+    7. 80mM MgCl2 solution <br>
+    8. 1.5mL microcentrifuge tubes <br>
+  </p>
+  <h5>Procedure : </h5>
+  <h5>Chemical Method : </h5>
+  <p>
+    1. Take 10 mL LB broth and inoculate it with E. coli and let it grow for 12 hours. Check OD600. <br>
+    2. Transfer the colony in 50mL LB miller broth in 250mL (1:5 ratio) conical flask. <br>
+    3. Now take OD after 30-60 min until it reaches 0.35-0.4. <br>
+    4. Transfer culture to sterile ice-cold falcon tubes. Cool culture to 0-4 degree celsius by incubating it on ice for 10 minutes. <br>
+    5. Centrifuge the culture at 4 degree celsius at 4100rpm for 10 minutes. <br>
+    6. Decant the medium and resuspend the cell pellet in 30mL of ice-cold MgCl2 and CaCl2 solution (80mM MgCl2 and 20mM CaCl2) by gentle swirling. <br>
+    7. Again centrifuge at 4100rpm for 10 minutes at 4 degree celsius. <br>
+    8. Decant the media and resuspend in 2mL of ice-cold 0.1M CaCl2 for each culture. <br>
+    9. Make aliquots of 100 microL each and store at -80degree celsius. 
+  </p>
+  <h5>Transformation</h5>
+  <h5>Materials Required :</h5>
+  <p>
+    1.  Competent E coli cells <br>
+    2. Ligated products <br>
+    3. 1.5 mL microcentrifuge tubes <br>
+    4. Ice and icebox <br>
+    5. LB miller broth <br>
+    6. LB agar with appropriate antibiotic plate (Chloramphenicol) <br>
+    7. Micropipette and tips 
+  </p>
+  <h5>Procedure :</h5>
+  <p>
+    1. Mix 10 microL of ligated products with 100microL aliquots of competent cells  in 1.5mL centrifuge tubes. <br>
+    2. Leave on ice for 15-30 minutes. <br>
+    3. Heat shock the mixture in a water bath for 45 seconds at 42degree celsius. <br>
+    4. Keep in ice for 5 minutes. <br>
+    5. Add 1mL of LB broth (without antibiotics) and let it grow in the shaking incubator for 45-60 minutes. <br>
+    6. Spread 50 microL on the Chloramphenicol antibiotic plate and place it in a 37 degree celsius static incubator. <br>
+    7. For the remaining solution, centrifuge at 4000 rpm for 4 minutes and resuspend in 50 microL LB broth in case you want to spread all transform cells or either store the remaining solution at -80degree celsius. <br>
+    8. Usually, colonies appear after 12-13 hours.
+  </p>
+</div>
+
+<div id="BiuretTest" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>BIURET TEST <hr></h3>
+  <h5>Procedure :</h5>
+  <p>
+
+  </p>
+
+</div>
+
+<div id="BiuretTest" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>pNPP Phosphatase Assay : <hr></h3>
+  <p>To check the activity of the phosphatase enzyme.</p>
+  <h5>Procedure</h5>
+  <h5>Materials Required :</h5>
+  <p>
+    1. Assay Buffer-neutral <br>
+    2. Assay Buffer-acidic <br>
+    3. Cell Lysis Buffer <br>
+    4. Stop Buffer <br>
+    5. Enzyme / Sample (1 Unit/mL) (Reconstitute enzyme with 1 mL of assay buffer) <br>
+    6. pNpp Substrate (5 µl of substrate per 96-well) <br>
+    7. Microplate reader <br>
+    8. 96-well plates with clear flat-bottom <br>
+    9. Dulbecco's Phosphate-Buffered Saline (PBS)
+  </p>
+  <h5>Sample Preparation :</h5>
+  <p>
+    1. Gently aspirate the cell culture medium. <br>
+    2. Wash the cells twice with Dulbecco's Phosphate-Buffered Saline(PBS). <br>
+    3. Lyse the cells with appropriate amount of cell lysis buffer (0.5 ml for 35 mm dish). <br>
+    4. Centrifuge the cell lysate at 14,000rpm for 5 min at 4 degree celsius. Transfer the supernatant to a new tube. <br>
+    5. Perform protein assay to determine total protein concentration in the lysate. <br>
+    6. We recommend performing several dilutions in the assay buffer to ensure your readings fall within the standard range.
+  </p>
+  <h5>Assay procedure :</h5>
+  <p>
+    1. Apply 45 µl of each enzyme in duplicate to each of a 96-well plate. <br>
+    2. Add 5 µl of substrate per well and incubate in the dark for 15-60 min. <br>
+    3. Stop the reaction by adding 50 µl of stop buffer to each well. Mix and measure the absorbance on ELISA plate reader with a test wavelength at 405 nm and a reference wavelength at 630 nm. Subtract the 630 nm reference absorbance from the 405 nm measurement.
+  </p>
+</div>
+
+<div id="CongoRedAssay" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Congo Red Assay <hr></h3>
+  <p>To visually see the production of curli by bacteria.</p>
+  <h5>Materials Required :</h5>
+  <p>
+    1. LB broth <br>
+    2. Congo Red stain <br>
+    3. Chloramphenicol antibiotic(2mg/ml) 
+  </p>
+  <h5>Procedure :</h5>
+  <p>
+    1. Add bacteria in 5mL of culture media <br>
+    2. Add 50µL of the appropriate selective antibiotic <br>
+    3. Let bacteria grow at 30°C with a 180 rpm agitation until OD600 = 1 <br>
+    4. Take 5mL of the bacterial culture in a 15mL tubes <br>
+    5. Pellet down the cells at 13000 rpm for 5 min <br>
+    6. Remove the supernatant <br>
+    7. Add 3mL of the Congo Red solution <br>
+    8. Let incubate for 10 min <br>
+    9. Pellet down the cells at 13000 rpm for 5 min <br>
+    10. Remove the supernatant <br>
+    11. Compare the results with the positive and negative control.    
+  </p>
+</div>
+
+<div id="BiofilmAssay" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3> Biofilm assay using 0.1% safranin <hr></h3>
+  <p>To perform quantification of biofilm formation</p>
+  <h5>Materials Required :</h5>
+  <p>
+    1. 96 well plate with clear flat-bottom <br>
+    2. Overnight cultures <br>
+    3. 01.% safranin stain <br>
+    4. Ethanol <br>
+    5. 30% acetic acid    
+  </p>
+  <h5>Procedure :</h5>
+  <p>
+    1.  Inoculate a 5ml liquid medium with 5μl 1st Overnight culture, use disposable test tubes and incubate at proper conditions overnight. <br>
+    2. Add the 2nd overnight culture onto plates and perform the experiment as follows. <br>
+    3. Add 200μl of diluted 2nd overnight culture into each well (96 well plates) and incubate at proper conditions overnight. <br>
+    4. Discard the overnight bacteria and wash with Ethanol. <br>
+    5. Add 200μl 0.1% safranin per well to stain the biofilm. <br>
+    6. Wait for a couple of minutes, then discard unabsorbed safranin and wash once with ethanol. <br>
+    7. Add 200 μl of 30% acetic acid into each well and wait for 5 minutes. <br>
+    8. Measure absorbance of samples at OD of 530 nm. <br>
+    9. Carefully discard the plate in the biological waste bin after measurement of OD.   
+  </p>
+</div>
+
+<div id="BiofilmCVassay" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3> Biofilm CV Assay <hr></h3>
+  <h5>Experimental Procedure :</h5>
+  <p>The experiments were performed on a 96 well plate.</p>
+  <p>
+    1.  The initial e.coli stock culture was prepared by adding 1000 ul inoculum into 9000 ul standard LB broth with a pH of 7.4 and allowing the e.coli to grow overnight (16-18 hrs) at 37℃ under orbital shaker at 120 rpm. <br>
+    2. Next day, the optical density (OD) at 600nm was checked. Value at 600nm must be 2.0 or dilute it. <br>
+    3. Few wells of plate are filled with 200 ul of fresh LB as blank. <br>
+    4. The culture was diluted in the ratio of 1:100 with 195 ul of fresh LB - MES broth at a pH of 7.4 and 5ul of culture in the well. <br>
+    5. The plates were then transferred to thermostatic static incubators maintained at 25℃. <br>
+    6. To avoid evaporation, the external area of the plate was filled with less amount of distilled water. <br>
+    7. After 24 hrs, the 96 well plate was taken from the incubator and the planktonic cells were removed. <br>
+    8. The wells were then washed using sterile PBS. <br>
+    9. Each well was then added with 200 ul of 0.1% crystal violet and was kept for 15 min for staining. <br>
+    10. The crystal violet was then removed and washed with sterile PBS and kept the plate for air drying for 5 min. <br>
+    11. The stained biofilm was then solubilised by adding 200 ul of 30% acetic acid. <br>
+    12. The plate was then kept in a microplate reader and OD value was recorded at 570 nm.   
+  </p>
+</div>
+
+<div id="CdToxicityTest" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>Cd Toxicity Test<hr></h3>
+  <h5>Experimental Procedure :</h5>
+  <p>
+    1. E.coli cells were grown in LB overnight (14 - 16 hrs). <br>
+    2. Next day, 1% culture suspension was added to freshly prepared LB and incubated at 37C until OD (600nm) reached 0.5. <br>
+    3. Then sterile CdCl2 solution was added to various conical flasks with different concentrations, all the flasks were then placed in an orbital shaker incubator at 37C and 130 rpm. <br>
+    4. Samples were taken at an interval of 30 min and OD at 600nm was taken spectrophotometrically. <br>
+    5. Simultaneously viable cell count was done on LB agar from which cell survival was determined. <br>
+    6. OD vs conc graph is plotted. <br>
+    7. For checking the morphology of the cells, the cells are subjected to gram staining and are observed under the microscope.     
+  </p>
+</div>
+
+<div id="MTTAssay" class="p-4 mb-4" style="background-color: #fcf5f7; border-radius: 20px;">
+  <h3>MTT Assay <hr></h3>
+  <h5>Materials Required :</h5>
+  <p>
+    1. Cell Lines <br>
+    2. 96 well plates <br>
+    3. ELISA reader <br>
+    4. Hemocytometer <br>
+  </p>
+  <h5>Procedure :</h5>
+  <p class="lead">Day 1</p>
+  <p>
+    1. Cells are grown overnight. <br>
+    2. Cells grown in suspension are harvested by centrifugation at 500 rpm for 5 min at 2-8 degree celsius. <br>
+    3. Discard the supernatant and resuspend the pellet in 5 ml of sterile PBS. Again centrifuge at 500 rpm for 5min at 2-8 degree celsius. <br>
+    4. Resuspend the pellet in 1ml of PBS. <br>
+    5. Count the number of cells using hemocytometer and record. <br>
+    6. Using the sterile PBS serial dilute the cells to 2 fold. <br>
+    7. Plate the cells at 100 μL per well. Incubate the cells for 6-12 hours at 37 degrees celsius. 
+  </p>
+  <p class="lead">Day 2</p>
+  <p>
+    1. Add 10 μL of the MTT solution to each well. The Blank contains 10 μL of MTT solution and 100 μL of PBS. <br>
+    2. Then incubate the plate for 2-4 hours at 37 degrees celsius. <br>
+    3. View the cells periodically for the appearance of purple precipitate (intracellular precipitate) using an inverted microscope. <br>
+    4. Add 100 μL of the solubilization solution to each well and mix thoroughly using a pipette. <br>
+    5. Leave the plate covered in the dark at 37 degree celsius for at least 2 hours. Samples are read after 2 hours. <br>
+    6. Remove the plate cover and measure the absorbance of the wells, including the blank, at 570 nm. 
+  </p>
 </div>
 
 {% endblock %}
