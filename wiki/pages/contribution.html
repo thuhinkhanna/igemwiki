@@ -1,214 +1,42 @@
 {% extends "layout.html" %}
   
 {% block title %}Contribution{% endblock %}
-{% block lead %}Make a useful contribution for future iGEM teams. Use this page to document that contribution.{% endblock %}
-{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/contribution.jpeg
-
-
-
-{% endblock %}
-
+{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/contribution.jpeg{% endblock %}
 
 
 {% block page_content %}
 
 
-<style>
+<h4>Overview</h4>
+<p>
+  Making a valuable contribution to future iGEM Teams has been our main impetus since the beginning  of our project. We benefited greatly from what our predecessors transcribed in their wiki, and we  have decided to do our best to be as useful to future generations of iGEM students as possible. 
+</p>
 
+<h4>Protein-Coding Sequence Modification</h4>
 
+<p>
+  The class B acid phosphatase enzyme coding sequence obtained from NCBI for the project was regrettably incompatible with the BioBrick RFC[10].
+</p>
+<center><img src="https://static.igem.wiki/teams/4509/wiki/before-opt.png" style="width:65%; height:500px;"/></center>
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 1: Acid phosphatase(aphA) coding sequence</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;"> When the sequence from NCBI is uploaded to the iGEM registry, it is evident that the sequence is not compatible with other Biobrick or iGEM standards except RFC[1000]</div>
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
+<p>
+  Therefore, we decided to troubleshoot this by removing the illegal restriction sites by inducing silent mutations by use of IDT's codon optimizing tool. As a result, the protein that is expressed would remain the same while enabling the sequence to comply with the iGEM assembly standard requirement.
+</p>
 
+<center><img src="https://static.igem.wiki/teams/4509/wiki/idt-tool.jpeg" style="width:65%; height:500px;"/></center>
 
-.mouse_scroll {
-  z-index: -1;
-	display: block;
-	margin: 0 auto;
-	width: 24px;
-  position: absolute;
-  top: 0;
-  right: 0;
-	height: 100px;
-}
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 2: IDT Codon Optimizing Tool</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;"> The figure indicates the illegal restriction sites present in the protein coding sequence</div>
 
+<p>We removed all the illegal restriction sites for the protein-coding sequences of acid phosphatase to be compatible with the BioBrick RFC[10]. We believe that this contribution will make assembly more convenient and universal for future iGEM teams who plan on assembling or synthesizing acid phosphatase in a prokaryotic system.</p>
 
-.m_scroll_arrows
-{
-  display: block;
-  width: 5px;
-  height: 5px;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-   
-  border-right: 2px solid rgb(85, 13, 13);
-  border-bottom: 2px solid rgb(92, 12, 12);
-  margin: 0 0 3px 4px;
-  
-  width: 16px;
-  height: 16px;
-}
-
-
-.unu
-{
-  margin-top: 1px;
-}
-
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-  
-}
-
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  -webkit-animation-direction: alternate;
-  
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
-
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
-
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .3s;
-  animation-direction: alternate;
-  
-  
-  margin-top: -6px;
-}
-
-.mouse {
-  height: 42px;
-  width: 24px;
-  border-radius: 14px;
-  transform: none;
-  border: 2px solid rgb(26, 58, 165);
-  top: 170px;
-}
-
-.wheel {
-  height: 5px;
-  width: 2px;
-  display: block;
-  margin: 5px auto;
-  background: white;
-  position: relative;
-  
-  height: 4px;
-  width: 4px;
-  border: 2px solid rgb(114, 10, 10);
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-}
-
-.wheel {
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-  -moz-animation: mouse-wheel 0.6s linear infinite;
-  animation: mouse-wheel 0.6s linear infinite;
-}
-
-@-webkit-keyframes mouse-wheel{
-   0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-
-@-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
-}
-@-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-</style>
-
-
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #4</h4>
-      <p>Make a useful contribution for future iGEM teams. Use this page to document that contribution.<p>
-      <p>If you are making a contribution by adding information to an existing Part or creating a new Part, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria. You can use this page to link to that part and include additional information about your contribution.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
-
-
+<center><img src="https://static.igem.wiki/teams/4509/wiki/after-opt.jpeg" style="width:65%; height:500px;"/></center>
+<div style="margin-top: 2em; margin-bottom: 1em; text-align: center;">Figure 3: Optimized Acid Phosphatase(aphA) Sequence</div>
+<div style="margin-top: 1em; margin-bottom: 1em; text-align: center;">The codon-optimized sequence is now compatible with the Biobrick or iGEM standards. </div>
+<p>
+  For more information, please visit our <a href="{{ url_for('parts') }}">parts </a> page!
+</p>
 
 {% endblock %}
