@@ -19,7 +19,7 @@
       <li>Is it possible to predict biofilm detachment from biocarrier?</li>
       <li>What helps in the efficient production of curli fibres?</li>
       <li>How to identify the important parameters for the over-expression of fusion protein?</li>
-      <li>Why should we learn about the binding affinity of fusion protein and how can it be achieved?</li>
+      <li>Why should we learn about the model confidence of fusion protein and how can it be done?</li>
       <li>Will the active site of acid phosphatase be different in native aphA and aphA present in fused form?</li>
     </ol>
     <h2>Module 1: Biofilm Detachment Model</h2><hr>
@@ -244,14 +244,15 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 4: Binding Affinity</h2><hr>
-    <p>Fusion proteins are formed when two genes are linked together with the help of a linker. In our project,  OmpA gene attached to a linker is joined with aphA gene. The role of OmpA linker is to bring aphA protein to the cell surface. For the efficient fusion protein yield, the binding affinity should be strong. To check the binding affinity of the fusion protein, we have used the iTASSER server. The server provided C - score for the fusion protein. We analysed the C - score to check the quality of the predicted fusion protein model. C - score obtained using the iTASSER helped us understand the quality of the model that we initially built. Then, we worked on creating a better model to increase the binding affinity. We will work on improving the C - score of the fusion protein till it achieves very strong binding affinity. Z-score is the normalized Z-score of the threading alignments. Alignment with a Normalized Z-score greater than 1 means a good alignment. The fusion protein sequence received 2.56 Normalized Z-score and pdb hit in Rank 1 is 1n8nA.</p>
+    <h2>Module 4: Structure Modelling</h2><hr>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp; 1. iTASSER</h4>
+    <p>Fusion proteins can be produced when two genes coding for different proteins are linked by a linker by a linker sequence and expressed as a single entity.In our project,  OmpA gene attached to a linker is joined with aphA gene. The role of OmpA linker is to bring aphA protein to the cell surface. For the efficient fusion protein yield, the binding affinity should be strong. To check the model confidence of the fusion protein, we have used the iTASSER server. The server provided C - score for the fusion protein. We analysed the C - score to check the quality of the predicted fusion protein model. C - score obtained using the iTASSER helped us understand the model that we initially built. We will work on improving the C - score of the fusion protein till it achieves a high confidence score. Z-score is the normalized Z-score of the threading alignments. Alignment with a Normalized Z-score greater than 1 means a good alignment. The fusion protein sequence received 2.56 Normalized Z-score and pdb hit in Rank 1 is 1n8nA.</p>
     <div class="row">
-      <div class="col-md-6">
-        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-14.jpg" style="width:70%; height: 300px;" /></center>
+      <div class="col-md-12">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-15.jpg" style="width:40%; height: 300px;" /></center>
       </div>
-      <div class="col-md-6">
-        <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-15.jpg" style="width:70%; height: 300px;" /></center>
+      <div class="col-md-12">
+        <center class="mt-2"><i>(yellow ribbon - OmpA-linker; blue ribbon - acid phosphatase)</i></center>
       </div>
     </div>
     <br>
@@ -259,8 +260,9 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 5: Alphafold</h2><hr>
-    <p>To check the model confidence we used another software called AlphaFold. The confidence score of the functional protein domains in our structure such as aphA and ompA range from confident to very confident (blue to dark blue) with slight distortion and lower confidence as a result of the linker molecule between the two major protein domains.</p>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp; 2. AlphaFold</h4>
+    <p>To check the model confidence we used another software called AlphaFold. The confidence score of the functional protein domains in our structure such as aphA and ompA range from confident to very confident (blue to dark blue) with slight distortion and lower confidence as a result of the linker molecule between the two major protein domains. (In the below model, blue ribbon represents OmpA-linker and green ribbon represents aphA)
+    </p>
     <div class="row">
       <div class="col-md-6">
         <center><img src="https://static.igem.wiki/teams/4509/wiki/modelling/picture-16.png" style="width:80%; height: 350px;" /></center>
@@ -288,7 +290,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 6: Aligning Native aphA and OmpA - aphA</h2><hr>
+    <h2>Module 5: Aligning Native aphA and OmpA - aphA</h2><hr>
     <p>The native acid phosphatase will have an active site for substrate binding. The conformation of the active site in aphA shouldn’t change when aphA is present in fused form. To check if there is any change in the active sites, we have made use of PyMOL. We have utilised the ‘align’ function in PyMOL which performed sequence alignment and structural superimposition. We aligned OmpA-aphA model  predicted by iTASSER and OmpA-aphA model predicted by AlphaFold Colab with the native aphA. We observed that the aphA in OmpA-aphA fused form and the native aphA superimposed perfectly and thus confirming that the active site  of aphA was not disturbed. Hence, it is proved that there is no difference in the active sites of native aphA and OmpA-aphA.</p>
     <div class="row">
       <div class="col-md-6">
@@ -301,10 +303,10 @@
     <br>
     <div class="row">
       <div class="col-md-6">
-        <p style="margin-left:20%; margin-right:20%"><i>iTASSER fusion protein prediction and native acid phosphatase aligned using PyMOL</i></p>
+        <p style="margin-left:20%; margin-right:20%"><i>iTASSER fusion protein prediction and native acid phosphatase aligned using PyMOL. (Pink ribbon - native aphA; Yellow ribbon - ompA of fusion protein; Blue ribbon- aphA of fusion protein)</i></p>
       </div>
       <div class="col-md-6">
-        <p style="margin-left:20%; margin-right:20%"><i>Alphafold fusion protein prediction and native acid phosphatase aligned using PyMOL</i></p>
+        <p style="margin-left:20%; margin-right:20%"><i>Alphafold fusion protein prediction and native acid phosphatase aligned using PyMOL.(Blue colour - Alphafold fusion protein;  Pink ribbon - native acid phosphatase.)</i></p>
       </div>
     </div>
     <h4>References</h4>
