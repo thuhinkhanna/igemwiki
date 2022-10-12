@@ -5,6 +5,77 @@
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/indexbanner.gif{% endblock %}
 {% block page_content %}
 
+<style>
+  .container{
+    transform-style: preserve-3d;
+}
+
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 650px;
+    margin: 25px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.container .box .body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.9s ease;
+}
+
+.container .box .body .imgContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: #7e5366;
+    object-fit: cover;
+}
+
+.container .box .body .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: #333;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.container .box:hover .body{
+    transform: rotateY(180deg);
+}
+
+.container .box .body .content div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg, #FE0061,#FFEB3B);
+    transform: translateZ(100px);
+}
+
+.container .box .body .content div h3{
+    letter-spacing: 1px;
+}
+</style>
 
 <div class="container bg-white" style="width: 80%; border-radius: 20px;">
   <div class="row mt-4 mb-4">
@@ -27,43 +98,66 @@
   </div>
 </div>
 
-<div class="container bg-light p-4">
+<div class="container bg-light p-4 mb-5">
   <center>
     <iframe width="100%" height="500px" src="https://www.youtube.com/embed/7-u4dG9B44Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </center>
 </div>
 
+<div class="m-5">
+
+</div>
+
 <br>
 
-
-
-<div class="container">
-  <div class="row justify-content-between">
-    <div class="col-md-3 my-auto">
-       <img class="img" style="width: 80%; margin-top: 4em;" src="https://static.igem.wiki/teams/4509/wiki/solution-ecoli.png">
-    </div>
-    <div class="col-md-8 mt-3" style="font-family: LucidaUnicode; font-size: larger; text-align: justify; text-justify: inter-word">
-      <h3 style="text-align: center; margin-bottom: 2em;">We Have a Vision.</h3>
-      Project CURLIM is a passion project curated by Team REC-CHENNAI. The primary source of cadmium ion emissions is non-ferrous refineries. Additionally, it is a major component of alkaline batteries, metal plating, paints, and stabilizers used in the manufacture of plastics. It is highly destructive to biological life and  has a significant negative influence on terrestrial and marine ecosystems when dumped into water bodies.
-    </div>
-    <div class="col-md-1"></div>
+<div class="container row d-flex align-items-center justify-content-center flex-wrap pt-5 bg-light">
+  <div class="box col-md-4">
+      <div class="body">
+          <div class="imgContainer">
+              <img src="https://static.igem.wiki/teams/4509/wiki/why-ecoli.png" style="width: 100%; padding-top: 20px;">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">Why</h3>
+                  <h3 style="text-align: center;">We Have a Vision.</h3>
+                  <p class="fs-6 text-white">
+                    Project CURLIM is a passion project curated by Team REC-CHENNAI. The primary source of cadmium ion emissions is non-ferrous refineries. Additionally, it is a major component of alkaline batteries, metal plating, paints, and stabilizers used in the manufacture of plastics. It is highly destructive to biological life and  has a significant negative influence on terrestrial and marine ecosystems when dumped into water bodies.
+                  </p>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="row">
-    <div class="col-md-2 mt-4"></div>
-    <div class="offset-md-1 col-md-8" style=" margin-top: 1em; background-color:#fde9ee; border-radius:30px;">
-      <center><h3>Our Innovation</h3>
-      <p class="mb-4" style="text-align:center;">Bio-precipitation is a revolutionary approach for heavy metal sequestration using <br> biologically active microorganisms in the treatment of industrial effluents <br> and wastewaters.</p></center>
-    </div>
-    <div class="col-md-2"></div>
+  <div class="box col-md-4">
+      <div class="body">
+          <div class="imgContainer">
+              <img src="https://static.igem.wiki/teams/4509/wiki/how-ecoli.png" alt="">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">How</h3>
+                  <h3 style="text-align: center;">Our Innovation.</h3>
+                  <p class="fs-6 text-white" style="text-align: center;">
+                    Bio-precipitation is a revolutionary approach for heavy metal sequestration using biologically active microorganisms in the treatment of industrial effluents and wastewaters. <br><br><br>
+                  </p>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="row justify-content-between" style="margin-top: 3%;">
-    <div class="col-md-3 my-auto">
-      <img class="img" style="width: 55%;" src="https://static.igem.wiki/teams/4509/wiki/how-ecoli.png">
-    </div>
-    <div class="col-md-8" style="margin-top:3em; font-family: LucidaUnicode; font-size: larger; text-align: justify; text-justify: inter-word">
-      We propose to design an <i>E. coli</i> K12 strain that is genetically modified to produce a biofilm with a suffused phosphatase enzyme. The acid phosphatase produced is dephosphorylated into phosphate monomers, which form phosphate-heavy metal complexes and precipitates. The bioprecipitation is carried out in a MBBR designed in the pilot scale by the team. 
-    </div>
-    <div class="col-md-1"></div>
+  <div class="box col-md-4">
+      <div class="body">
+          <div class="imgContainer">
+              <img src="https://static.igem.wiki/teams/4509/wiki/solution-ecoli.png" alt="">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">Solution</h3>
+                  <h3 style="text-align: center;">Ideation.</h3>
+                  <p class="fs-6 text-white">
+                    We propose to design an <i>E. coli</i> K12 strain that is genetically modified to produce a biofilm with a suffused phosphatase enzyme. The acid phosphatase produced is dephosphorylated into phosphate monomers, which form phosphate-heavy metal complexes and precipitates. The bioprecipitation is carried out in a MBBR designed in the pilot scale by the team. 
+                  </p>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
 
@@ -78,7 +172,9 @@
 
 <div class="container mt-4">
   <div class="bg-light p-3">
-    <img src="https://static.igem.wiki/teams/4509/wiki/process.jpg" style="width: 100%;"/>
+    <a href="{{ url_for('pages', page='engineering') }}">
+      <img src="https://static.igem.wiki/teams/4509/wiki/process.jpg" style="width: 100%;"/>
+    </a>
   </div>
 </div>
 
