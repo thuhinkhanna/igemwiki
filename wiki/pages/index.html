@@ -2,41 +2,40 @@
 
 {% block title %}Meet CURLIM!{% endblock %}
 {% block lead %}{% endblock %}
-{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/homepage1.gif{% endblock %}
+{% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/indexbanner.gif{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4 mb-4">
-  <div class="col-md-6">
-    <img src="https://static.igem.wiki/teams/4509/wiki/notepad.svg" style="width: 50%; height:300px; margin-left: 45%;"/>
-  </div>
-  <div class="col-md-6">
-    <h4 style="text-align: left; margin-top:10%; margin-right:30%;">According to recent research, drinking water samples from western Indian states had Cd contents that are greater than the permitted level established by the <a href="http://apps.who.int/iris/bitstream/handle/10665/44584/9789241548151_eng.pdf">World Health Organization (2011).</a></h4>
+
+<div class="container bg-white" style="width: 80%; border-radius: 20px;">
+  <div class="row mt-4 mb-4">
+    <div class="col-md-6">
+      <img src="https://static.igem.wiki/teams/4509/wiki/notepad.svg" style="width: 50%; height:300px; margin-left: 45%;"/>
+    </div>
+    <div class="col-md-6">
+      <h4 style="text-align: left; margin-top:10%; margin-right:30%;">According to recent research, drinking water samples from western Indian states had Cd contents that are greater than the permitted level established by the <a href="http://apps.who.int/iris/bitstream/handle/10665/44584/9789241548151_eng.pdf">World Health Organization (2011).</a></h4>
+    </div>
   </div>
 </div>
 
-<!--don't disturb this-->
+<div class="container bg-light p-4 mb-3">
+  <img class="img img-fluid banner-img" style="width:100%; height:500px;" src="https://static.igem.wiki/teams/4509/wiki/home-page-extra.jpg">
 </div>
-<img class="img img-fluid banner-img" style="width:100%; height:500px;" src="https://static.igem.wiki/teams/4509/wiki/home-page-extra.jpg">
-<div class="container">
-<!---->
 
-<div class="row">
-  <div class="col-md-12">
+<div class="container bg-dark p-4 mb-3">
+  <div class="bg-light">
     <img src="https://static.igem.wiki/teams/4509/wiki/cadmium-map.png" style="width: 100%;"/>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12"></div>
-</div>
-
-<div class="row">
-  <div class="offset-md-4 col-md-5">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/7-u4dG9B44Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+<div class="container bg-light p-4">
+  <center>
+    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/7-u4dG9B44Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center>
 </div>
 
 <br>
+
+
 
 <div class="container">
   <div class="row justify-content-between">
@@ -70,45 +69,57 @@
 
 <br>
 
-<div class="row">
+<div class="container bg-light p-4">
   <h3>Here is our Promo Video to get you started on Project Curlim!</h3>
-  <div class="col-sm-6 offset-md-3">
-    <iframe title="REC-CHENNAI: Curlim (2022) - Project Promotion [English]" src="https://video.igem.org/videos/embed/d9df0afb-53da-4a65-bb1e-644cbddfee59" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="100%" height="350px" frameborder="0"></iframe>
+  <center>
+    <iframe width="100%" height="500px" title="REC-CHENNAI: Curlim (2022) - Project Promotion [English]" src="https://video.igem.org/videos/embed/d9df0afb-53da-4a65-bb1e-644cbddfee59" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" frameborder="0"></iframe>
+  </center>
+</div>
+
+<div class="container mt-4">
+  <div class="bg-light p-3">
+    <img src="https://static.igem.wiki/teams/4509/wiki/process.jpg" style="width: 100%;"/>
   </div>
 </div>
 
-<!-- <div class="container mt-5">
+<div class="container mt-5">
   <div class="row">
     <div class="col-md-4">
       <div class="card" style="width:100%">
-        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/humanpractices.jpeg" alt="Card image">
+        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/bioreactor.jpeg" width="100%" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Human Practices</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="{{ url_for('pages', page='human-practices') }}" class="btn btn-primary">Go to HP</a>
+          <h4 class="card-title">Bioreactor</h4>
+          <p class="card-text">
+            The goal of our project is to bio precipitate the noxious cadmium ions present in industrial effluents employing our product, an engineered E. coli strain one which provides a strong biofilm medium via curli protein and expresses the acid phosphatase enzyme. 
+          </p>
+          <a href="{{ url_for('pages', page='bioreactor') }}" class="btn btn-primary">Know More</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card" style="width:100%">
-        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/attributions.jpeg" alt="Card image">
+        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/modelling.jpeg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Attributions</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="{{ url_for('pages', page='attributions') }}" class="btn btn-primary">Go to Attributions</a>
+          <h4 class="card-title">Modelling</h4>
+          <p class="card-text">
+            The crucial steps in our project include biofilm attachment, production of recombinant proteins and designing the reactor. In order to optimise the vital elements in our project, we created and instigated modelling. <br><br>
+          </p>
+          <a href="{{ url_for('pages', page='modelling') }}" class="btn btn-primary">Know More</a>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card" style="width:100%">
-        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/attributions.jpeg" alt="Card image">
+        <img class="card-img-top" src="https://static.igem.wiki/teams/4509/wiki/banners/communication.jpeg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Team</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="{{ url_for('pages', page='team') }}" class="btn btn-primary">Meet the Team</a>
+          <h4 class="card-title">Education and Communication</h4>
+          <p class="card-text">
+            We had the opportunity to conduct outreach programs and connect with various people. The purpose of our outreach programs was to raise general awareness about the hazardous effects that arise from exposure to heavy metals. <br><br>
+          </p>
+          <a href="{{ url_for('pages', page='communication') }}" class="btn btn-primary">Know More</a>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 {% endblock %}
