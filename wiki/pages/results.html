@@ -1,53 +1,395 @@
 {% extends "layout.html" %}
   
 {% block title %}Results{% endblock %}
-{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/results.jpeg {% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-5">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Clearly and objectively describe the results of your work.</li>
-      <li>Future plans for the project.</li>
-      <li>Considerations for replicating the experiments.</li>
-    </ul>
-  </div>
-  <div class="col-lg-7">
-    <h2>Describe what your results mean</h2>
-    <hr>
-    <ul>
-      <li>Interpretation of the results obtained during your project. Don't just show a plot/figure/graph/other, tell us what you think the data means. This is an important part of your project that the judges will look for.</li>
-      <li>Show data, but remember <b>all measurement and characterization data must also be on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</b> Otherwise these data will not be in consideration for any medals or part awards!</li>
-      <li>Consider including an analysis summary section to discuss what your results mean. Judges like to read what you think your data means, beyond all the data you have acquired during your project.</li>
-    </ul>
+<div class="row">
+  <div class="col-md-12">
+    <h4 style="text-align: center;"><i>"As a man evolves, Nature dissolves"</i></h4>
+    <p>
+      Once destroyed, the beauty of nature cannot be reacquired. Humans are causing life on Earth to vanish. Carelessness leads to catastrophic events. When the industrial discharge is released into the water bodies, the heavy metals present in the effluent cause significant damage to the environment, leading to mass disturbances in the terrestrial and marine ecosystems. Cadmium in specific is found to be mutagenic when exposed for a long period of time.
+    </p>
+    <p>
+      In this page we have shown the results of our recombinant gene expression and reactor model.
+    </p>
+    <p>
+      Our aim was to produce a solid biofilm structure that would contribute to the production of our hero enzyme, Acid Phosphatase. E.coli K12 strains possess poor biofilm abilities. With the introduction of csgD and OmpR genes, we enhanced the biofilm strength of E.coli K12. OmpR upregulation followed by csgD activation and csgD protein production induced the levels of curli fibers responsible for biofilm formation.Presence of OmpA linker facilitated the cell surface display of acid phosphatase enzyme.
+    </p>
+    <p>
+      Here, we have proposed an eco-friendly and cost effective solution for the removal of the heavy metal, Cadmium from industrial effluents. We are pleased to inform you that our biologically developed E.coli system has the ability to regulate growth and protein production, thereby increasing the lifespan of Project Curlim!
+    </p>
   </div>
 </div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Project Achievements</h2>
-    <hr>
-    <p>You can also include a list of bullet points (and links) of the successes and failures you have had over your summer. It is a quick reference page for the judges to see what you achieved during your summer.</p>
-    <ul>
-      <li>A list of linked bullet points of the successful results during your project</li>
-      <li>A list of linked bullet points of the unsuccessful results during your project. This is about being scientifically honest. If you worked on an area for a long time with no success, tell us so we know where you put your effort.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Results">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Munich/Results">2019 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Tec-Chihuahua/Results">2019 Tec Chihuahua</a></li>
-      <li><a href="https://2020.igem.org/Team:Aalto-Helsinki/Results">2020 Aalto Helsinki</a></li>
-      <li><a href="https://2020.igem.org/Team:GreatBay_SCIE/Results">2020 GreatBay SCIE</a></li>
-      <li><a href="https://2020.igem.org/Team:Queens_Canada/Results">2020 Queens Canada</a></li>
-    </ul>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Inception of Project CURLIM</h2><hr>
+    <h4>
+      Finalization of Strains
+    </h4>
+    <p>
+      Initially, our team worked with two strains of bacteria, Escherichia coli K12 (wild strain)  and Escherichia coli DH5ɑ. We performed characterization for Escherichia coli DH5ɑ by checking it’s growth and color change in EMB agar.
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-1.jpg" style="width:60%; height:300px"></center>
+      </div>
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-2.jpg" style="width:60%; height:300px"></center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <center class="mt-2 mb-2">Figure 1: <i>Escherichia coli</i> DH5ɑ in EMB agar</center>
+      </div>
+      <div class="col-md-6">
+        <center class="mt-2 mb-2">Figure 2: <i>E.coli</i> K12 MG1655 in LB agar.</center>
+      </div>
+    </div>
+    <br>
+    <p>
+      E.coli MG1655 was grown in LB broth and E.coli DH5ɑ was grown in Nutrient broth.We observed the growth curve of K12MG1655 and DH5ɑ.After extensive literature review, we decided to move forward with E.coli K12 MG1655.
+    </p>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-3.png" style="width:70%; height:500px"></center>
+    <center class="mt-2 mb-2">Graph 1: Growth curve of <i>E.Coli</i> K12 MG1655</center>
+    <h4>Improving the Biofilm formation</h4>
+    <p>
+      To identify the biofilm integrity of the native E.coli, we conducted CV assay. We found that the biofilm formed was not strong enough. The biofilm formation was very poor so we decided to enhance the biofilm formation with the help of our construct BBa_K4509469.Since it consists of BBa_J23118 promoter, the burden value is also less and the percentage of growth rate will not be reduced.
+    </p>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-4.jpg" style="width:35%; height:300px"></center>
+    <center class="mt-2">Figure 3: CV assay forming showing poor biofilm formation of E.coli MG1655</center>
+    <h4>Biofilm Formation in Plasmid-induced biofilm</h4>
+    <center class="mt-4"><img src="https://static.igem.wiki/teams/4509/wiki/results/cvassay.jpeg" style="width:35%; height:500px"></center>
+    <center class="mt-2">Figure 4: Crystal Violet assay</center>
+    <center class="mt-4"><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-10.png" style="width:70%; height:500px"></center>
+    <center class="mt-2 mb-4">Graph 2: OD Reading for Crystal Violet Assay</center>
+    
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Testing aphA Activity</h2><hr>
+    <p>
+      As mentioned earlier,the main element of our project is acid phosphatase enzyme. The following assays were conducted to check the concentration and activity of the enzyme.
+    </p>
+    <h4>Biuret Test</h4>
+    <div class="table-responsive-sm mb-4" style="margin-top: 2em;">
+      <table class="table table-hover table-responsive-sm">
+        <thead>
+          <tr class="col-property">
+            <th scope="col" class="make-it-bolder col-color" >Particulars</th>
+            <th scope="col" class="make-it-bolder col-color">Blank</th>
+            <th scope="col" colspan="5" class="make-it-bolder col-color">Standard Solution</th>
+            <th scope="col" colspan="2" class="make-it-bolder col-color">Test</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr>
+            <td> </td>
+            <td>B</td>
+            <td>S1</td>
+            <td>S2</td>
+            <td>S3</td>
+            <td>S4</td>
+            <td>S5</td>
+            <td>T1</td>
+            <td>T2</td>
+          </tr>
+          <tr>
+            <th scope="row" class="make-it-normal">Volume of working standard (ml)</th>
+            <td class="make-it-normal">-</td>
+            <td class="make-it-normal">0.5</td>
+            <td class = "text-nowrap make-it-normal">1</td>
+            <td class="make-it-normal">1.5</td>
+            <td>2</td>
+            <td>2.5</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row" class="make-it-normal">Concentration of Working Standard (mg/ml)</th>
+            <td class="make-it-normal">-</td>
+            <td class="make-it-normal">2</td>
+            <td class="make-it-normal">4</td>
+            <td class="make-it-normal">6</td>
+            <td>8</td>
+            <td>10</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">Volume of Test Solution (ml)</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>0.5</td>
+            <td>1</td>
+          </tr>
+    
+          <tr>
+            <th scope="row">Volume of Distilled Water (ml)</th>
+            <td>3</td>
+            <td>2.5</td>
+            <td>2</td>
+            <td>1.5</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>2.5</td>
+            <td>2</td>
+          </tr>
+    
+          <tr>
+            <th scope="row">Volume of Biuret solution (ml)</th>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+    
+          <tr>
+            <th scope="row">Optical density aT 520 nm</th>
+            <td>0</td>
+            <td>0.03</td>
+            <td>0.07</td>
+            <td>0.1</td>
+            <td>0.16</td>
+            <td>0.18</td>
+            <td>0.01</td>
+            <td>0.05</td>
+          </tr>
+    
+        </tbody>
+      </table>
+      </div>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-5.jpg" style="width:35%; height:300px"></center>
+    <center class="mt-2">Figure 5: Biuret's test for quantification of ahpA</center>
+    <h4>pNPP Assay</h4>
+    <h5>&nbsp;&nbsp;&nbsp;1. With enzyme concentration fixed</h5>
+    <div class="table-responsive-sm" style="margin-top: 3em;">
+      <table class="table table-hover table-responsive-sm">
+        <thead>
+          <tr class="col-property">
+            <th scope="col" colspan="7" class="make-it-bolder col-color" >Constant Enzyme</th>
+          </tr>
+          <tr class="col-property">
+            <th scope="col" class="make-it-bolder col-color" >Volume of Citrate Buffer (mL)</th>
+            <th scope="col" class="make-it-bolder col-color">Volume of pNPP (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color">Volume of Enzyme (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color">Volume of Distilled Water (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color"> Volume of NaOH (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color"> OD at 430nm</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr>
+            <td>0.5</th>
+            <td>0</td>
+            <td>0.4</td>
+            <td>0.6</td>
+            <td>2.5</td>
+            <td>0 (Blank)</td>
+            </tr>
+          
+            <tr>
+              <td>0.5</th>
+              <td>0</td>
+              <td>0.4</td>
+              <td>0.6</td>
+              <td>2.5</td>
+              <td>0 (Blank)</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.2</td>
+              <td>0.4</td>
+              <td>0.4</td>
+              <td>2.5</td>
+              <td>0.22</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.3</td>
+              <td>0.4</td>
+              <td>0.3</td>
+              <td>2.5</td>
+              <td>0.27</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.4</td>
+              <td>0.2</td>
+              <td>2.5</td>
+              <td>0.28</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.5</td>
+              <td>0.4</td>
+              <td>0.1</td>
+              <td>2.5</td>
+              <td>0.31</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.6</td>
+              <td>0.4</td>
+              <td>0</td>
+              <td>2.5</td>
+              <td>0.34</td>
+            </tr> 
+        </tbody>
+      </table>
+      </div>
+    <center class="mt-4"><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-6.jpg" style="width:35%; height:300px"></center>
+    <center class="mt-2">Figure 6: pNPP assay for std enzyme concentration </center>
+    <h5>&nbsp;&nbsp;&nbsp;2. With substrate concentration fixed</h5>
+    <div class="table-responsive-sm" style="margin-top: 3em;">
+      <table class="table table-hover table-responsive-sm">
+        <thead>
+          <tr class="col-property">
+            <th scope="col" colspan="7" class="make-it-bolder col-color" >Constant Substrate</th>
+          </tr>
+          <tr class="col-property">
+            <th scope="col" class="make-it-bolder col-color" >Volume of Citrate Buffer (mL)</th>
+            <th scope="col" class="make-it-bolder col-color">Volume of pNPP (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color">Volume of Enzyme (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color">Volume of Distilled Water (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color"> Volume of NaOH (mL)</th>
+            <th scope="col"  class="make-it-bolder col-color"> OD at 430nm</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr>
+            <td>0.5</th>
+            <td>0.4</td>
+            <td>0</td>
+            <td>0.6</td>
+            <td>2.5</td>
+            <td>0 (Blank)</td>
+            </tr>
+          
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.1</td>
+              <td>0.5</td>
+              <td>2.5</td>
+              <td>0.1</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.2</td>
+              <td>0.4</td>
+              <td>2.5</td>
+              <td>0.17</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.3</td>
+              <td>0.3</td>
+              <td>2.5</td>
+              <td>0.24</td>
+            </tr>
 
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.4</td>
+              <td>0.2</td>
+              <td>2.5</td>
+              <td>0.25</td>
+            </tr>
+  
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.5</td>
+              <td>0.1</td>
+              <td>2.5</td>
+              <td>0.29</td>
+            </tr>
+            
+            <tr>
+              <td>0.5</th>
+              <td>0.4</td>
+              <td>0.6</td>
+              <td>0</td>
+              <td>2.5</td>
+              <td>0.31</td>
+            </tr> 
+        </tbody>
+      </table>
+      </div>
+    <center class="mt-4"><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-7.jpg" style="width:35%; height:300px"></center>
+    <center class="mt-2">Figure 7: pNPP assay for std substrate concentration </center>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Cadmium Toxicity</h2><hr>
+    <p>
+      As we are using cadmium which is a heavy metal, we performed cadmium toxicity for E.coli. We observed the growth curve of the E.coli under different concentrations of the cadmium.
+    </p>
+    <p>Control &rarr; without cadmium</p>
+    <p>&lt; MIC(Minimum Inhibitory Concentration) &rarr; 1 mg/L</p>
+    <p>MIC &rarr; 2.75 mg/L</p>
+    <p>&lt; Sub-lethal Concentration &rarr; 9.18 mg/L</span></p>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/results/cd-tox.png" style="width:70%; height:500px;"></center>
+    <center class="mt-2">Graph 3 : Cadmium Toxicity Vs Optical Density</center>
+    <h4>MTT Assay</h4>
+    <p>
+      The MTT assay is used to measure cellular metabolic activity as an indicator of cell viability, proliferation and cytotoxicity. The cell viability of the cells were observed after 24 hours using 96 well plates. 
+    </p>
+    <center class="mt-4"><img src="https://static.igem.wiki/teams/4509/wiki/results/picture-21.png" style="width:60%; height:300px"></center>
+    <div class="row">
+      <div class="col-md-4"><p style="margin-left: 95%;">&ltMIC</p></div>
+      <div class="col-md-4"><p style="margin-left: 55%;">MIC</p></div>
+      <div class="col-md-4"><p style="margin-right: 75%;">&ltSub-lethal</p></div>
+    </div>
+    <h4>Cadmium-E.coli interaction: Morphology</h4>
+    <p>The morphology of the E.coli K12 strain changed drastically in the presence of Cadmium in sub lethal level (36.68mg/l). Figure 8(a) denotes unexposed cells while Figure 8(b) denotes cells exposed to Cadmium.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/results/8a.jpeg" style="width:60%; height:300px;"></center>
+      </div>
+      <div class="col-md-6">
+        <center><img src="https://static.igem.wiki/teams/4509/wiki/results/8b.jpeg" style="width:50%; height:300px; margin-right: 30%;"></center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <center>Figure 8(a)</center>
+      </div>
+      <div class="col-md-6">
+        <p style="margin-left:30%">Figure 8(b)</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Atomic Adsorption Spectroscopy</h2><hr>
+    <p>Atomic absorption spectroscopy, is a technique for measuring the concentrations of metallic elements in different materials.Samples were taken at different time intervals to check the concentration of cadmium before the treatment,during the treatment and after the treatment.The result showed significant difference in the concentration of cadmium before and after treatment revealing the efficiency of our project CURLIM!</p>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/results/aas-final.png" style="width:70%; height:500px;"></center>
+    <center class="mt-2">Graph 4 : Atomic Adsorption Spectroscopy</center>
+  </div>
+</div>
 {% endblock %}
