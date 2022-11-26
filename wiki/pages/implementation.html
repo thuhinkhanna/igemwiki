@@ -5,23 +5,152 @@
 {% block bnrurl %}https://static.igem.wiki/teams/4509/wiki/banners/implementation.jpeg{% endblock %}
 {% block page_content %}
 
-<h2>Design</h2><hr>
+<h2>
+    Overview
+</h2><hr>
+
+<h4>
+    Our Project
+</h4>
+
+<p>
+    To construct a pilot-scale moving bed biofilm reactor and use our engineered bacteria CURLIM to remove cadmium ions from industrial discharge.
+</p>
+
+<h4>
+    Objectives
+</h4>
+<ul>
+    <li>
+        <p>
+            To genetically modify an Escherichia coli strain to produce acid phosphatase enzyme.
+        </p>
+    </li>
+    <li>
+        <p>
+            To create a lab scale model of a Moving Bed biofilm Reactor to achieve optimal biofilm formation conditions.
+        </p>
+    </li>
+    <li>
+        <p>
+            To achieve cadmium bio-precipitation in the form of Cadmium Phosphate for successful removal from waste water effluents.
+        </p>
+    </li>
+</ul>
+
+<h4>
+    Our Final Product
+</h4>
+
+<p>Curlim bacteria has been genetically modified to perform two major functions:</p>
+<ul>
+    <li>
+        <p>
+            Increasing biofilm formation through dual expression of csgD and OmpR234.
+        </p>
+    </li>
+    <li>
+        <p>
+            Increasing acid phosphatase enzyme expression on the cell surface. This is accomplished with the assistance of a cell surface tag (OmpA with Linker).
+        </p>
+    </li>
+</ul>
+<p>
+    On the biocarrier, Curlim bacteria will be allowed to form a biofilm. The biocarriers will be added to the reactor. Acid phosphatase enzyme is dephosphorylated when phosphatase substrate is added. The available free phosphate ions will bind to cadmium in the effluent and form metal phosphate. Because metal phosphate is insoluble in aqueous solution, it causes bioprecipitation of cadmium ions, allowing cadmium to be easily removed from industrial discharge.
+</p>
+
+<h4>
+    End Users
+</h4>
+
+<p>
+    As a result, biotechnologically, Project Curlim could be used for:
+</p>
+
+<ol>
+    <li>
+        <p>
+            The remediation of Cd-rich industrial effluents.
+        </p>
+    </li>
+    <li>
+        <p>
+            The team also holds the idea of Synthesizing Fertilizers from the system's  Cadmium Phosphate complex sludge - A commercial Product Benefitting the Farmers.
+        </p>
+    </li>
+</ol>
+
+
+<h2>
+    The Application of Our Project in the Real World
+</h2><hr>
+
+<h4 style="margin-bottom: -2em">
+    For Industry
+</h4>
+
+<h4 >Design</h4>
 <p>The Curlim team envisions using MBBR in a 100 percent flow-through process, which means that the flow rate of the reactor's effluent and influent are the same. The gooseneck effluent piping maintains the water level in the reactor. The reactor will have specially created submerged freely moving bio media that will provide engineered bacteria biofilms enough of surface area to develop and thrive on. The media will be in numerous layers, which will make the MBBR exceptionally robust and self-regulating. A solid separation system will remove the metal precipitate further downstream.</p>
 <br>
 <center><img src="https://static.igem.wiki/teams/4509/wiki/figure-1-future-bioreactor-design.gif"/></center>
 <br>
 <p>To facilitate bacterial growth, oxygen will be introduced into the tank using blowers that send air through stainless steel aeration manifolds strategically placed inside the tank to ensure even coverage across the whole volume of the reactor and the necessary mixing for optimal treatment during the reactor's retention time.</p>
+<p style="margin-bottom: 1em; text-align: center;">
+    Click <a href="{{ url_for('pages', page='proof-of-concept') }}">here</a> to check out our Proof of Concept!
+</p>
 
-<h2>Construct</h2><hr>
+<h4>Construct</h4>
 <p>With the assistance of our internal faculties, we have been able to create detailed plans for where, how, and by whom our project can be implemented in the most effective way to increase consumer acceptance. As a result, accessibility and integration have been improved while cost and inconvenience have been reduced. Due to its low toxicity level and pathogenicity, the Lab Scale Bioreactor was designed with a flexible but efficient design, allowing small scale industries to effectively apply it for wastewater treatment. The MBBR can be used to remediate other heavy metals as well. Along with our metal of interest, Cadmium, acid phosphatase is known to bio precipitate other heavy metals such as Cobalt, Lead, and Ferrous. Our proposed solution is a cost-effective method of heavy metal removal due to its low energy consumption and material requirements. Finally, we used a literature review to ensure that we could be confident in our product's safety for future use.
 </p>
 <center><img src="https://static.igem.wiki/teams/4509/wiki/mbbr-layout.jpg" style="width:100%;"/></center>
 
-<h4> Reference</h4>
+<h4>
+    For Farmers
+</h4>
+<p>
+    Commercial phosphate (P) fertilizers contain cadmium (Cd), which occurs naturally as an impurity in rock phosphate at values of 1-200 mg Cd (kg P2O5)-1. The fertilizer containing cadmium phosphate has the simplest practical application. Foliar fertilizer and soil fertilizer can both be made with cadmium phosphate fertilizer.
+</p>
+
+<h2 style="margin-top: 1em;">
+    Concerning Safety
+</h2><hr>
+<p>
+    Our project focuses on the bioremediation of heavy metals present in effluents by genetically engineering E. coli. The strain that we have selected is non-pathogenic and does not cause any type of threat to human beings and animals. All safety norms were followed strictly when the strain was being bio- engineered. Our team ensured that there was no type of exposure or any type of accidental release. All our procedures were performed in a contained and safe area within the lab. Our wet lab team followed safety protocols to our fullest knowledge and were always kept away from hazardous substances. All types of wastes were differentiated, and the bio-waste was disposed of in a safe and proper way.
+</p>
+<p style="text-align: center; margin-top: 1em;">
+    Check out our Project Curlim <a href="{{ url_for('pages', page='safety') }}"> Safety Page! </a> 
+</p>
+
+<h2 style="margin-top: 1em;">
+    Challenges to Conquer
+</h2><hr>
+
 <ol>
     <li>
         <p>
-            Mcquarrie, James & Boltz, Joshua. (2011). Moving Bed Biofilm Reactor Technology: Process Applications, Design, and Performance. Water environment research : a research publication of the Water Environment Federation. 83. 560-75. 10.2175/106143010X12851009156286.
+            The team wants to concentrate on removing the cadmium phosphate precipitate separately from the biocarriers. We don't want these substances to be combined since it would be undesirable to come up with desired end-product.
+        </p>
+    </li>
+    <li>
+        <p>
+            We cannot allow filthy water to enter the system without a process; else, our engineered bacteria will perish. The team on a Future Perspective has planned to implement a second tank prior to the treated water entering the main stream to filter the other suspended particles such as the detached biofilms, disrupted microbial cell components, etc. Being in the ideation stage of the plan we believe that with this implementation Project Curlim will be more effective as a pre-treatment process.
+        </p>
+    </li>
+</ol>
+
+<h4> References:</h4>
+<ol>
+    <li>
+        <p>
+            J. Xing, R. Hickey, Response in performance of the GAC-fluidized bed reactor process for BTX removal to perturbation in oxygen and nutrient supply, International Biodeterioration & Biodegradation, Volume 33, Issue 1,1994, Pages 23-39, ISSN 0964-8305,        
+        <a href="https://doi.org/10.1016/0964-8305(94)90053-1" style="word-wrap: break-word;">
+            https://doi.org/10.1016/0964-8305(94)90053-1.
+        </a>
+        </p>
+    </li>
+    <li>
+        <p>
+            Mcquarrie, James & Boltz, Joshua. (2011). Moving Bed Biofilm Reactor Technology: Process Applications, Design, and Performance. Water environment research: a research publication of the Water Environment Federation. 83. 560-75. 10.2175/106143010X12851009156286.
         </p>
     </li>
 </ol>
