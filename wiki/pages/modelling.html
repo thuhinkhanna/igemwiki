@@ -10,7 +10,17 @@
   }
 </style>
 
-<div class="row">
+<nav class="mb-4 pagination-navbar"  aria-label="Page navigation example">
+  <ul class="pagination justify-content-center" >
+    <li class="page-item" ><a class="page-link text-dark" href="#Module1">Module 1</a></li>
+    <li class="page-item" ><a class="page-link text-dark" href="#Module2">Module 2</a></li>
+    <li class="page-item" ><a class="page-link text-dark" href="#Module3">Module 3</a></li>
+    <li class="page-item"><a class="page-link text-dark" href="#Module4">Module 4</a></li>
+    <li class="page-item"><a class="page-link text-dark" href="#Module5">Module 5</a></li>
+  </ul>
+</nav>
+
+<div class="row ">
   <div class="col-md-12">
     <p>
     The crucial steps in our project include biofilm attachment, production of recombinant proteins and designing the reactor. In order to optimise the vital elements in our project, we created and instigated modelling. We executed mathematical and computational models to answer the following questions:
@@ -22,7 +32,7 @@
       <li>Why should we learn about the model confidence of fusion protein and how can it be done?</li>
       <li>Will the active site of acid phosphatase be different in native aphA and aphA present in fused form?</li>
     </ol>
-    <h2>Module 1: Biofilm Detachment Model</h2><hr>
+    <h2 id="Module1">Module 1: Biofilm Detachment Model</h2><hr>
     <h4>Theory</h4>
     <p>
       The process in which the microorganisms attach to and grow on a surface is called biofilm formation. Biocarriers provide surface for the biofilm attachment. It is essential to understand the steps involved in the formation to derive the model.
@@ -39,7 +49,7 @@
     <p>
       Detachment is one of the phases in the biofilm cycle. Since the biofilm is attached to the biocarrier, the detachment phase shouldn't lead to the run off of engineered bacteria. Hence, it is critical to identify when the biofilm present in the biocarriers need replacement. Conditions that govern detachment of biofilm are stress parameter of bacteria, biofilm strength, liquid shear and other properties of the bacteria.
     </p>
-    <center><img src="https://static.igem.wiki/teams/4509/wiki/module-1-pic.jpeg" style="width:50%" /></center>
+    <center><img src="https://static.igem.wiki/teams/4509/wiki/module-1-pic.jpeg" style="width:75%; margin-top: -1em;" /></center>
     <h4>Assumptions</h4>
     <ol>
       <li>The biofilm is considered to be homogenous.</li>
@@ -83,7 +93,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 2: Curli Fibre Production</h2><hr>
+    <h2 id="Module2">Module 2: Curli Fibre Production</h2><hr>
     <h4>Theory</h4>
     <p>
       The csgBAC operon encodes csgA, csgB and csgC. csgA is the major structural subunit of curli protein and it is mainly responsible for biofilm formation. csgB is  the minor structural subunit and it binds to the extracellular matrix and facilitates the polymerization for the production of curli proteins. csgC is required for the correct assembly of mature curli fimbriae. csgD is the positive transcriptional regulator of csgBAC operon. The transition from the planktonic to the multicellular state of the bacteria is controlled by csgD through regulation of curli genes. To activate csgD gene and produce curli proteins necessary for biofilm formation, upregulation of OmpR is required.
@@ -203,7 +213,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 3: Fusion Protien Expression</h2><hr>
+    <h2 id="Module3">Module 3: Fusion Protien Expression</h2><hr>
     <h4>Theory</h4>
     <p>The gene is transcribed into mRNA and the mRNA is translated into protein. Promoter strength, plasmid copy number, transcription factors, RNA polymerase are important parameters responsible for effective transcription process. For the effective translation process, ribosome, strength of ribosome binding site(RBS), tRNA play a pivotal role.</p>
     <h4>Assumptions</h4>
@@ -244,7 +254,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 4: Structure Modelling</h2><hr>
+    <h2 id="Module4">Module 4: Structure Modelling</h2><hr>
     <h4>&nbsp;&nbsp;&nbsp;&nbsp; 1. iTASSER</h4>
     <p>Fusion proteins can be produced when two genes coding for different proteins are linked by a linker by a linker sequence and expressed as a single entity.In our project,  OmpA gene attached to a linker is joined with aphA gene. The role of OmpA linker is to bring aphA protein to the cell surface. For the efficient fusion protein yield, the binding affinity should be strong. To check the model confidence of the fusion protein, we have used the iTASSER server. The server provided C - score for the fusion protein. We analysed the C - score to check the quality of the predicted fusion protein model. C - score obtained using the iTASSER helped us understand the model that we initially built. We will work on improving the C - score of the fusion protein till it achieves a high confidence score. Z-score is the normalized Z-score of the threading alignments. Alignment with a Normalized Z-score greater than 1 means a good alignment. The fusion protein sequence received 2.56 Normalized Z-score and pdb hit in Rank 1 is 1n8nA.</p>
     <div class="row">
@@ -290,7 +300,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Module 5: Aligning Native aphA and OmpA - aphA</h2><hr>
+    <h2 id="Module5">Module 5: Aligning Native aphA and OmpA - aphA</h2><hr>
     <p>The native acid phosphatase will have an active site for substrate binding. The conformation of the active site in aphA shouldn’t change when aphA is present in fused form. To check if there is any change in the active sites, we have made use of PyMOL. We have utilised the ‘align’ function in PyMOL which performed sequence alignment and structural superimposition. We aligned OmpA-aphA model  predicted by iTASSER and OmpA-aphA model predicted by AlphaFold Colab with the native aphA. We observed that the aphA in OmpA-aphA fused form and the native aphA superimposed perfectly and thus confirming that the active site  of aphA was not disturbed. Hence, it is proved that there is no difference in the active sites of native aphA and OmpA-aphA.</p>
     <div class="row">
       <div class="col-md-6">
